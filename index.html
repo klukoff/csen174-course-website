@@ -403,33 +403,6 @@
     .tool { flex-direction: column; gap: 0.4rem; }
   }
 
-  /* Assignment overlay */
-  .assignment-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    background: rgba(0,0,0,0.5);
-    overflow-y: auto;
-    padding: 2rem 1rem;
-  }
-  .assignment-overlay.active { display: flex; justify-content: center; align-items: flex-start; }
-  .assignment-panel {
-    background: #fff;
-    max-width: 48rem;
-    width: 100%;
-    border-radius: 8px;
-    padding: 2.5rem 2.5rem 2rem;
-    position: relative;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  }
-  .assignment-panel .close-btn {
-    position: absolute; top: 1rem; right: 1rem;
-    background: none; border: none; font-size: 1.5rem; cursor: pointer;
-    color: var(--stone); line-height: 1;
-  }
-  .assignment-panel .close-btn:hover { color: var(--text); }
-
   /* Rendered markdown styles */
   .md-content h1 { font-family: 'Crimson Pro', serif; font-size: 1.6rem; color: var(--red); margin: 0 0 0.5rem; }
   .md-content h2 { font-family: 'Crimson Pro', serif; font-size: 1.25rem; color: var(--slate-dark); margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--fog); padding-bottom: 0.3rem; }
@@ -479,6 +452,7 @@
   <a data-tab="schedule" role="tab" aria-selected="false" aria-controls="schedule" tabindex="-1">Schedule</a>
   <a data-tab="project" role="tab" aria-selected="false" aria-controls="project" tabindex="-1">Project</a>
   <a data-tab="readings" role="tab" aria-selected="false" aria-controls="readings" tabindex="-1">Readings</a>
+  <a data-tab="assignments" role="tab" aria-selected="false" aria-controls="assignments" tabindex="-1">Assignments</a>
   <a data-tab="ai-policy" role="tab" aria-selected="false" aria-controls="ai-policy" tabindex="-1">AI Policy</a>
   <a data-tab="tools" role="tab" aria-selected="false" aria-controls="tools" tabindex="-1">Tools &amp; Setup</a>
 </nav>
@@ -699,7 +673,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <ul>
     <li><strong>API Exploration + Product Ideas slide deck</strong> (6 slides, 10 points) &mdash; Explore 2+ AI APIs, propose 3 product ideas, and mock up your best concept with Nano Banana. Submit to Camino as PDF.</li>
   </ul>
-  <a class="assignment-link" onclick="openAssignment('assignments/week1.md')">View full assignment &amp; rubric &rarr;</a>
+  <a class="assignment-link" onclick="switchTab('assignments'); loadAssignment('week1')">View full assignment &amp; rubric &rarr;</a>
 </div>
 
 <!-- WEEK 2 -->
@@ -1085,6 +1059,33 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 </section>
 
+<!-- ==================== ASSIGNMENTS ==================== -->
+<section id="assignments" class="tab" role="tabpanel" aria-label="Assignments" tabindex="0">
+
+<h2>Assignments</h2>
+<p>All assignments are submitted on Camino. Click any assignment below for the full description and rubric.</p>
+
+<!-- Assignment list (shown when no assignment is loaded) -->
+<div id="assignment-list">
+
+<div class="week week-explore" style="cursor:pointer" onclick="loadAssignment('week1', this)">
+  <div class="week-title">Week 1: AI API Exploration + Product Ideation (Individual)</div>
+  <div class="week-meta">10 points &middot; Due before Week 2 lab &middot; Submit PDF to Camino</div>
+  <p>Explore 2+ AI APIs, propose 3 product ideas grounded in domains you know, and mock up your best concept with Nano Banana.</p>
+</div>
+
+<!-- Future assignments will be added here as the quarter progresses -->
+
+</div>
+
+<!-- Rendered assignment content (shown when an assignment is loaded) -->
+<div id="assignment-detail" style="display:none">
+  <a href="#" onclick="backToAssignments(); return false" style="display:inline-block;margin-bottom:1rem;color:var(--sky);font-size:0.9rem">&larr; Back to all assignments</a>
+  <div class="md-content" id="assignment-content"></div>
+</div>
+
+</section>
+
 <!-- ==================== AI POLICY ==================== -->
 <section id="ai-policy" class="tab" role="tabpanel" aria-label="AI Policy" tabindex="0">
 
@@ -1225,47 +1226,35 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   window.switchTab = switchTab;
 </script>
 
-<!-- Assignment overlay -->
-<div class="assignment-overlay" id="assignment-overlay">
-  <div class="assignment-panel">
-    <button class="close-btn" onclick="closeAssignment()" aria-label="Close">&times;</button>
-    <div class="md-content" id="assignment-content"></div>
-  </div>
-</div>
-
-<!-- Markdown renderer -->
+<!-- Markdown renderer for assignments -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
 <script>
-  async function openAssignment(mdPath) {
-    const overlay = document.getElementById('assignment-overlay');
+  async function loadAssignment(id) {
+    const list = document.getElementById('assignment-list');
+    const detail = document.getElementById('assignment-detail');
     const content = document.getElementById('assignment-content');
     content.innerHTML = '<p style="color:var(--stone)">Loading assignment&hellip;</p>';
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    list.style.display = 'none';
+    detail.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     try {
-      const resp = await fetch(mdPath);
+      const resp = await fetch('assignments/' + id + '.md');
       if (!resp.ok) throw new Error('Could not load assignment');
       const md = await resp.text();
       content.innerHTML = marked.parse(md);
     } catch (e) {
-      content.innerHTML = '<p style="color:var(--red)">Could not load assignment. <a href="' + mdPath + '">View the raw file instead.</a></p>';
+      content.innerHTML = '<p style="color:var(--red)">Could not load assignment. <a href="assignments/' + id + '.md">View the raw file instead.</a></p>';
     }
   }
 
-  function closeAssignment() {
-    document.getElementById('assignment-overlay').classList.remove('active');
-    document.body.style.overflow = '';
+  function backToAssignments() {
+    document.getElementById('assignment-list').style.display = '';
+    document.getElementById('assignment-detail').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  document.getElementById('assignment-overlay').addEventListener('click', function(e) {
-    if (e.target === this) closeAssignment();
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeAssignment();
-  });
-
-  window.openAssignment = openAssignment;
+  window.loadAssignment = loadAssignment;
+  window.backToAssignments = backToAssignments;
 </script>
 
 </body>
