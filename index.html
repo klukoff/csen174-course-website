@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSEN 174: Software Engineering | Spring 2026 | Santa Clara University</title>
+<link rel="icon" href="https://www.scu.edu/assets/images/favicons/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #A32035;
+    --bronco: #862633;
+    --slate: #425766;
+    --slate-dark: #2A373F;
+    --stone: #758592;
+    --fog: #E0DAD3;
+    --fog-light: #EFECE9;
+    --adobe: #F1E7CC;
+    --adobe-light: #F8F3E5;
+    --clay: #C2A98B;
+    --clay-light: #F0E9E2;
+    --palm: #55712E;
+    --palm-light: #C6D944;
+    --agave: #4D8798;
+    --sky: #4974BB;
+    --sunrise: #FFB600;
+    --wisteria: #7F5E9C;
+    --text: #2A2A2A;
+    --text-mid: #555;
+    --text-light: #777;
+    --bg: #FAFAF7;
+    --white: #FFFFFF;
+    --rule: #D5CFCA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ---- HEADER / BANNER ---- */
+  .course-banner {
+    background: var(--bronco);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  .course-banner .banner-logo {
+    position: absolute;
+    top: 1.1rem;
+    left: 1.5rem;
+    height: 44px;
+  }
+  .course-banner .banner-text {
+    text-align: center;
+  }
+  .course-banner h1 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.15rem;
+  }
+  .course-banner .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-weight: 400;
+  }
+  .course-banner .term {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    background: var(--slate-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Skip-to-content link */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    background: var(--bronco);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    z-index: 200;
+    font-size: 0.85rem;
+    border-radius: 0 0 4px 4px;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 0; }
+
+  nav a {
+    display: block;
+    padding: 0.7rem 1.35rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  nav a:hover { color: #fff; }
+  nav a.active { color: #fff; border-bottom-color: var(--sunrise); }
+  nav a:focus-visible {
+    outline: 2px solid var(--sunrise);
+    outline-offset: -2px;
+  }
+
+  /* Global focus-visible */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--bronco);
+    outline-offset: 2px;
+  }
+
+  /* ---- MAIN ---- */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  .tab { display: none; }
+  .tab.active { display: block; }
+
+  /* ---- TYPOGRAPHY ---- */
+  h2 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--bronco);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--slate-dark);
+    margin: 1.75rem 0 0.5rem;
+    line-height: 1.3;
+  }
+  h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--stone);
+    margin: 1.25rem 0 0.4rem;
+  }
+  p { margin-bottom: 0.65rem; }
+  ul, ol { margin: 0.4rem 0 0.9rem 1.25rem; }
+  li { margin-bottom: 0.3rem; }
+  a { color: var(--red); text-decoration: underline; text-decoration-color: rgba(163,32,53,0.3); }
+  a:hover { text-decoration-color: var(--red); }
+  strong { font-weight: 600; }
+  code {
+    font-size: 0.88em;
+    background: var(--fog-light);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem 0;
+  }
+
+  /* ---- TABLES ---- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.9rem;
+  }
+  th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--stone);
+    padding: 0.5rem 0.65rem;
+    border-bottom: 2px solid var(--slate-dark);
+  }
+  td {
+    padding: 0.55rem 0.65rem;
+    border-bottom: 1px solid var(--fog);
+    vertical-align: top;
+  }
+  .grade-weight { font-weight: 600; color: var(--bronco); text-align: center; }
+
+  /* ---- PHASE TIMELINE ---- */
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 1.5rem 0 2rem;
+  }
+  .phase {
+    background: var(--white);
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+  .phase .label {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-bottom: 0.25rem;
+  }
+  .phase h4 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text);
+    margin: 0.2rem 0 0.15rem;
+    font-weight: 600;
+  }
+  .phase p { font-size: 0.78rem; color: var(--text-light); margin: 0; }
+  .label-explore { background: #EBF5EB; color: var(--palm); }
+  .label-commit { background: #FFF6DD; color: #9A6A00; }
+  .label-build { background: #E8EEF6; color: var(--sky); }
+  .label-ship { background: #F1ECF5; color: var(--wisteria); }
+
+  /* ---- WEEK BLOCKS ---- */
+  .week {
+    border-left: 3px solid var(--fog);
+    padding: 0 0 0 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .week-explore { border-left-color: var(--palm); }
+  .week-commit { border-left-color: var(--sunrise); }
+  .week-build { border-left-color: var(--sky); }
+  .week-ship { border-left-color: var(--wisteria); }
+  .week .week-title {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.1rem;
+    line-height: 1.3;
+  }
+  .week .week-meta {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+
+  /* ---- ASYNC WARNING ---- */
+  .async-note {
+    background: var(--adobe-light);
+    border: 1px solid var(--clay);
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    color: var(--slate-dark);
+  }
+
+  /* ---- READING ITEMS ---- */
+  .reading {
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--fog-light);
+  }
+  .reading:last-child { border-bottom: none; }
+  .reading .r-title {
+    font-weight: 600;
+  }
+  .reading .r-title a {
+    color: var(--text);
+    text-decoration-color: rgba(0,0,0,0.2);
+  }
+  .reading .r-title a:hover { text-decoration-color: var(--red); color: var(--red); }
+  .reading .r-meta {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 0.1rem;
+  }
+  .reading .r-desc {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    margin-top: 0.25rem;
+  }
+
+  /* ---- DISCUSSION PROMPTS ---- */
+  .prompt {
+    background: var(--adobe-light);
+    border-left: 3px solid var(--sunrise);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--slate-dark);
+  }
+  .prompt strong { font-style: normal; }
+
+  /* ---- SCOPE EXAMPLES ---- */
+  .scope {
+    border-left: 3px solid;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.88rem;
+  }
+  .scope-bad { border-color: var(--red); background: #FAF0F0; }
+  .scope-good { border-color: var(--palm); background: #F4F7F0; }
+  .scope-caution { border-color: var(--sunrise); background: var(--adobe-light); }
+
+  /* ---- CALLOUT ---- */
+  .callout {
+    background: var(--fog-light);
+    border: 1px solid var(--fog);
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* ---- TOOL ITEMS ---- */
+  .tool {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--fog);
+  }
+  .tool:last-child { border-bottom: none; }
+  .tool-icon {
+    width: 36px; height: 36px;
+    background: var(--fog-light);
+    border: 1px solid var(--fog);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .tool h4 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0 0 0.15rem;
+  }
+  .tool p { margin: 0; font-size: 0.85rem; color: var(--text-mid); }
+
+  /* ---- FOOTER ---- */
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.75rem;
+    color: var(--stone);
+    border-top: 1px solid var(--fog);
+  }
+
+  /* Scrollable table wrapper for narrow screens */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  @media (max-width: 840px) {
+    .phases { grid-template-columns: repeat(2, 1fr); }
+    .course-banner .banner-logo { top: 0.8rem; left: 1rem; height: 36px; }
+  }
+
+  @media (max-width: 640px) {
+    .course-banner { padding: 1.25rem 1rem; }
+    .course-banner h1 { font-size: 1.35rem; }
+    .course-banner .subtitle { font-size: 0.85rem; }
+    .course-banner .banner-logo { position: static; display: block; margin: 0 auto 0.75rem; height: 32px; }
+    .course-banner .banner-text { text-align: center; }
+    .phases { grid-template-columns: 1fr 1fr; }
+    main { padding: 1.25rem 0.85rem 2.5rem; }
+    nav { justify-content: flex-start; }
+    nav a { padding: 0.6rem 0.85rem; font-size: 0.72rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.05rem; }
+    table { font-size: 0.82rem; }
+    td, th { padding: 0.4rem 0.5rem; }
+    .week-card { padding: 1rem; }
+    .tool { flex-direction: column; gap: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- BANNER -->
+<header class="course-banner" role="banner">
+  <img class="banner-logo" src="scu-logo-white.png" alt="Santa Clara University">
+  <div class="banner-text">
+    <h1>CSEN 174: Software Engineering</h1>
+    <div class="subtitle">AI-Assisted Software Development</div>
+    <div class="term">Spring 2026 &middot; Tue/Thu 10:20 AM&thinsp;&ndash;&thinsp;12:00 PM</div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav id="tabs" role="tablist" aria-label="Course sections">
+  <a class="active" data-tab="syllabus" role="tab" aria-selected="true" aria-controls="syllabus" tabindex="0">Syllabus</a>
+  <a data-tab="schedule" role="tab" aria-selected="false" aria-controls="schedule" tabindex="-1">Schedule</a>
+  <a data-tab="project" role="tab" aria-selected="false" aria-controls="project" tabindex="-1">Project</a>
+  <a data-tab="readings" role="tab" aria-selected="false" aria-controls="readings" tabindex="-1">Readings</a>
+  <a data-tab="tools" role="tab" aria-selected="false" aria-controls="tools" tabindex="-1">Tools &amp; Setup</a>
+</nav>
+
+<main id="main-content">
+
+<!-- ==================== SYLLABUS ==================== -->
+<section id="syllabus" class="tab active" role="tabpanel" aria-label="Syllabus" tabindex="0">
+
+<h2>Course Overview</h2>
+<p>Software engineering is changing. AI tools can now generate code, review pull requests, scaffold entire applications, and explain unfamiliar codebases. This course teaches you to build real software products using these tools while learning the engineering practices that still matter: architecture, testing, deployment, security, ethics, and team collaboration.</p>
+<p>You will work in teams on a quarter-long project, starting with rapid AI-assisted prototyping and culminating in a properly engineered, deployed web application. Along the way, you will learn to evaluate what AI tools do well, where they fall short, and how to maintain quality and understanding in an AI-assisted workflow.</p>
+
+<h3>Instructor</h3>
+<p><strong>Kai Lukoff</strong> &middot; <a href="mailto:klukoff@scu.edu">klukoff@scu.edu</a><br>
+Office hours: TBD</p>
+
+<h3>Teaching Assistants</h3>
+<p><strong>Lawrence Liu</strong> and <strong>Kiki Zhang</strong> (graduate students)<br>
+TAs run the weekly lab sessions and provide feedback on assignments.</p>
+
+<h3>Meeting Times</h3>
+<table>
+  <tbody>
+    <tr><td><strong>Lectures</strong></td><td>Tuesday &amp; Thursday, 10:20 AM&thinsp;&ndash;&thinsp;12:00 PM</td></tr>
+    <tr><td><strong>Lab</strong></td><td>One session per week (day/time TBD), ~3 hours</td></tr>
+    <tr><td><strong>Final Presentations</strong></td><td>Thursday, June 4</td></tr>
+    <tr><td><strong>Final Project Due</strong></td><td>Wednesday, June 10</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Learning Outcomes</h2>
+<ol>
+  <li>Compare and contrast phases of different software development processes and choose the best fit for a given scenario</li>
+  <li>Develop and present software artifacts produced through a methodical development process</li>
+  <li>Compare and contrast different software architectures and choose the best fit for a given scenario</li>
+  <li>Compare and contrast different approaches to software project management and choose the best fit for a given scenario</li>
+  <li>Apply the IEEE/CS code of ethics for software engineers, including considerations specific to AI-assisted development</li>
+</ol>
+
+<hr>
+
+<h2>Grading</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Component</th><th style="text-align:center">Weight</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Group project deliverables</strong></td><td class="grade-weight">45%</td><td>Weekly artifacts graded on simple rubric: meets expectations / needs revision / incomplete</td></tr>
+    <tr><td><strong>Perusall annotations</strong></td><td class="grade-weight">15%</td><td>3+ substantive annotations per reading assignment, auto-scored by Perusall</td></tr>
+    <tr><td><strong>AI learning journal</strong></td><td class="grade-weight">10%</td><td>Weekly: one opportunity + one challenge/risk from your AI usage. Completion-graded.</td></tr>
+    <tr><td><strong>Final presentation</strong></td><td class="grade-weight">15%</td><td>Group demo + individual video walkthrough (2&ndash;3 min per person)</td></tr>
+    <tr><td><strong>Pop quizzes</strong></td><td class="grade-weight">5%</td><td>7 quizzes on readings + lectures, best 5 of 7 count</td></tr>
+    <tr><td><strong>Lab attendance + engagement</strong></td><td class="grade-weight">10%</td><td>Mandatory attendance, participation in standups/demos</td></tr>
+  </tbody>
+</table></div>
+
+<hr>
+
+<h2>Policies</h2>
+
+<h3>AI Tool Use</h3>
+<p>AI tools (Cursor, GitHub Copilot, Claude, ChatGPT, etc.) are encouraged throughout this course. You do not need permission to use them and there is no penalty for heavy use. However, you must:</p>
+<ul>
+  <li><strong>Cite AI assistance on every assignment,</strong> similar to citing a source. Example: "Used Cursor agent mode to generate initial test scaffolding; modified 3 tests to cover edge cases."</li>
+  <li><strong>Document which tools you used</strong> in your AI learning journal.</li>
+  <li><strong>Understand what you submit.</strong> Video walkthroughs and pop quizzes verify your understanding of the code and concepts.</li>
+</ul>
+
+<h3>Attendance</h3>
+<p>Lecture attendance is expected. Lab attendance is mandatory and tracked. Pop quizzes (in-class, paper-based) serve as additional attendance verification. The drop-2 policy on quizzes handles occasional absences without requiring excuses.</p>
+
+<h3>Late Work</h3>
+<p>Weekly deliverables are due at the times specified on Canvas. Late submissions receive "needs revision" at best. If you are facing an emergency, email Kai before the deadline.</p>
+
+<h3>Academic Integrity</h3>
+<p>Using AI to help you build is expected. Submitting work you do not understand, or misrepresenting another student's work as your own, is not. The individual video walkthrough is the primary mechanism for verifying understanding.</p>
+
+</section>
+
+<!-- ==================== SCHEDULE ==================== -->
+<section id="schedule" class="tab" role="tabpanel" aria-label="Schedule" tabindex="0">
+
+<h2>Quarter at a Glance</h2>
+
+<div class="phases">
+  <div class="phase">
+    <span class="label label-explore">Explore</span>
+    <h4>Weeks 1&ndash;3</h4>
+    <p>Ideate, form teams, vibe&nbsp;code 2&ndash;3 prototypes</p>
+  </div>
+  <div class="phase">
+    <span class="label label-commit">Commit</span>
+    <h4>Week 4</h4>
+    <p>Pick the best prototype, plan the real build</p>
+  </div>
+  <div class="phase">
+    <span class="label label-build">Build</span>
+    <h4>Weeks 5&ndash;8</h4>
+    <p>Architecture, testing, CI/CD, security</p>
+  </div>
+  <div class="phase">
+    <span class="label label-ship">Ship</span>
+    <h4>Weeks 9&ndash;10</h4>
+    <p>Polish, code freeze, present</p>
+  </div>
+</div>
+
+<!-- WEEK 1 -->
+<div class="week week-explore">
+  <div class="week-title">Week 1: Product Vision + AI-Assisted SE</div>
+  <div class="week-meta">Tue Mar 31 &amp; Thu Apr 3 &middot; Lab &middot; <span class="label label-explore" style="font-size:0.65rem">Explore</span></div>
+
+  <h4>Pre-class (Perusall)</h4>
+  <p>Complete all Week 1 readings (see Readings tab) and make 3+ substantive annotations before Tuesday's class.</p>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>Session 1 (Tue):</strong> Course intro. "Before and after" demo: solve a coding problem by hand (15 min), then with Cursor (15 min), then discuss. Brainstorm project ideas.</li>
+    <li><strong>Session 2 (Thu):</strong> Tool setup workshop. Individual idea pitches (2-min each or gallery walk). Students browse ideas and begin identifying potential teammates.</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>Guided activity (30&ndash;45 min):</strong> Cursor orientation, first clone + PR, explore an open-source repo together</li>
+    <li><strong>Individual work:</strong> Refine product idea pitches, complete tool setup</li>
+    <li><strong>Closing:</strong> Post idea pitches to shared document. Students begin self-selecting into teams.</li>
+  </ul>
+
+  <h4>Deliverables</h4>
+  <ul>
+    <li><strong>Individual: Tool setup</strong> (completion-graded) &mdash; Cursor Pro (student verification), GitHub (Student Developer Pack), Perusall account linked</li>
+    <li><strong>Individual: AI experience survey</strong> &mdash; Background with AI tools, programming languages, what you hope to learn</li>
+    <li><strong>Individual: Product idea pitch</strong> (completion-graded) &mdash; 1-page document with 1&ndash;2 AI-powered app ideas. For each: the problem, the target user, the AI capability (name a specific API or model), and the "without AI" test. See <a href="#" onclick="switchTab('project');return false">Project Guide</a> for examples.</li>
+    <li><strong>Perusall:</strong> Week 1 annotations</li>
+  </ul>
+</div>
+
+<!-- WEEK 2 -->
+<div class="week week-explore">
+  <div class="week-title">Week 2: Personas, User Stories + Prototype 1</div>
+  <div class="week-meta">Tue Apr 7 &amp; Thu Apr 9 &middot; Lab &middot; <span class="label label-explore" style="font-size:0.65rem">Explore</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>Session 1 (Tue):</strong> Teams finalized. User story writing exercise: write stories by hand, then have Cursor critique them. Compare results across teams.</li>
+    <li><strong>Session 2 (Thu):</strong> Vibe coding workshop. Each team starts building Prototype 1 in Cursor. Goal: get the core AI interaction working as fast as possible, even if the code is messy.</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>Guided activity:</strong> Codebase exploration exercise (Excalidraw repo in Cursor). How to ask the right questions of an AI tool when navigating unfamiliar code.</li>
+    <li><strong>Team work:</strong> Continue Prototype 1. Set up team GitHub repo.</li>
+    <li><strong>Standup:</strong> Each team shows what their AI API call returns and the core interaction so far.</li>
+  </ul>
+
+  <h4>Deliverables</h4>
+  <ul>
+    <li><strong>Individual: Repo exploration assignment</strong> (completion-graded) &mdash; Use Cursor to explore an open-source repo. Answer orientation, architecture, and reflection questions. Find one thing the AI got wrong.</li>
+    <li><strong>Group: Personas + user stories + Prototype 1</strong> &mdash; 2&ndash;3 personas, 10+ user stories (hand-written then AI-critiqued), and a working first prototype showing the core AI interaction (spaghetti code is fine).</li>
+    <li><strong>AI learning journal:</strong> Week 2 entry</li>
+  </ul>
+</div>
+
+<!-- WEEK 3 -->
+<div class="week week-explore">
+  <div class="week-title">Week 3: Git/GitHub + Prototypes 2&ndash;3</div>
+  <div class="week-meta">Tue Apr 14 &amp; Thu Apr 16 &middot; Lab &middot; <span class="label label-explore" style="font-size:0.65rem">Explore</span></div>
+
+  <div class="async-note">
+    <strong>Fully async this week.</strong> Kai and both TAs are at the CHI conference. No in-person lecture or lab. All activities are self-paced with clear due dates. Readings carry a heavier load to compensate. No pop quiz this week.
+  </div>
+
+  <h4>Async Activities (replace lecture + lab)</h4>
+  <ul>
+    <li><strong>Git exercise with checkpoints:</strong> Fork a repo, create a branch, make changes, open a PR, review a classmate's PR using GitHub Copilot. Submit links to your PR and review.</li>
+    <li><strong>Cross-environment comparison:</strong> Build the same small feature using the same model in 3 different environments (Cursor required, plus 2 others from: Claude.ai, Claude Code, Copilot Chat, Cowork, OpenAI Codex CLI). Write up a comparison.</li>
+    <li><strong>Canvas discussion post:</strong> ~150 words on which git workflow your team will use and why, plus 2 replies to classmates.</li>
+    <li><strong>Team async standup:</strong> Each member posts to a shared doc: what they set up, one thing learned, one blocker.</li>
+  </ul>
+
+  <h4>Deliverables</h4>
+  <ul>
+    <li><strong>Individual: Git exercise</strong> &mdash; Links to your PR and code review</li>
+    <li><strong>Individual: Cross-environment comparison</strong> &mdash; 3 HTML files + comparison document</li>
+    <li><strong>Group: Team dev environment + Prototypes 2&ndash;3</strong> &mdash; GitHub repo with branch protection, PR template, <code>.cursorrules</code> file. Each member has at least one merged PR. Teams should have 2&ndash;3 rough prototypes by end of week.</li>
+    <li><strong>AI learning journal:</strong> Week 3 entry</li>
+  </ul>
+</div>
+
+<!-- WEEKS 4-10 OUTLINE -->
+<hr>
+<h2>Weeks 4&ndash;10: Outline</h2>
+<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
+
+<div class="week week-commit">
+  <div class="week-title">Week 4: Agile + Sprint Planning + The Pivot</div>
+  <div class="week-meta">Tue Apr 21 &amp; Thu Apr 23 &middot; <span class="label label-commit" style="font-size:0.65rem">Commit</span></div>
+  <p>Teams evaluate their 2&ndash;3 prototypes and pick the most promising one. From here on, the code must be properly engineered. <strong>Deliverable:</strong> Prototype evaluation + sprint plan + product backlog in GitHub Projects.</p>
+</div>
+
+<div class="week week-build">
+  <div class="week-title">Week 5: Software Architecture + ADRs</div>
+  <div class="week-meta">Tue Apr 28 &amp; Thu Apr 30 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+  <p><strong>Deliverable:</strong> Component diagram, 2&ndash;3 Architecture Decision Records, API cost estimate, "unplugged vs. AI" architecture comparison.</p>
+</div>
+
+<div class="week week-build">
+  <div class="week-title">Week 6: Testing + TDD</div>
+  <div class="week-meta">Tue May 5 &amp; Thu May 7 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+  <p><strong>Deliverable:</strong> Test suite + coverage report. Unit tests on core logic (especially AI prompt construction and response parsing). TDD exercise documented.</p>
+</div>
+
+<div class="week week-build">
+  <div class="week-title">Week 7: DevOps + CI/CD + Deployment</div>
+  <div class="week-meta">Tue May 12 &amp; Thu May 14 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+  <p><strong>Deliverable:</strong> GitHub Actions pipeline (lint, test, build on every PR). Deployed app at a live URL. Deployment runbook.</p>
+</div>
+
+<div class="week week-build">
+  <div class="week-title">Week 8: Security Review</div>
+  <div class="week-meta">Tue May 19 &amp; Thu May 21 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+  <p><strong>Deliverable:</strong> Security audit (Cursor + manual review) for API key exposure, input validation, prompt injection, dependency issues. Cross-team code review with written feedback.</p>
+</div>
+
+<div class="week week-ship">
+  <div class="week-title">Week 9: Ethics + Polish + Code Freeze</div>
+  <div class="week-meta">Tue May 26 &amp; Thu May 28 &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
+  <p><strong>Individual:</strong> Ethics reflection (1&ndash;2 pages applying IEEE/CS code of ethics to your project). <strong>Group:</strong> Code freeze by end of lab. All PRs merged, CI green, deployed and working.</p>
+</div>
+
+<div class="week week-ship">
+  <div class="week-title">Week 10: Final Presentations</div>
+  <div class="week-meta">Tue Jun 2 &amp; Thu Jun 4 &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
+  <p><strong>Group:</strong> Live demo (10&ndash;15 min per team). <strong>Individual:</strong> Video walkthrough (2&ndash;3 min) + course reflection (1 page). <strong>Final project submission due June 10.</strong></p>
+</div>
+
+</section>
+
+<!-- ==================== PROJECT GUIDE ==================== -->
+<section id="project" class="tab" role="tabpanel" aria-label="Project" tabindex="0">
+
+<h2>The Quarter-Long Project</h2>
+<p>This course is built around a single team project. But unlike a traditional project course, you will start by building fast and messy, then slow down to build right.</p>
+
+<div class="phases">
+  <div class="phase">
+    <span class="label label-explore">Explore</span>
+    <h4>Weeks 1&ndash;3</h4>
+    <p>Vibe code 2&ndash;3 prototypes. Spaghetti code is fine. Demonstrate interactive features and experiment with ideas.</p>
+  </div>
+  <div class="phase">
+    <span class="label label-commit">Commit</span>
+    <h4>Week 4</h4>
+    <p>Evaluate prototypes. Pick the most promising one. Write a sprint plan for the real build.</p>
+  </div>
+  <div class="phase">
+    <span class="label label-build">Build</span>
+    <h4>Weeks 4&ndash;8</h4>
+    <p>Properly engineered: architecture, testing, CI/CD, security. Weekly deliverables follow SE&nbsp;topics.</p>
+  </div>
+  <div class="phase">
+    <span class="label label-ship">Ship</span>
+    <h4>Weeks 9&ndash;10</h4>
+    <p>Code freeze, ethics reflection, final presentations.</p>
+  </div>
+</div>
+
+<h3>Why prototype first?</h3>
+<p>AI tools make it possible to build a working interactive prototype in hours, not weeks. That changes the game: instead of spending three weeks writing requirements documents for an idea you have never tested, you can build the thing and try it. The Explore phase takes advantage of this. Your early prototypes are experiments, not commitments. They let you answer the question "Does this idea actually work?" before you invest in engineering it properly.</p>
+
+<hr>
+
+<h2>Team Formation</h2>
+
+<p>Teams of <strong>3&ndash;5 students</strong>, self-selected around shared ideas.</p>
+
+<h4>How it works</h4>
+<ol>
+  <li><strong>Week 1, Sessions 1&ndash;2:</strong> Every student brainstorms individually and writes a product idea pitch (1&ndash;2 app ideas).</li>
+  <li><strong>Week 1, Lab:</strong> Students share their ideas with the class via 2-minute pitches or a gallery walk. All pitches are posted to a shared document.</li>
+  <li><strong>Between Week 1 and Week 2:</strong> Students browse ideas, reach out to potential teammates, and self-organize into teams of 3&ndash;5 around the most compelling ideas. You do not need to use your own idea. Joining someone else's is great.</li>
+  <li><strong>Week 2, Session 1 (Tue Apr 7):</strong> Teams finalized. Post your team roster and chosen direction to Canvas/GitHub.</li>
+  <li><strong>Safety net:</strong> Students who haven't found a team by Tuesday of Week 2 will be matched by Kai by Thursday.</li>
+</ol>
+
+<div class="callout">
+  <strong>Each team member must own a distinct area of the codebase.</strong> This is enforced through the individual video walkthrough at the end of the quarter. You will each record a 2&ndash;3 minute video explaining the code you wrote, the design decisions you made, and how AI tools were involved.
+</div>
+
+<hr>
+
+<h2>Technical Requirements (Final Deliverable)</h2>
+
+<p>Your final, refined application must include all of the following:</p>
+<ul>
+  <li><strong>AI API integration</strong> central to the product, not bolted on. The AI must process user input and return a meaningful, non-trivial result. Options include OpenAI, Anthropic, Google, Hugging Face, or similar.</li>
+  <li><strong>Programmatic prompt construction.</strong> Build prompts with system instructions, context injection, or structured output parsing. Not just raw user input passed to an API.</li>
+  <li><strong>Frontend + backend.</strong> A web app with both a user-facing interface and server-side logic. A full-stack framework (Next.js, etc.) counts. Pure static HTML calling an API from the browser does not.</li>
+  <li><strong>Data persistence.</strong> A database, file storage, or external service storing state beyond the session.</li>
+  <li><strong>Version control on GitHub</strong> with branch protection, pull requests, and code review.</li>
+  <li><strong>GitHub Projects Kanban board</strong> for backlog and sprint management, with retrospective cards for each sprint.</li>
+  <li><strong>Deployed to a live URL</strong> (Vercel, Render, or similar free tier).</li>
+  <li><strong>Test suite</strong> covering core business logic, especially the AI interaction layer.</li>
+  <li><strong>CI/CD pipeline</strong> via GitHub Actions (lint, test, build on every PR).</li>
+</ul>
+
+<p>The Explore-phase prototypes have <em>no</em> technical requirements beyond "it shows the idea working." Spaghetti code, no tests, no deployment. Those come later.</p>
+
+<hr>
+
+<h2>Scope Guidance</h2>
+
+<p>Because AI tools dramatically accelerate coding, the expected scope for a team project is higher than in a traditional course. A polished MVP with one core flow that works well is the target.</p>
+
+<h4>Insufficient scope (too simple)</h4>
+<div class="scope scope-bad">
+  A chatbot wrapper that just passes user input to an LLM and displays the response. An app where the AI feature could be replaced by a database query. A to-do list with an "AI generate" button. Ask yourself: "What can this do that ChatGPT can't?" If the answer is unclear, the scope is too thin.
+</div>
+
+<h4>Appropriate scope (aim here)</h4>
+<div class="scope scope-good">
+  A study tool that processes lecture notes and generates practice questions, flashcards, and concept maps. A meal planner that creates weekly menus from dietary restrictions, budget, and fridge inventory. A code review assistant that analyzes PR diffs and suggests improvements with explanations. A meeting summarizer that extracts action items, decisions, and follow-ups from transcripts.
+</div>
+
+<h4>Excessive scope (too ambitious)</h4>
+<div class="scope scope-caution">
+  A full social network with AI moderation, recommendations, and matching. Anything requiring training or fine-tuning a custom model. A real-time collaborative editor with AI pair programming. If you can't explain and demo it in 10&ndash;15 minutes, the scope is too big.
+</div>
+
+<hr>
+
+<h2>AI API Budget</h2>
+<p>Kai will provide shared API credits (e.g., OpenAI or Anthropic). Design with cost awareness: cache responses, choose the right model size for each task, and implement rate limiting. The architecture assignment (Week 5) includes documenting API cost estimates.</p>
+
+<hr>
+
+<h2>AI Learning Journal</h2>
+<p>Each week, write a short entry documenting:</p>
+<ul>
+  <li><strong>One opportunity:</strong> Something AI tools helped you accomplish this week.</li>
+  <li><strong>One challenge or risk:</strong> A moment where AI tools fell short, produced something wrong, or introduced a risk you had to manage.</li>
+</ul>
+<p>Completion-graded. The goal is honest reflection, not detailed analysis.</p>
+
+<hr>
+
+<h2>Final Presentation</h2>
+
+<h4>Group demo (10&ndash;15 min per team)</h4>
+<ul>
+  <li>2&ndash;3 min: Problem, personas, product vision</li>
+  <li>5&ndash;7 min: Live demo at the deployed URL</li>
+  <li>2&ndash;3 min: Architecture overview, key technical decisions, how AI was integrated</li>
+  <li>2&ndash;3 min: Q&amp;A from class</li>
+</ul>
+
+<h4>Rubric (100 points)</h4>
+<table>
+  <thead><tr><th>Category</th><th style="text-align:center">Points</th></tr></thead>
+  <tbody>
+    <tr><td>Demonstration of methodical SE process</td><td style="text-align:center">30</td></tr>
+    <tr><td>Reflection on the process</td><td style="text-align:center">20</td></tr>
+    <tr><td>Presentation quality</td><td style="text-align:center">10</td></tr>
+    <tr><td>Quality of Q&amp;A responses</td><td style="text-align:center">10</td></tr>
+    <tr><td>Usability</td><td style="text-align:center">10</td></tr>
+    <tr><td>Technical depth</td><td style="text-align:center">10</td></tr>
+    <tr><td>Cohesion</td><td style="text-align:center">10</td></tr>
+  </tbody>
+</table>
+
+<h4>Individual video walkthrough (2&ndash;3 min)</h4>
+<p>Each team member records a video walking through their part of the codebase, explaining design decisions and how AI was used. Graded on understanding, not polish.</p>
+
+</section>
+
+<!-- ==================== READINGS ==================== -->
+<section id="readings" class="tab" role="tabpanel" aria-label="Readings" tabindex="0">
+
+<h2>Reading Assignments</h2>
+<p>Each week has 3&ndash;5 required readings or videos assigned on <strong>Perusall</strong> for social annotation before class. Target pre-class time: <strong>1&ndash;1.5 hours</strong> (reading + annotation). You must make <strong>3+ substantive annotations</strong> per assignment. "I agree" does not count.</p>
+
+<hr>
+
+<h3>Week 1: Product Vision, User Needs, and Intro to AI-Assisted SE</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~70 min reading + annotation time</p>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.romanpichler.com/blog/ultimate-product-vision-faqs/" target="_blank">Product Vision FAQs</a></div>
+  <div class="r-meta">Roman Pichler &middot; Article &middot; ~10 min</div>
+  <div class="r-desc">Practical Q&amp;A on what a product vision is, why it matters, and common mistakes like confusing vision with strategy.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.atlassian.com/agile/product-management/requirements" target="_blank">What is a Product Requirements Document (PRD)?</a></div>
+  <div class="r-meta">Atlassian &middot; Article &middot; ~7 min</div>
+  <div class="r-desc">Clear explanation of PRDs with examples. Bridges the gap between abstract requirements and practical documentation.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged" target="_blank">Centaurs and cyborgs on the jagged frontier</a></div>
+  <div class="r-meta">Ethan Mollick &middot; Blog post &middot; ~10 min</div>
+  <div class="r-desc">A study of 758 BCG consultants using AI. Introduces "centaurs" (divide labor with AI) and "cyborgs" (blend it), and the "jagged frontier" where AI capabilities are uneven. Foundational framing for the entire course.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://newsletter.pragmaticengineer.com/p/the-third-golden-age-of-software" target="_blank">The third golden age of software engineering</a></div>
+  <div class="r-meta">Grady Booch on The Pragmatic Engineer &middot; Podcast &middot; ~20 min (assigned segments)</div>
+  <div class="r-desc">Booch argues that software engineering is not equivalent to coding, and that AI tools are part of a long historical arc of abstraction. Core message: "Your tools are changing, but your problems are not."</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://missing.csail.mit.edu/2026/agentic-coding/" target="_blank">Agentic Coding</a></div>
+  <div class="r-meta">MIT CSAIL Missing Semester (Jan 2026) &middot; Lecture + video &middot; ~20 min (assigned segments)</div>
+  <div class="r-desc">MIT's official lecture on agentic coding: core concepts, practical use cases, "vibe coding," and responsible use of AI tools.</div>
+</div>
+
+<div class="prompt">
+  <strong>Perusall discussion:</strong> "Mollick describes 'centaurs' and 'cyborgs' as two ways to work with AI. Which approach do you think you'll take in this course? What does Booch's historical perspective suggest about which skills will last?"
+</div>
+
+<hr>
+
+<h3>Week 2: Personas, Scenarios, User Stories</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~60 min reading + annotation time</p>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.nngroup.com/articles/persona/" target="_blank">Personas Make Users Memorable for Product Team Members</a></div>
+  <div class="r-meta">Nielsen Norman Group &middot; Article &middot; ~8 min</div>
+  <div class="r-desc">Why personas matter beyond demographic lists. Emphasizes research-based design over assumptions.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.romanpichler.com/blog/personas-epics-user-stories/" target="_blank">From Personas to User Stories</a></div>
+  <div class="r-meta">Roman Pichler &middot; Blog post &middot; ~10 min</div>
+  <div class="r-desc">Connects personas to user stories with concrete examples. The bridge from "who is our user" to "what do we build."</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.atlassian.com/agile/project-management/user-stories" target="_blank">User Stories with Examples and a Template</a></div>
+  <div class="r-meta">Atlassian &middot; Article &middot; ~7 min</div>
+  <div class="r-desc">Practical guide to writing user stories with the "As a [persona], I want [feature], so that [benefit]" template.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://addyosmani.com/blog/good-spec/" target="_blank">How to write a good spec for AI agents</a></div>
+  <div class="r-meta">Addy Osmani &middot; Article &middot; ~12 min</div>
+  <div class="r-desc">Structuring specifications so AI agents can execute effectively: modular prompts, three-tier boundaries ("always do" / "ask first" / "never do").</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://medium.com/@haberlah/how-to-write-prds-for-ai-coding-agents-d60d72efb797" target="_blank">How to Write PRDs for AI Coding Agents</a></div>
+  <div class="r-meta">David Haberlah &middot; Article &middot; ~10 min</div>
+  <div class="r-desc">How to structure product requirements when an AI (not just a human team) will be consuming them.</div>
+</div>
+
+<div class="prompt">
+  <strong>Perusall discussion:</strong> "Osmani describes three-tier boundaries for AI agents: 'always do,' 'ask first,' 'never do.' Draft a version of these boundaries for your team's project. What should your AI agent never do without asking?"
+</div>
+
+<hr>
+
+<h3>Week 3: Git/GitHub and Collaboration</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~80 min reading/viewing + annotation (heavier load, fully async week)</p>
+
+<div class="reading">
+  <div class="r-title"><a href="https://www.atlassian.com/git/tutorials/comparing-workflows" target="_blank">Comparing Git Workflows</a></div>
+  <div class="r-meta">Atlassian &middot; Tutorial &middot; ~25 min</div>
+  <div class="r-desc">Centralized, Feature Branch, Gitflow, and Forking workflows. When and why to use each.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://docs.github.com/en/get-started/using-github/github-flow" target="_blank">GitHub Flow</a></div>
+  <div class="r-meta">GitHub Docs &middot; Guide &middot; ~8 min</div>
+  <div class="r-desc">The simplified branching workflow most startups and open-source projects use. This is the workflow your team should adopt.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://kristine-a-du.medium.com/a-simple-workflow-for-collaborating-via-github-129c26aca4e2" target="_blank">A Simple Workflow for Collaborating via GitHub</a></div>
+  <div class="r-meta">Kristine Du &middot; Blog post &middot; ~10 min</div>
+  <div class="r-desc">Real collaboration patterns: branching, pull requests, code review, and merging.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://docs.github.com/copilot/using-github-copilot/code-review/using-copilot-code-review" target="_blank">Using GitHub Copilot Code Review</a></div>
+  <div class="r-meta">GitHub Docs &middot; Documentation &middot; ~15 min</div>
+  <div class="r-desc">How Copilot reviews pull requests, suggests improvements, and integrates into code review. You will use this for the git exercise.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://podcasts.apple.com/us/podcast/how-i-ai/id1809663079" target="_blank">How Coinbase scaled AI to 1,000+ engineers</a></div>
+  <div class="r-meta">Claire Vo, "How I AI" podcast &middot; ~30 min</div>
+  <div class="r-desc">How a real engineering org adopted AI tools at scale, reducing PR review times from 150 to 15 hours.</div>
+</div>
+
+<div class="prompt">
+  <strong>Perusall discussion:</strong> "The Coinbase episode shows AI reducing PR review times from 150 to 15 hours. What gets lost when AI handles code review? What kinds of feedback should still come from a human reviewer?"
+</div>
+
+<p><strong>Async Canvas discussion (replaces in-class):</strong> Post ~150 words on which git workflow your team will use and why. What collaboration problem do you anticipate, and how does your workflow help prevent it? Reply to 2 classmates.</p>
+
+<hr>
+
+<h3>Weeks 4&ndash;10</h3>
+<p>Reading assignments for weeks 4&ndash;10 will be posted to Perusall at least one week in advance. Topics follow the weekly schedule: Agile (Week 4), Architecture (Week 5), Testing (Week 6), DevOps (Week 7), Security (Week 8), Ethics (Week 9).</p>
+
+</section>
+
+<!-- ==================== TOOLS ==================== -->
+<section id="tools" class="tab" role="tabpanel" aria-label="Tools &amp; Setup" tabindex="0">
+
+<h2>Tools &amp; Setup</h2>
+<p>All required tools are free via student plans. Complete setup by end of Week 1.</p>
+
+<h3>Required</h3>
+
+<div class="tool">
+  <div class="tool-icon">C</div>
+  <div>
+    <h4>Cursor Pro</h4>
+    <p>AI-powered code editor. Primary tool for the course. <strong>Free for 1 year</strong> with student verification. Go to <a href="https://cursor.com/students" target="_blank">cursor.com/students</a>, sign up with your @scu.edu email. If verification takes more than 48 hours, email Kai. Select models manually for assignments requiring a specific model; use Auto mode for general work.</p>
+  </div>
+</div>
+
+<div class="tool">
+  <div class="tool-icon">G</div>
+  <div>
+    <h4>GitHub + Student Developer Pack</h4>
+    <p>Version control, project management (Kanban boards via GitHub Projects), CI/CD (GitHub Actions), and code review. <strong>Free</strong> with <a href="https://education.github.com/pack" target="_blank">GitHub Student Developer Pack</a>, which also includes GitHub Copilot.</p>
+  </div>
+</div>
+
+<div class="tool">
+  <div class="tool-icon">P</div>
+  <div>
+    <h4>Perusall</h4>
+    <p>Social annotation platform for pre-class readings. Read, annotate, and discuss with classmates directly on assigned materials. Auto-scores engagement. Link provided on Canvas.</p>
+  </div>
+</div>
+
+<div class="tool">
+  <div class="tool-icon">F</div>
+  <div>
+    <h4>Figma</h4>
+    <p>UI design and wireframing. <strong>Free for 2 years</strong> with <a href="https://www.figma.com/education/" target="_blank">Figma Education plan</a>. Used for lo-fi wireframes in Week 2.</p>
+  </div>
+</div>
+
+<h3>Recommended (free)</h3>
+
+<div class="tool">
+  <div class="tool-icon">V</div>
+  <div>
+    <h4>Vercel / Render</h4>
+    <p>Deployment platforms with generous free tiers. You will deploy your project to a live URL starting in Week 7. Vercel works well for Next.js; Render is more general-purpose.</p>
+  </div>
+</div>
+
+<div class="tool">
+  <div class="tool-icon">+</div>
+  <div>
+    <h4>Additional AI Tools</h4>
+    <p>You are welcome to use any additional AI tools: Claude, ChatGPT, Google Gemini, v0, etc. <strong>Document which tools you used</strong> in your AI learning journal. Cursor Pro is the default and must be one of the three tools in the Week 3 cross-environment comparison.</p>
+  </div>
+</div>
+
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  CSEN 174: Software Engineering &middot; Spring 2026 &middot; Santa Clara University<br>
+  Course materials by Kai Lukoff. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+</footer>
+
+<script>
+  const navLinks = document.querySelectorAll('nav a[role="tab"]');
+  const sections = document.querySelectorAll('.tab');
+
+  function switchTab(tabId) {
+    navLinks.forEach(l => {
+      const isActive = l.dataset.tab === tabId;
+      l.classList.toggle('active', isActive);
+      l.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      l.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+    sections.forEach(s => s.classList.toggle('active', s.id === tabId));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab(link.dataset.tab);
+    });
+    link.addEventListener('keydown', (e) => {
+      const tabs = Array.from(navLinks);
+      const idx = tabs.indexOf(link);
+      let target;
+      if (e.key === 'ArrowRight') target = tabs[(idx + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft') target = tabs[(idx - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') target = tabs[0];
+      else if (e.key === 'End') target = tabs[tabs.length - 1];
+      if (target) {
+        e.preventDefault();
+        target.focus();
+        switchTab(target.dataset.tab);
+      }
+    });
+  });
+
+  window.switchTab = switchTab;
+</script>
+
+</body>
+</html>
