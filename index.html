@@ -1253,6 +1253,27 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // Hash-based deep linking for assignments and tabs
+  // e.g. #assignment-week1 opens Assignments tab + loads week1
+  // e.g. #schedule opens the Schedule tab
+  function handleHash() {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    if (hash.startsWith('assignment-')) {
+      const id = hash.replace('assignment-', '');
+      switchTab('assignments');
+      loadAssignment(id);
+    } else {
+      const section = document.getElementById(hash);
+      if (section && section.classList.contains('tab')) {
+        switchTab(hash);
+      }
+    }
+  }
+
+  window.addEventListener('hashchange', handleHash);
+  handleHash();
+
   window.loadAssignment = loadAssignment;
   window.backToAssignments = backToAssignments;
 </script>
