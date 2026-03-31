@@ -402,6 +402,61 @@
     .week-card { padding: 1rem; }
     .tool { flex-direction: column; gap: 0.4rem; }
   }
+
+  /* Assignment overlay */
+  .assignment-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    padding: 2rem 1rem;
+  }
+  .assignment-overlay.active { display: flex; justify-content: center; align-items: flex-start; }
+  .assignment-panel {
+    background: #fff;
+    max-width: 48rem;
+    width: 100%;
+    border-radius: 8px;
+    padding: 2.5rem 2.5rem 2rem;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  }
+  .assignment-panel .close-btn {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; font-size: 1.5rem; cursor: pointer;
+    color: var(--stone); line-height: 1;
+  }
+  .assignment-panel .close-btn:hover { color: var(--text); }
+
+  /* Rendered markdown styles */
+  .md-content h1 { font-family: 'Crimson Pro', serif; font-size: 1.6rem; color: var(--red); margin: 0 0 0.5rem; }
+  .md-content h2 { font-family: 'Crimson Pro', serif; font-size: 1.25rem; color: var(--slate-dark); margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--fog); padding-bottom: 0.3rem; }
+  .md-content p { margin: 0.6rem 0; line-height: 1.65; }
+  .md-content ul, .md-content ol { margin: 0.5rem 0; padding-left: 1.5rem; }
+  .md-content li { margin: 0.3rem 0; line-height: 1.55; }
+  .md-content strong { color: var(--slate-dark); }
+  .md-content hr { border: none; border-top: 1px solid var(--fog); margin: 1.2rem 0; }
+  .md-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; }
+  .md-content th, .md-content td { border: 1px solid var(--fog); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+  .md-content th { background: var(--fog-light); font-weight: 600; }
+  .md-content a { color: var(--sky); }
+  .md-content code { background: var(--fog-light); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.88em; }
+
+  .assignment-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.45rem 1rem;
+    background: var(--red);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .assignment-link:hover { background: var(--bronco); }
 </style>
 </head>
 <body>
@@ -633,47 +688,18 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   </ul>
 
   <h4>Lab</h4>
-  <p>A core part of a software engineer&rsquo;s job is exploring and understanding new technologies, evaluating what they can and can&rsquo;t do, and figuring out what&rsquo;s now possible that wasn&rsquo;t before. The lab drives both parts of this week&rsquo;s assignment together: API exploration first, then product ideation that grows out of it. The order matters: your ideas should emerge from what you just saw the APIs can do.</p>
+  <p>Complete your tool setup during lab (Cursor Pro, GitHub Student Developer Pack, Perusall). A core part of a software engineer&rsquo;s job is exploring and understanding new technologies, evaluating what they can and can&rsquo;t do, and figuring out what&rsquo;s now possible that wasn&rsquo;t before. The lab drives both parts of this week&rsquo;s assignment together: API exploration first, then product ideation that grows out of it. The order matters: your ideas should emerge from what you just saw the APIs can do.</p>
   <ul>
     <li><strong>Hands-on API exploration (60&ndash;90 min):</strong> Each student explores at least two AI/ML APIs (e.g., Anthropic, OpenAI, Hugging Face, Google Gemini, Replicate, ElevenLabs). Run a simple demo yourself or study and document an existing example. Try different inputs. See what the API can and cannot do.</li>
     <li><strong>Product ideation (60&ndash;90 min):</strong> From your API exploration, develop 3 product ideas. Each should be grounded in a domain you know something about (a hobby, a job you&rsquo;ve had, a community you belong to, a problem you&rsquo;ve personally experienced) and shaped by an AI capability you explored.</li>
     <li><strong>End-of-lab demo:</strong> Each student walks through one of the AI APIs they explored, ideally with a working demo or video showing how it might be used.</li>
   </ul>
 
-  <h4>Deliverables (all individual, due before Week 2 lab)</h4>
+  <h4>Deliverable (individual, due before Week 2 lab)</h4>
   <ul>
-    <li><strong>Tool setup</strong> (completion-graded) &mdash; Cursor Pro (student verification), GitHub (Student Developer Pack), Perusall account linked</li>
-    <li><strong>AI experience survey</strong> &mdash; Background with AI tools, programming languages, what you hope to learn</li>
-    <li>
-      <strong>API Exploration + Product Ideas slide deck</strong> (6 slides, submitted as PDF to Camino):
-      <ul style="margin-top:0.3rem">
-        <li><strong>Slides 1&ndash;2: API Exploration.</strong> One slide per API. What it is, what you tried (screenshots/code/links), what surprised you, and limitations you noticed.</li>
-        <li><strong>Slides 3&ndash;5: Product Ideas.</strong> One slide per idea. The problem and who has it, the AI capability that powers it, how the core interaction works, and the &ldquo;without AI&rdquo; test (could you build this without AI? If yes, what would be meaningfully worse?).</li>
-        <li><strong>Slide 6: Concept Mockup.</strong> Use <a href="https://gemini.google.com/" target="_blank">Nano Banana</a> (Gemini&rsquo;s image generation) to mock up the core interaction of your best idea. Try at least 3 prompts, include your 2 best outputs. Keep it sketchy and low-fidelity: focus on the core interaction, not visual polish. Include the prompt you used and one sentence on what it captures.</li>
-      </ul>
-    </li>
-    <li><strong>Shared pitch deck:</strong> Copy your best product idea slide + concept mockup slide (2 slides) into the shared Google Slides deck for your lab section [link TBD]. These are the slides you will present during your ~1 min pitch in Week 2 lab.</li>
+    <li><strong>API Exploration + Product Ideas slide deck</strong> (6 slides, 10 points) &mdash; Explore 2+ AI APIs, propose 3 product ideas, and mock up your best concept with Nano Banana. Submit to Camino as PDF.</li>
   </ul>
-
-  <h4>Grading (10 points)</h4>
-  <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:0.5rem">
-    <tr style="border-bottom:1px solid var(--border)">
-      <td style="padding:0.4rem 0.6rem;vertical-align:top"><strong>API Exploration (3 pts)</strong></td>
-      <td style="padding:0.4rem 0.6rem">Two or more APIs explored with genuine hands-on engagement. Each includes what you tried, what surprised you, and limitations. Screenshots or code included. <em>3 = thorough and reflective, 2 = surface-level or missing detail, 1 = only one API or no evidence of hands-on work, 0 = missing.</em></td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border)">
-      <td style="padding:0.4rem 0.6rem;vertical-align:top"><strong>Product Ideas (4 pts)</strong></td>
-      <td style="padding:0.4rem 0.6rem">Three ideas, each grounded in a real domain and shaped by an explored API capability. All four prompts addressed (problem, AI capability, how it works, &ldquo;without AI&rdquo; test). <em>4 = compelling ideas with clear AI rationale, 3 = solid but generic or weak on the &ldquo;without AI&rdquo; test, 2 = fewer than 3 ideas or not connected to API exploration, 0&ndash;1 = missing or minimal effort.</em></td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border)">
-      <td style="padding:0.4rem 0.6rem;vertical-align:top"><strong>Concept Mockup (2 pts)</strong></td>
-      <td style="padding:0.4rem 0.6rem">Nano Banana mockup of the best idea showing the core interaction. Evidence of prompt iteration (2+ outputs shown with prompts). <em>2 = mockup clearly communicates the product concept, 1 = mockup present but doesn&rsquo;t convey the interaction, 0 = missing.</em></td>
-    </tr>
-    <tr>
-      <td style="padding:0.4rem 0.6rem;vertical-align:top"><strong>Presentation-ready (1 pt)</strong></td>
-      <td style="padding:0.4rem 0.6rem">Slides are visual, concise, and ready to pitch. Best idea + mockup added to the shared lab deck on time. <em>1 = yes, 0 = no.</em></td>
-    </tr>
-  </table>
+  <a class="assignment-link" onclick="openAssignment('assignments/week1.md')">View full assignment &amp; rubric &rarr;</a>
 </div>
 
 <!-- WEEK 2 -->
@@ -1197,6 +1223,49 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   });
 
   window.switchTab = switchTab;
+</script>
+
+<!-- Assignment overlay -->
+<div class="assignment-overlay" id="assignment-overlay">
+  <div class="assignment-panel">
+    <button class="close-btn" onclick="closeAssignment()" aria-label="Close">&times;</button>
+    <div class="md-content" id="assignment-content"></div>
+  </div>
+</div>
+
+<!-- Markdown renderer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
+<script>
+  async function openAssignment(mdPath) {
+    const overlay = document.getElementById('assignment-overlay');
+    const content = document.getElementById('assignment-content');
+    content.innerHTML = '<p style="color:var(--stone)">Loading assignment&hellip;</p>';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    try {
+      const resp = await fetch(mdPath);
+      if (!resp.ok) throw new Error('Could not load assignment');
+      const md = await resp.text();
+      content.innerHTML = marked.parse(md);
+    } catch (e) {
+      content.innerHTML = '<p style="color:var(--red)">Could not load assignment. <a href="' + mdPath + '">View the raw file instead.</a></p>';
+    }
+  }
+
+  function closeAssignment() {
+    document.getElementById('assignment-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('assignment-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeAssignment();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAssignment();
+  });
+
+  window.openAssignment = openAssignment;
 </script>
 
 </body>
