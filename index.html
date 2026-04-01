@@ -448,13 +448,13 @@
 
 <!-- NAV -->
 <nav id="tabs" role="tablist" aria-label="Course sections">
-  <a class="active" data-tab="syllabus" role="tab" aria-selected="true" aria-controls="syllabus" tabindex="0">Syllabus</a>
-  <a data-tab="schedule" role="tab" aria-selected="false" aria-controls="schedule" tabindex="-1">Schedule</a>
-  <a data-tab="project" role="tab" aria-selected="false" aria-controls="project" tabindex="-1">Project</a>
-  <a data-tab="readings" role="tab" aria-selected="false" aria-controls="readings" tabindex="-1">Readings</a>
-  <a data-tab="assignments" role="tab" aria-selected="false" aria-controls="assignments" tabindex="-1">Assignments</a>
-  <a data-tab="ai-policy" role="tab" aria-selected="false" aria-controls="ai-policy" tabindex="-1">AI Policy</a>
-  <a data-tab="tools" role="tab" aria-selected="false" aria-controls="tools" tabindex="-1">Tools &amp; Setup</a>
+  <a href="#syllabus" class="active" data-tab="syllabus" role="tab" aria-selected="true" aria-controls="syllabus" tabindex="0">Syllabus</a>
+  <a href="#schedule" data-tab="schedule" role="tab" aria-selected="false" aria-controls="schedule" tabindex="-1">Schedule</a>
+  <a href="#project" data-tab="project" role="tab" aria-selected="false" aria-controls="project" tabindex="-1">Project</a>
+  <a href="#readings" data-tab="readings" role="tab" aria-selected="false" aria-controls="readings" tabindex="-1">Readings</a>
+  <a href="#assignments" data-tab="assignments" role="tab" aria-selected="false" aria-controls="assignments" tabindex="-1">Assignments</a>
+  <a href="#ai-policy" data-tab="ai-policy" role="tab" aria-selected="false" aria-controls="ai-policy" tabindex="-1">AI Policy</a>
+  <a href="#tools" data-tab="tools" role="tab" aria-selected="false" aria-controls="tools" tabindex="-1">Tools &amp; Setup</a>
 </nav>
 
 <main id="main-content">
@@ -521,7 +521,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <h2>Policies</h2>
 
 <h3>AI Tool Use</h3>
-<p>AI tools are encouraged and expected in this course. See the full <a href="#" onclick="switchTab('ai-policy'); return false;">AI Policy</a> tab for details.</p>
+<p>AI tools are encouraged and expected in this course. See the full <a href="#ai-policy">AI Policy</a> tab for details.</p>
 
 <h3>Attendance and Participation</h3>
 
@@ -543,7 +543,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <p>Assignments that are late without prior notice will not be accepted. If you need to submit your assignment late due to special circumstances, please email the instructor at least 24 hours before the deadline to discuss the possibility of an extension. This is a fast-paced course and it is imperative that you stay on track in order to participate in class and lab activities that depend upon your having completed your assignment on time.</p>
 
 <h3>Academic Integrity</h3>
-<p>Using AI to help you build is expected. Submitting work you do not understand, or misrepresenting another student&rsquo;s work as your own, is not. See the <a href="#" onclick="switchTab('ai-policy'); return false;">AI Policy</a> tab for the full details on ownership, understanding, and what happens if something goes wrong.</p>
+<p>Using AI to help you build is expected. Submitting work you do not understand, or misrepresenting another student&rsquo;s work as your own, is not. See the <a href="#ai-policy">AI Policy</a> tab for the full details on ownership, understanding, and what happens if something goes wrong.</p>
 
 <hr>
 
@@ -673,7 +673,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <ul>
     <li><strong>API Exploration + Product Ideas slide deck</strong> (6 slides, 10 points) &mdash; Explore 2+ AI APIs, propose 3 product ideas, and mock up your best concept with Nano Banana. Submit to Camino as PDF.</li>
   </ul>
-  <a class="assignment-link" onclick="switchTab('assignments'); loadAssignment('week1')">View full assignment &amp; rubric &rarr;</a>
+  <a class="assignment-link" href="#assignment-week1">View full assignment &amp; rubric &rarr;</a>
 </div>
 
 <!-- WEEK 2 -->
@@ -1198,7 +1198,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   const navLinks = document.querySelectorAll('nav a[role="tab"]');
   const sections = document.querySelectorAll('.tab');
 
-  function switchTab(tabId) {
+  function switchTab(tabId, updateHash) {
     navLinks.forEach(l => {
       const isActive = l.dataset.tab === tabId;
       l.classList.toggle('active', isActive);
@@ -1206,6 +1206,9 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
       l.setAttribute('tabindex', isActive ? '0' : '-1');
     });
     sections.forEach(s => s.classList.toggle('active', s.id === tabId));
+    if (updateHash !== false) {
+      history.replaceState(null, '', '#' + tabId);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -1243,6 +1246,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     content.innerHTML = '<p style="color:var(--stone)">Loading assignment&hellip;</p>';
     list.style.display = 'none';
     detail.style.display = 'block';
+    history.replaceState(null, '', '#assignment-' + id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     try {
       const resp = await fetch('assignments/' + id + '.md');
@@ -1257,6 +1261,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   function backToAssignments() {
     document.getElementById('assignment-list').style.display = '';
     document.getElementById('assignment-detail').style.display = 'none';
+    history.replaceState(null, '', '#assignments');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -1268,12 +1273,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     if (!hash) return;
     if (hash.startsWith('assignment-')) {
       const id = hash.replace('assignment-', '');
-      switchTab('assignments');
+      switchTab('assignments', false);
       loadAssignment(id);
     } else {
       const section = document.getElementById(hash);
       if (section && section.classList.contains('tab')) {
-        switchTab(hash);
+        switchTab(hash, false);
       }
     }
   }
