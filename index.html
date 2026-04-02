@@ -430,6 +430,20 @@
     cursor: pointer;
   }
   .assignment-link:hover { background: var(--bronco); }
+
+  .slides-link {
+    display: inline-block;
+    margin-left: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    background: var(--fog-light);
+    color: var(--red);
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .slides-link:hover { background: var(--red); color: #fff; }
 </style>
 </head>
 <body>
@@ -657,8 +671,8 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
   <h4>In-class Sessions</h4>
   <ul>
-    <li><strong>W1D1 (Tue Mar 31):</strong> Student introductions. Course overview and syllabus walkthrough. Introduce the Week 1 assignment: exploring AI/ML APIs and the projects built with them (Anthropic, OpenAI, Hugging Face, Gemini, etc.).</li>
-    <li><strong>W1D2 (Thu Apr 2):</strong> Perusall introduction and demo. Product ideation workshop: what makes a strong AI product idea, Moore&rsquo;s product vision template (from Sommerville Ch.&nbsp;1), the &ldquo;without AI&rdquo; test. In-class brainstorming exercise.</li>
+    <li><strong>W1D1 (Tue Mar 31):</strong> <a class="slides-link" href="SLIDES_URL_W1D1" target="_blank">Slides</a> Student introductions. Course overview and syllabus walkthrough. Introduce the Week 1 assignment: exploring AI/ML APIs and the projects built with them (Anthropic, OpenAI, Hugging Face, Gemini, etc.).</li>
+    <li><strong>W1D2 (Thu Apr 2):</strong> <a class="slides-link" href="SLIDES_URL_W1D2" target="_blank">Slides</a> Perusall introduction and demo. AI API credit policy. The jagged frontier (from Mollick). AI learning journal introduction. API show-and-tell in small groups, then open work time on the Week&nbsp;1 assignment and Perusall readings.</li>
   </ul>
 
   <h4>Lab</h4>
@@ -678,12 +692,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <!-- WEEK 2 -->
 <div class="week week-explore">
-  <div class="week-title">Week 2: Agent Skills, Pitch Session, and Team Formation</div>
+  <div class="week-title">Week 2: Product Vision, Agent Skills, and Team Formation</div>
   <div class="week-meta">Lab &middot; <span class="label label-explore" style="font-size:0.65rem">Explore</span></div>
 
   <h4>In-class Sessions</h4>
   <ul>
-    <li><strong>W2D1 (Tue Apr 7):</strong> Mini-lecture on personas and user stories. Live demo: building the same small feature with and without an AI agent skill loaded, so you can see the before/after difference in output quality.</li>
+    <li><strong>W2D1 (Tue Apr 7):</strong> Team formation demo with Claude Cowork. API credit policy ($25/student reimbursement for final project). Live demo: building the same small feature with and without an AI agent skill loaded, so you can see the before/after difference in output quality.</li>
     <li><strong>W2D2 (Thu Apr 9):</strong> Scope and feasibility discussion. How to evaluate whether a project idea is the right size for a 10-week course. <strong>Hard deadline: all teams must be finalized by end of this session.</strong></li>
   </ul>
 
@@ -692,13 +706,13 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     <li><strong>Pitch session (~20 min):</strong> Each student pitches their best product idea (~1 min each) using the shared class slide deck.</li>
     <li><strong>Team formation:</strong> Teams of 3&ndash;4 self-form around the ideas that excite people. You do not need to use your own idea. Joining someone else&rsquo;s is great. All teams log their formation on the <a href="https://docs.google.com/spreadsheets/d/10T--7SYk6CEZbr2-oZxBn4FFLBE6BYzNkZMfHZjRkqA/edit?usp=sharing" target="_blank">team roster spreadsheet</a> before leaving lab.</li>
     <li><strong>Guided activity:</strong> Codebase exploration exercise (Excalidraw repo in Cursor). How to ask the right questions of an AI tool when navigating unfamiliar code.</li>
-    <li><strong>Team work:</strong> Teams begin working on skills setup, personas, and user stories for their chosen product concept.</li>
+    <li><strong>Team work:</strong> Teams begin working on skills setup and product vision for their chosen product concept.</li>
   </ul>
 
   <h4>Deliverables</h4>
   <ul>
     <li><strong>Individual: Repo exploration assignment</strong> (completion-graded) &mdash; Use Cursor to explore an open-source repo. Answer orientation, architecture, and reflection questions. Find one thing the AI got wrong.</li>
-    <li><strong>Group: Skills setup + personas + user stories</strong> &mdash; Three foundational skills installed in the team repo (Brainstorming, Frontend Design, Opportunity Solution Tree). Two personas and 5&ndash;8 prioritized user stories for the team&rsquo;s chosen product concept.</li>
+    <li><strong>Group: Skills setup + product vision</strong> &mdash; Three foundational skills installed in the team repo (Brainstorming, Frontend Design, Opportunity Solution Tree). Product vision using Moore&rsquo;s template (from Sommerville Ch.&nbsp;1): target customer, need, product category, key benefit, competitive differentiation.</li>
     <li><strong>AI learning journal:</strong> Week 2 entry (3 interesting prompts with a sentence on why each, plus one opportunity and one challenge)</li>
   </ul>
 </div>
@@ -949,11 +963,6 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <h2>Reading Assignments</h2>
 <p>Each week has 3&ndash;5 required readings or videos assigned on <strong>Perusall</strong> for social annotation before class. Target pre-class time: <strong>1&ndash;1.5 hours</strong> (reading + annotation). You must make <strong>3+ substantive annotations</strong> per assignment. "I agree" does not count.</p>
 
-<p style="color:var(--stone);font-style:italic">Weekly reading lists will be posted here shortly. Check Perusall for current assignments.</p>
-
-<!-- To restore readings: remove the style="display:none" from the div below -->
-<div style="display:none">
-
 <hr>
 
 <h3>Week 1: AI APIs, Product Vision, and Intro to AI-Assisted SE</h3>
@@ -992,6 +1001,9 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <div class="prompt">
   <strong>Perusall discussion:</strong> "Mollick describes 'centaurs' and 'cyborgs' as two ways to work with AI. Which approach do you think you'll take in this course? What does Booch's historical perspective suggest about which skills will last?"
 </div>
+
+<!-- Weeks 2+ hidden until finalized -->
+<div style="display:none">
 
 <hr>
 
