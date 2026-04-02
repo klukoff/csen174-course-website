@@ -56,8 +56,6 @@ Then copy your **best product idea slide and your concept mockup slide (2 slides
 
 **Submit your full deck (all 6 slides) to Camino as a PDF.**
 
-**Due before the first lab session of Week 2.**
-
 ## Grading (10 points)
 
 | Category | Points | Criteria |
