@@ -671,8 +671,8 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
   <h4>In-class Sessions</h4>
   <ul>
-    <li><strong>W1D1 (Tue Mar 31):</strong> <a class="slides-link" href="SLIDES_URL_W1D1" target="_blank">Slides</a> Student introductions. Course overview and syllabus walkthrough. Introduce the Week 1 assignment: exploring AI/ML APIs and the projects built with them (Anthropic, OpenAI, Hugging Face, Gemini, etc.).</li>
-    <li><strong>W1D2 (Thu Apr 2):</strong> <a class="slides-link" href="SLIDES_URL_W1D2" target="_blank">Slides</a> Perusall introduction and demo. AI API credit policy. The jagged frontier (from Mollick). AI learning journal introduction. API show-and-tell in small groups, then open work time on the Week&nbsp;1 assignment and Perusall readings.</li>
+    <li><strong>W1D1 (Tue Mar 31):</strong> <a class="slides-link" href="https://docs.google.com/presentation/d/1FyleFD0q4d9MrEnNjm9eln6DWD39YwCW/edit?usp=sharing&amp;ouid=100784209259722486169&amp;rtpof=true&amp;sd=true" target="_blank">Slides</a> Student introductions. Course overview and syllabus walkthrough. Introduce the Week 1 assignment: exploring AI/ML APIs and the projects built with them (Anthropic, OpenAI, Hugging Face, Gemini, etc.).</li>
+    <li><strong>W1D2 (Thu Apr 2):</strong> <a class="slides-link" href="https://docs.google.com/presentation/d/11a_1J8k0g4GmzorRu_hA9FsELgS-JcQk/edit?usp=sharing&amp;ouid=100784209259722486169&amp;rtpof=true&amp;sd=true" target="_blank">Slides</a> Perusall introduction and demo. AI API credit policy. The jagged frontier (from Mollick). AI learning journal introduction. API show-and-tell in small groups, then open work time on the Week&nbsp;1 assignment and Perusall readings.</li>
   </ul>
 
   <h4>Lab</h4>
@@ -965,19 +965,25 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <hr>
 
-<h3>Week 1: AI APIs, Product Vision, and Intro to AI-Assisted SE</h3>
-<p style="font-size:0.85rem;color:var(--text-light)">~70 min reading + annotation time</p>
+<h3>Week 1: Intro to AI-Assisted Software Engineering</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~55 min reading + annotation time &middot; Due Apr 5, 10pm on Perusall</p>
 
 <div class="reading">
-  <div class="r-title"><a href="https://www.romanpichler.com/blog/ultimate-product-vision-faqs/" target="_blank">Product Vision FAQs</a></div>
-  <div class="r-meta">Roman Pichler &middot; Article &middot; ~10 min</div>
-  <div class="r-desc">Practical Q&amp;A on what a product vision is, why it matters, and common mistakes like confusing vision with strategy.</div>
+  <div class="r-title">Course Syllabus</div>
+  <div class="r-meta">CSEN 174 &middot; ~10 min</div>
+  <div class="r-desc">Read the full syllabus, including course policies, grading breakdown, and the quarter-long project arc.</div>
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://www.atlassian.com/agile/product-management/requirements" target="_blank">What is a Product Requirements Document (PRD)?</a></div>
-  <div class="r-meta">Atlassian &middot; Article &middot; ~7 min</div>
-  <div class="r-desc">Clear explanation of PRDs with examples. Bridges the gap between abstract requirements and practical documentation.</div>
+  <div class="r-title"><em>Engineering Software Products</em>, Ch.&nbsp;1: Software Products (pp.&nbsp;11&ndash;27)</div>
+  <div class="r-meta">Ian Sommerville &middot; Textbook &middot; ~15 min</div>
+  <div class="r-desc">Key points on what makes software products different from custom software, and why product-oriented thinking matters for modern SE. Sommerville&rsquo;s product vision template will be used throughout the course.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://karpathy.bearblog.dev/vibe-coding-menugen/" target="_blank">Vibe coding MenuGen</a></div>
+  <div class="r-meta">Andrej Karpathy &middot; Blog post &middot; ~10 min</div>
+  <div class="r-desc">Karpathy builds a restaurant menu app entirely through AI. The local prototype comes together fast, but deployment is painful: juggling API keys, auth, payments, and configuration across services. A vivid preview of the exhilaration and friction students will encounter this quarter.</div>
 </div>
 
 <div class="reading">
@@ -987,19 +993,13 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://newsletter.pragmaticengineer.com/p/the-third-golden-age-of-software" target="_blank">The third golden age of software engineering</a></div>
-  <div class="r-meta">Grady Booch on The Pragmatic Engineer &middot; Podcast &middot; ~20 min (assigned segments)</div>
-  <div class="r-desc">Booch argues that software engineering is not equivalent to coding, and that AI tools are part of a long historical arc of abstraction. Core message: "Your tools are changing, but your problems are not."</div>
-</div>
-
-<div class="reading">
-  <div class="r-title"><a href="https://missing.csail.mit.edu/2026/agentic-coding/" target="_blank">Agentic Coding</a></div>
-  <div class="r-meta">MIT CSAIL Missing Semester (Jan 2026) &middot; Lecture + video &middot; ~20 min (assigned segments)</div>
-  <div class="r-desc">MIT's official lecture on agentic coding: core concepts, practical use cases, "vibe coding," and responsible use of AI tools.</div>
+  <div class="r-title"><a href="https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the" target="_blank">A Guide to Which AI to Use in the Agentic Era</a></div>
+  <div class="r-meta">Ethan Mollick &middot; Blog post &middot; ~15 min</div>
+  <div class="r-desc">Distinguishes between models, apps, and harnesses as three layers of AI tooling. The harness concept (systems that let AI use tools and complete multi-step tasks) is central to how students will work with Cursor and other agentic tools this quarter.</div>
 </div>
 
 <div class="prompt">
-  <strong>Perusall discussion:</strong> "Mollick describes 'centaurs' and 'cyborgs' as two ways to work with AI. Which approach do you think you'll take in this course? What does Booch's historical perspective suggest about which skills will last?"
+  <strong>Perusall discussion:</strong> "Mollick describes 'centaurs' and 'cyborgs' as two ways to work with AI, and Karpathy shows what it's like to build a full app through vibe coding. Which integration pattern do you think you'll take in this course, and what do you expect will be hardest?"
 </div>
 
 <!-- Weeks 2+ hidden until finalized -->
