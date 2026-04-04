@@ -50,11 +50,7 @@ Include for each mockup:
 
 ## Submission
 
-Create a slide deck (Google Slides) with all six slides.
-
-Then copy your **best product idea slide and your concept mockup slide (2 slides)** into the shared pitch deck for your lab section: [link TBD]. These are the slides you will present during the Week 2 lab pitch session. Each student will have roughly 1 minute to walk through their best idea, so keep the slides visual and don't overload them with text.
-
-**Submit your full deck (all 6 slides) to Camino as a PDF.**
+Create a slide deck (Google Slides) with all six slides. Submit as a PDF to Camino. See the Camino assignment page for submission details, the shared pitch deck link, and due date.
 
 ## Grading (10 points)
 
