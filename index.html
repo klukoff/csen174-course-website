@@ -698,7 +698,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
   <h4>In-class Sessions</h4>
   <ul>
-    <li><strong>W2D1 (Tue Apr 7):</strong> Team formation demo with Claude Cowork. API credit policy ($25/student reimbursement for final project). Live demo: building the same small feature with and without an AI agent skill loaded, so you can see the before/after difference in output quality.</li>
+    <li><strong>W2D1 (Tue Apr 7):</strong> <a class="slides-link" href="https://docs.google.com/presentation/d/1VCpiKoJYrdO9JlTZNAQRSUj5sNp2B1qo/edit?usp=sharing&amp;ouid=100784209259722486169&amp;rtpof=true&amp;sd=true" target="_blank">Slides</a> Course arc and readings discussion (Booch, Mollick). Centaur vs. cyborg patterns for working with AI. Live demo: building with an AI agent harness. Think-pair-share on what could be improved and where else you&rsquo;d use a harness. Team formation overview and Week 2 assignment walkthrough.</li>
     <li><strong>W2D2 (Thu Apr 9):</strong> Scope and feasibility discussion. How to evaluate whether a project idea is the right size for a 10-week course. <strong>Hard deadline: all teams must be finalized by end of this session.</strong></li>
   </ul>
 
@@ -713,7 +713,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <h4>Deliverables</h4>
   <ul>
     <li><strong>Individual: Repo exploration assignment</strong> (completion-graded) &mdash; Use Cursor to explore an open-source repo. Answer orientation, architecture, and reflection questions. Find one thing the AI got wrong.</li>
-    <li><strong>Group: Skills setup + product vision</strong> &mdash; Three foundational skills installed in the team repo (Brainstorming, Frontend Design, Opportunity Solution Tree). Product vision using Moore&rsquo;s template (from Sommerville Ch.&nbsp;1): target customer, need, product category, key benefit, competitive differentiation.</li>
+    <li><strong>Group: Skills setup + product vision</strong> &mdash; Three foundational skills installed in the team repo (Problem Framing Canvas, Storyboard, Frontend Design). Product vision using the modified Moore&rsquo;s template (FOR / WHO / THE / THAT / UNLIKE / OUR PRODUCT / POWERED BY) plus a half-page vision narrative. Use the Problem Framing Canvas skill to stress-test your product concept.</li>
     <li><strong>AI learning journal:</strong> Week 2 entry (3 interesting prompts with a sentence on why each, plus one opportunity and one challenge)</li>
   </ul>
 </div>
@@ -1011,30 +1011,15 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <strong>Perusall discussion:</strong> "Mollick describes 'centaurs' and 'cyborgs' as two ways to work with AI, and Karpathy shows what it's like to build a full app through vibe coding. Which integration pattern do you think you'll take in this course, and what do you expect will be hardest?"
 </div>
 
-<!-- Weeks 2+ hidden until finalized -->
-<div style="display:none">
-
 <hr>
 
-<h3>Week 2: Personas, User Stories, and AI Agent Skills</h3>
-<p style="font-size:0.85rem;color:var(--text-light)">~90 min reading + annotation time</p>
+<h3>Week 2: Storyboards, Agent Skills, and the Arc of Software Engineering</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~100 min reading/listening + annotation time</p>
 
 <div class="reading">
-  <div class="r-title"><a href="https://www.nngroup.com/articles/persona/" target="_blank">Personas Make Users Memorable for Product Team Members</a></div>
-  <div class="r-meta">Nielsen Norman Group &middot; Article &middot; ~8 min</div>
-  <div class="r-desc">Why personas matter beyond demographic lists. Emphasizes research-based design over assumptions.</div>
-</div>
-
-<div class="reading">
-  <div class="r-title"><a href="https://www.romanpichler.com/blog/personas-epics-user-stories/" target="_blank">From Personas to User Stories</a></div>
-  <div class="r-meta">Roman Pichler &middot; Blog post &middot; ~10 min</div>
-  <div class="r-desc">Connects personas to user stories with concrete examples. The bridge from "who is our user" to "what do we build."</div>
-</div>
-
-<div class="reading">
-  <div class="r-title"><a href="https://www.atlassian.com/agile/project-management/user-stories" target="_blank">User Stories with Examples and a Template</a></div>
-  <div class="r-meta">Atlassian &middot; Article &middot; ~7 min</div>
-  <div class="r-desc">Practical guide to writing user stories with the "As a [persona], I want [feature], so that [benefit]" template.</div>
+  <div class="r-title"><a href="https://newsletter.pragmaticengineer.com/p/the-third-golden-age-of-software" target="_blank">The third golden age of software engineering</a></div>
+  <div class="r-meta">Grady Booch on The Pragmatic Engineer &middot; Podcast &middot; ~77 min</div>
+  <div class="r-desc">Booch argues that software engineering is not equivalent to coding and that AI tools are part of a long arc of abstraction stretching back decades. Core message: "Your tools are changing, but your problems are not." Listen to the full episode.</div>
 </div>
 
 <div class="reading">
@@ -1044,26 +1029,23 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://serenitiesai.com/articles/agent-skills-guide-2026" target="_blank">AI Agent Skills Guide 2026</a></div>
-  <div class="r-meta">Serenities AI &middot; Article &middot; ~15 min</div>
-  <div class="r-desc">Broader overview of the agent skills ecosystem. How skills are structured, the open standard, and why packaging domain knowledge into portable skill files is becoming a core practice in AI-assisted development.</div>
+  <div class="r-title"><a href="https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/problem-framing-canvas/SKILL.md" target="_blank">Problem Framing Canvas SKILL.md</a></div>
+  <div class="r-meta">deanpeters/Product-Manager-Skills &middot; Skill file &middot; ~13 min</div>
+  <div class="r-desc">Read the actual skill file you'll use in this week's assignment. It walks through MITRE's Problem Framing Canvas: examining your assumptions (Look Inward), understanding who's affected and excluded (Look Outward), and reframing the problem as a "How Might We" question (Reframe). You'll learn the framework and see how a well-written skill is structured, both at once.</div>
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://addyosmani.com/blog/good-spec/" target="_blank">How to write a good spec for AI agents</a></div>
-  <div class="r-meta">Addy Osmani &middot; Article &middot; ~12 min</div>
-  <div class="r-desc">Structuring specifications so AI agents can execute effectively: modular prompts, three-tier boundaries ("always do" / "ask first" / "never do").</div>
-</div>
-
-<div class="reading">
-  <div class="r-title"><a href="https://medium.com/@haberlah/how-to-write-prds-for-ai-coding-agents-d60d72efb797" target="_blank">How to Write PRDs for AI Coding Agents</a></div>
-  <div class="r-meta">David Haberlah &middot; Article &middot; ~10 min</div>
-  <div class="r-desc">How to structure product requirements when an AI (not just a human team) will be consuming them.</div>
+  <div class="r-title"><a href="https://www.nngroup.com/articles/storyboards-visualize-ideas/" target="_blank">Storyboards Help Visualize UX Ideas</a></div>
+  <div class="r-meta">Nielsen Norman Group &middot; Article &middot; ~8 min</div>
+  <div class="r-desc">How storyboards communicate a user's experience through a sequence of panels: a specific scenario, simple visuals, and captions. Emphasizes that storyboards don't need to be high-fidelity. Preps you for the storyboard component of the Week 3 assignment.</div>
 </div>
 
 <div class="prompt">
-  <strong>Perusall discussion:</strong> "After reading about AI agent skills, think about your product idea from Week 1. What domain knowledge would an AI agent need to build your product well? Describe one skill you would want to create, including what it should know and what it should never assume."
+  <strong>Perusall discussion:</strong> "Booch argues software engineering has always been about managing complexity, not writing code. How does that framing change how you think about the AI agent skills you're setting up this week? What kind of complexity are skills helping you manage?"
 </div>
+
+<!-- Weeks 3+ hidden until finalized -->
+<div style="display:none">
 
 <hr>
 
