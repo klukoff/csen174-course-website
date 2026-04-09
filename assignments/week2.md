@@ -106,13 +106,18 @@ Before locking in your product concept, use the Problem Framing Canvas skill to 
 
 ### How to use it
 
-1. Open Cursor in your team repo (with skills installed from Part 2).
-2. Invoke the Problem Framing Canvas skill by typing `/problem-framing-canvas` in the agent chat.
-3. Start by giving the agent your product vision statement and a description of the problem you're trying to solve. The skill will then walk you through 8 questions across three phases:
-   - **Look Inward (Q1-Q3):** What assumptions are you bringing? What biases might be shaping how you see the problem? What do you think you know, and what are you guessing?
+1. **Start with your vision doc.** Have your completed product vision statement (from Part 1) in a file like `product-vision.md` in your repo, or paste it into the chat. The skill needs this context to be useful.
+2. **Invoke the skill.** Open Cursor in your team repo and type `/problem-framing-canvas` in the agent chat. Reference your vision file (e.g., `@product-vision.md`) so the assistant has your baseline.
+3. **Insist on turn-taking.** Tell the assistant explicitly: *ask only one canvas question per message, then wait for our answer before continuing.* Do not let it race through all eight questions at once. For each question, the assistant should briefly restate what your vision doc already implies for that step, then probe one gap (something vague, unmeasured, or untested).
+4. **Work through all three phases as a team.** This is a conversation, not a form to fill out.
+   - **Look Inward (Q1-Q3):** What assumptions are you bringing? What biases might be shaping how you see the problem? What do you think you know vs. what are you guessing?
    - **Look Outward (Q4-Q6):** Who actually experiences this problem? Who else is affected that you haven't considered? Who might be excluded from or harmed by your solution?
-   - **Reframe (Q7-Q8):** Restate the problem based on what you've surfaced. Generate a "How Might We" question that sets boundaries for solution exploration without constraining ideas.
-4. Work through the full canvas as a team. This is a conversation, not a form to fill out. Push back on the agent if its suggestions don't match your domain knowledge. Add perspectives it misses. The Look Outward phase is especially important: take it seriously and think about who you might be designing for (or against) without realizing it.
+   - **Reframe (Q7-Q8):** Restate the problem based on what you've surfaced. Generate a "How Might We" question that opens up exploration without constraining it to one solution.
+5. **Be honest about uncertainty.** If an answer is a guess, label it "hypothesis" so your team knows to validate it later with users, readings, or data.
+6. **Generate a single final canvas.** After finishing all phases, ask the assistant to produce one consolidated Problem Framing Canvas (all three phases plus your "How Might We" statement) suitable for your submission. The conversation is for thinking; the final output is for documentation.
+7. **Feed insights back into your vision.** If the canvas surfaced assumptions, blind spots, or a sharper framing of the problem, revise your product vision statement accordingly. The canvas should improve your vision, not just sit alongside it.
+
+Push back on the agent if its suggestions don't match your domain knowledge. Add perspectives it misses. The Look Outward phase is especially important: take it seriously and think about who you might be designing for (or against) without realizing it.
 
 ### What to submit
 
