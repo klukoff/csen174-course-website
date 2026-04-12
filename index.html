@@ -743,25 +743,27 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <!-- WEEK 4 DETAILED -->
 <div class="week week-explore">
-  <div class="week-title">Week 4: Gallery Walk, Retrospective, and Transition to Final Project</div>
+  <div class="week-title">Week 4: Gallery Walk, Initial Architecture, and Kanban Setup</div>
   <div class="week-meta">Lab &middot; <span class="label label-explore" style="font-size:0.65rem">Explore</span> &rarr; <span class="label label-commit" style="font-size:0.65rem">Commit</span></div>
 
   <h4>In-class Sessions</h4>
   <ul>
     <li><strong>W4D1 (Tue Apr 21): Gallery walk.</strong> Teams bring laptops with prototypes running locally. Students rotate through stations, trying each prototype and leaving sticky-note feedback (&ldquo;I liked&hellip;&rdquo;, &ldquo;I wondered&hellip;&rdquo;, &ldquo;I&rsquo;d try&hellip;&rdquo;). Teams reset the app between rotations.</li>
-    <li><strong>W4D2 (Thu Apr 23):</strong> Intro to Agile and Kanban. Teams commit to one direction based on gallery walk feedback and begin planning the final project.</li>
+    <li><strong>W4D2 (Thu Apr 23):</strong> Intro to Agile, Kanban, and software architecture (C4 model). Teams synthesize gallery walk feedback, choose a direction, and begin planning the final project.</li>
   </ul>
 
   <h4>Lab</h4>
   <ul>
-    <li><strong>Prototype evaluation:</strong> Teams formally evaluate their prototypes against scope guidance and technical feasibility. Look for patterns in the sticky-note feedback.</li>
-    <li><strong>Kanban setup + sprint planning:</strong> Set up GitHub Projects Kanban board. Populate initial backlog based on chosen direction. From here on, the constraints shift: architecture, testing, and maintainability matter.</li>
+    <li><strong>Gallery walk synthesis:</strong> Teams review sticky-note feedback, identify patterns, and decide which prototype direction (or combination) to pursue.</li>
+    <li><strong>Initial architecture:</strong> Create C4 context and container diagrams for the consolidated product. Write a consolidation plan describing how the team will merge the best elements from the divergent prototypes.</li>
+    <li><strong>Kanban setup:</strong> Set up a GitHub Projects board with backlog, to-do, in-progress, and done columns. Populate initial backlog based on the architecture and consolidation plan. Sprint 1 begins next week.</li>
   </ul>
 
   <h4>Deliverable</h4>
   <ul>
-    <li><strong>Retrospective + transition plan</strong> (team) &mdash; What each prototype explored, what worked, what the gallery walk feedback revealed, which direction the team will pursue, and a Kanban board set up for the final project phase.</li>
+    <li><strong>Gallery walk synthesis, initial architecture, and Kanban board</strong> (team) &mdash; Sticky-note feedback synthesis and consolidation decision, C4 context and container diagrams with a consolidation plan committed to the repo, and a Kanban board populated with initial backlog items.</li>
   </ul>
+  <a class="assignment-link" href="#assignment-week4">View full assignment &amp; rubric &rarr;</a>
 </div>
 
 <!-- WEEKS 5-10 OUTLINE -->
@@ -770,39 +772,39 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
 
 <div class="week week-build">
-  <div class="week-title">Week 5: Software Architecture + ADRs</div>
+  <div class="week-title">Week 5: Testing Strategy (Sprint 1)</div>
   <div class="week-meta">Tue Apr 28 &amp; Thu Apr 30 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> Component diagram, 2&ndash;3 Architecture Decision Records, API cost estimate, "unplugged vs. AI" architecture comparison.</p>
+  <p><strong>Deliverable:</strong> Working test suite (unit tests on core logic + integration test), testing strategy write-up, self-selected testing/code quality skill. Jolli.ai demo and setup.</p>
 </div>
 
 <div class="week week-build">
-  <div class="week-title">Week 6: Testing + TDD</div>
+  <div class="week-title">Week 6: CI/CD Pipeline + Sprint 1 Retrospective</div>
   <div class="week-meta">Tue May 5 &amp; Thu May 7 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> Test suite + coverage report. Unit tests on core logic (especially AI prompt construction and response parsing). TDD exercise documented.</p>
+  <p><strong>Deliverable:</strong> GitHub Actions pipeline (lint, test on every PR), deployment documentation, and Sprint 1 retrospective.</p>
 </div>
 
 <div class="week week-build">
-  <div class="week-title">Week 7: DevOps + CI/CD + Deployment</div>
+  <div class="week-title">Week 7: Security Audit (Sprint 2)</div>
   <div class="week-meta">Tue May 12 &amp; Thu May 14 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> GitHub Actions pipeline (lint, test, build on every PR). Deployed app at a live URL. Deployment runbook.</p>
+  <p><strong>Deliverable:</strong> Threat model, AI-assisted security review findings, remediation of 2&ndash;3 vulnerabilities, AI-specific security section (prompt injection, API keys, permissions).</p>
 </div>
 
 <div class="week week-build">
-  <div class="week-title">Week 8: Security Review</div>
+  <div class="week-title">Week 8: Revised Architecture + Sprint 2 Retrospective</div>
   <div class="week-meta">Tue May 19 &amp; Thu May 21 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> Security audit (Cursor + manual review) for API key exposure, input validation, prompt injection, dependency issues. Cross-team code review with written feedback.</p>
+  <p><strong>Deliverable:</strong> Updated C4 diagrams reflecting the current system (compared to W4 plan), narrative on what changed and why, jolli.ai output comparison, and Sprint 2 retrospective. Lighter week by design.</p>
 </div>
 
 <div class="week week-ship">
-  <div class="week-title">Week 9: Ethics + Polish + Code Freeze</div>
+  <div class="week-title">Week 9: Ethics Reflection + Peer Code Review + Code Freeze (Sprint 3)</div>
   <div class="week-meta">Tue May 26 &amp; Thu May 28 &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
-  <p><strong>Individual:</strong> Ethics reflection (1&ndash;2 pages applying IEEE/CS code of ethics to your project). <strong>Group:</strong> Code freeze by end of lab. All PRs merged, CI green, deployed and working.</p>
+  <p><strong>Deliverable:</strong> Team ethics reflection (product ethics, process ethics, IEEE/ACM mapping), cross-team peer code review (lab), and code freeze by end of week.</p>
 </div>
 
 <div class="week week-ship">
-  <div class="week-title">Week 10: Final Presentations</div>
-  <div class="week-meta">Tue Jun 2 &amp; Thu Jun 4 &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
-  <p><strong>Group:</strong> Live demo (10&ndash;15 min per team). <strong>Final project submission due June 10.</strong></p>
+  <div class="week-title">Week 10: AI Kitchen Demo Night + Technical Report (Sprint 3)</div>
+  <div class="week-meta">Thu Jun 4 practice &middot; Fri Jun 5 demo night &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
+  <p><strong>Deliverable:</strong> Working live demo, 60-second lightning pitch, one-page project summary card (Fri Jun 5, 5:30&ndash;7:30 PM public event). Technical report due Wed Jun 10 (3&ndash;5 pages: architecture, testing, security, deployment, AI process reflection).</p>
 </div>
 
 </section>
@@ -1096,7 +1098,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <hr>
 
 <h3>Weeks 4&ndash;10</h3>
-<p>Reading assignments for weeks 4&ndash;10 will be posted to Perusall at least one week in advance. Topics follow the weekly schedule: Agile (Week 4), Architecture (Week 5), Testing (Week 6), DevOps (Week 7), Security (Week 8), Ethics (Week 9).</p>
+<p>Reading assignments for weeks 4&ndash;10 will be posted to Perusall at least one week in advance. Topics follow the weekly schedule: Agile and sprint planning (Week 4), software architecture (Week 5), testing and TDD (Week 6), DevOps and CI/CD (Week 7), security (Week 8), ethics (Week 9).</p>
 
 </div><!-- end hidden readings -->
 
