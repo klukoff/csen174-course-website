@@ -735,9 +735,8 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
   <h4>Deliverables</h4>
   <ul>
-    <li><strong>Individual: Git exercise</strong> &mdash; Links to your PR and code review</li>
-    <li><strong>Group: Repo setup + built divergent prototypes</strong> &mdash; Configured team repo and one working prototype per team member, committed to the repo, ready to demo at the Week 4 gallery walk.</li>
-    <li><strong>AI learning journal:</strong> Week 3 entry (3 interesting prompts with a sentence on why each, plus one opportunity and one challenge)</li>
+    <li><strong>Git exercise</strong> (individual) &mdash; Links to your PR and code review</li>
+    <li><strong>Repo setup + divergent prototypes</strong> (team) &mdash; Configured team repo and one working prototype per team member, committed to the repo, ready to demo at the Week 4 gallery walk.</li>
   </ul>
 </div>
 
@@ -758,10 +757,9 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     <li><strong>Kanban setup + sprint planning:</strong> Set up GitHub Projects Kanban board. Populate initial backlog based on chosen direction. From here on, the constraints shift: architecture, testing, and maintainability matter.</li>
   </ul>
 
-  <h4>Deliverables</h4>
+  <h4>Deliverable</h4>
   <ul>
-    <li><strong>Group: Retrospective + transition plan</strong> &mdash; What each prototype explored, what worked, what the gallery walk feedback revealed, which direction the team will pursue, and a Kanban board set up for the final project phase.</li>
-    <li><strong>AI learning journal:</strong> Week 4 entry (3 interesting prompts with a sentence on why each, plus one opportunity and one challenge)</li>
+    <li><strong>Retrospective + transition plan</strong> (team) &mdash; What each prototype explored, what worked, what the gallery walk feedback revealed, which direction the team will pursue, and a Kanban board set up for the final project phase.</li>
   </ul>
 </div>
 
@@ -878,7 +876,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <p>Each team member builds their own divergent prototype. The bar is &ldquo;works on your laptop when someone walks up to it.&rdquo;</p>
 <ul>
-  <li><strong>Web application</strong> with front end, back end, database, and at least one AI API integration.</li>
+  <li><strong>Front end, back end, database, and at least one AI API integration.</strong> The front end is typically a web interface, but if your product concept calls for a different client (e.g., a browser extension), that&rsquo;s acceptable as long as the back end components are present.</li>
   <li><strong>Code in the team&rsquo;s GitHub repository</strong> with commits showing individual work. Formal branching strategy and PR workflow are not required.</li>
   <li><strong>A working database connection.</strong> SQLite, local Postgres, or equivalent is fine. Production-grade persistence is not expected.</li>
   <li><strong>Intro screen</strong> that communicates what the app is, who it&rsquo;s for, what problem it solves, and how to use it, so someone approaching your laptop with zero context can immediately understand and try it.</li>
@@ -893,7 +891,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <ul>
   <li><strong>AI API integration</strong> central to the product, not bolted on. The AI must process user input and return a meaningful, non-trivial result. Options include OpenAI, Anthropic, Google, Hugging Face, or similar.</li>
   <li><strong>Programmatic prompt construction.</strong> Build prompts with system instructions, context injection, or structured output parsing. Not just raw user input passed to an API.</li>
-  <li><strong>Frontend + backend.</strong> A web app with both a user-facing interface and server-side logic. A full-stack framework (Next.js, etc.) counts. Pure static HTML calling an API from the browser does not.</li>
+  <li><strong>Frontend + backend.</strong> Your project must include a server-side component with meaningful backend logic. The primary user interface can be a web app, browser extension, or other client, but there must be a backend, not just a frontend calling an AI API directly. A full-stack framework (Next.js, etc.) counts. Pure static HTML calling an API from the browser does not.</li>
   <li><strong>Production-appropriate data persistence.</strong> A properly configured database that persists user data across sessions and survives redeployment.</li>
   <li><strong>Version control on GitHub</strong> with branch protection, pull requests, and code review.</li>
   <li><strong>GitHub Projects Kanban board</strong> for backlog and sprint management, with retrospective cards for each sprint.</li>
@@ -923,7 +921,15 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   A full social network with AI moderation, recommendations, and matching. Anything requiring training or fine-tuning a custom model. A real-time collaborative editor with AI pair programming. If you can't explain and demo it in 10&ndash;15 minutes, the scope is too big.
 </div>
 
-<hr>
+<h3>Not in scope for this course</h3>
+
+<p>The following project types don&rsquo;t fit the course because they require fundamentally different development toolchains, can&rsquo;t be experienced by classmates at the gallery walk and demo night, or fall outside the software engineering fundamentals we cover:</p>
+<ul>
+  <li><strong>Native mobile apps (iOS/Android).</strong> The development, testing, and deployment toolchain is fundamentally different from web-based projects (App Store provisioning, platform-specific CI/CD, device-specific debugging). Classmates can&rsquo;t try your app at the gallery walk or demo night without installing it on their own phone.</li>
+  <li><strong>Desktop-only applications</strong> with no web-accessible component. Peers can&rsquo;t interact with your work at the gallery walk or demo night without installing software on their machine, and the deployment and CI/CD patterns don&rsquo;t transfer to what we cover in the course.</li>
+  <li><strong>Training custom ML models from scratch.</strong> Using AI APIs and building RAG pipelines over existing data is in scope and encouraged. Training your own model is a different discipline with different infrastructure requirements, and it would consume your entire quarter at the expense of the software engineering fundamentals this course is designed to teach.</li>
+</ul>
+<p>If your product idea doesn&rsquo;t naturally fit a standard web app format (e.g., a browser extension, a chatbot, a CLI tool), that&rsquo;s fine. Build the interface that makes sense for your product, and make sure the project includes a server-side component with a database and an API. If you&rsquo;re unsure whether your approach qualifies, check with the instructor.</p>
 
 <hr>
 
