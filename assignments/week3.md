@@ -74,20 +74,32 @@ Your persona should be grounded in your team's product vision but doesn't have t
 
 ### Creating the visual panels
 
-Once you have the narrative script from the skill, use **Nano Banana** (Gemini's image generation, familiar from Week 1) to create a visual panel for each frame.
-
 Storyboards work best as **low-fidelity sketches**, not polished illustrations. Too much visual detail pulls attention away from the scenario and toward the artwork. You want someone looking at your storyboard to think about the user's problem and your product's solution, not admire the rendering.
 
-Include a consistent style instruction in every prompt to keep all 6 panels visually cohesive. Something like:
+You have two options for creating your 6 panels:
 
-> "simple pencil sketch style, loose lines, minimal detail, black and white with light gray shading"
+**Option A: Draw by hand.** Sketch each panel on paper (or a tablet) and photograph or scan them. Hand-drawn storyboards are a perfectly good approach. Keep them rough and loose: stick figures, simple environments, minimal shading. The goal is to communicate the scenario, not to showcase your drawing skills.
 
-Use this same style instruction as a prefix for every panel's prompt, then add the scene-specific content after it. Try multiple prompts per frame and pick the best output, but keep the style instruction constant across all panels. The result should look like a quick whiteboard sketch, not a finished illustration.
+**Option B: Use Nano Banana (recommended AI route).** Use **Nano Banana** (Gemini's image generation, familiar from Week 1) to generate a visual panel for each frame. The key is maintaining visual consistency across all 6 panels, which takes a deliberate approach. Do all of the following in a single Nano Banana conversation.
+
+**Step 1: Generate a character reference panel.** Before creating any story panels, generate a standalone image of your protagonist. Include their name, appearance details (hair, clothing, accessories), and your style instruction. For example:
+
+> "Create a simple illustration of a college student named Maya. She has short curly brown hair, round glasses, and a green hoodie. She's standing in front of a campus building. Use a clean, low-fidelity sketch style with muted colors, like a UX storyboard."
+
+This reference image anchors the model's understanding of your character for the rest of the conversation.
+
+**Step 2: Generate each story panel in the same conversation.** Do not start a new chat for each panel. Stay in the same conversation thread so the model can reference the character it already generated. For each panel, explicitly ask for the same character and visual style:
+
+> "Using the exact same character and visual style: Maya is sitting alone at a library table, looking frustrated at her laptop screen."
+
+The phrase "exact same character and visual style" is doing real work here. Without it, the model will drift on details like facial features, clothing, and art style between panels.
+
+**Step 3: Pick and retry.** Try multiple prompts per frame and pick the best output, but always stay in the same conversation and always include the consistency instruction. If a panel drifts too far from the others, regenerate it before moving on. The result should look like a cohesive visual narrative, not six unrelated illustrations.
 
 ### What to submit for this part
 
 Your individual storyboard as a **PDF**, with:
-- 6 visual panels generated in Nano Banana, all in the same low-fidelity sketch style
+- 6 visual panels (hand-drawn or generated in Nano Banana), all in the same low-fidelity sketch style
 - A brief caption for each panel (1-2 sentences) explaining what's happening
 - The persona name and a one-sentence description at the top
 
