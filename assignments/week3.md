@@ -107,6 +107,18 @@ Your individual storyboard as a **PDF**, with:
 
 Each team member builds their own working prototype of the team's product concept. The goal is to explore genuinely different directions so the team has real options to compare at the Week 4 gallery walk.
 
+### Focus on your biggest risks
+
+The question your prototype should answer is: **is this a good way to realize our product vision statement?** That looks different for different teams:
+
+- **UX-heavy risk:** is this the right flow, look, and feel?
+- **AI risk:** can the API generate output that actually addresses the user need?
+- **Architecture risk:** can this flow of information realize the product?
+
+The goal of the prototype is not technical sophistication. Invest in technical depth only insofar as it helps you chart a path toward your product vision. Avoid implementation and polish you already know can be done with more effort (those belong in the final product). At this stage, focus on the greatest risks for your product direction.
+
+If you want to go deeper on prototyping theory, Houde and Hill's ["What Do Prototypes Prototype?"](https://hci.stanford.edu/courses/cs247/2009/readings/Houde-Hill-Prototypes.pdf) is a great read (covered in more depth in the HCI course).
+
 ### What "divergent" means
 
 All prototypes should be grounded in the team's shared product vision and "How Might We" statement, and informed by your individual storyboard. But each team member should explore a meaningfully different direction. "Different" means different interfaces, interaction patterns, or implementation approaches, not cosmetic variations like swapping colors or moving a button.
