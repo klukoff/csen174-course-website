@@ -58,7 +58,11 @@ The diagrams should be **visual and human-readable**: someone looking at your co
 
 #### How to create the diagrams
 
-**Recommended approach: Mermaid C4 syntax.** Mermaid has built-in support for C4 diagrams using keywords like `C4Context`, `C4Container`, `Person()`, `System()`, `Container()`, and `Rel()`. The syntax reads naturally:
+**Iterate with AI feedback on your design.** Whatever tool you use to think through the architecture, the goal is a back-and-forth conversation with Cursor, Claude, or ChatGPT that stress-tests your decisions. Describe your direction, share whatever you have (a whiteboard photo, a pen-and-paper sketch, a rough draw.io diagram, or a first pass of Mermaid code), and ask the AI to weigh alternatives. Push on trade-offs: where would this architecture break at scale, what simpler options exist, which external dependencies are you missing, are the boundaries between containers right? Some teams prefer to sketch first and bring the sketch into the conversation. Others prefer to start by describing the product to the AI and letting it propose an initial structure. Either order works. What matters is that the final architecture reflects real deliberation, not the first plausible-looking boxes the tool produced.
+
+The tools you use along the way are flexible: whiteboard sketches, pen and paper, [draw.io](https://draw.io/), Figma, or Mermaid directly. Pick whatever lets the team think clearly.
+
+**For the final C4 diagrams in the repo, use Mermaid.** Mermaid has built-in support for C4 diagrams using keywords like `C4Context`, `C4Container`, `Person()`, `System()`, `Container()`, and `Rel()`. The syntax reads naturally:
 
 ```
 C4Context
@@ -72,11 +76,7 @@ C4Context
   Rel(app, db, "Reads and writes")
 ```
 
-GitHub automatically renders Mermaid code blocks in `.md` files as visual diagrams, so when you commit your architecture doc to the repo, anyone viewing it on GitHub sees the actual diagram (not just the code). You can also preview diagrams in the [Mermaid Live Editor](https://mermaid.live/) or in Cursor. See the [Mermaid C4 documentation](https://mermaid.js.org/syntax/c4.html) for full syntax reference.
-
-**Discuss with AI, then draw.** Start with a rough sketch on paper or a whiteboard so the team reasons through the pieces before a tool fills in plausible-looking boxes. Then bring the sketch into a conversation with Cursor, Claude, or ChatGPT: describe your direction, share the sketch, and ask it to weigh alternatives. Push on trade-offs: where would this architecture break at scale, what simpler options exist, which external dependencies are you missing, are the boundaries between containers right? Iterate until the team is confident in the design, then translate the result into Mermaid or your diagramming tool of choice.
-
-**Alternative tools are fine.** If your team prefers a visual diagramming tool like [draw.io](https://draw.io/), Figma, or even pen-and-paper (photographed), that works too. The important thing is that the diagrams are clear and accurate.
+GitHub automatically renders Mermaid code blocks in `.md` files as visual diagrams, so when you commit your architecture doc to the repo, anyone viewing it on GitHub sees the actual diagram (not just the code). Your AI tools can also read and update Mermaid code directly, which makes the diagrams easier to keep in sync with your system as it evolves. You can preview diagrams in the [Mermaid Live Editor](https://mermaid.live/) or in Cursor. See the [Mermaid C4 documentation](https://mermaid.js.org/syntax/c4.html) for full syntax reference.
 
 ### Commit to your repo
 
@@ -84,8 +84,8 @@ Your architecture documentation must live in the team's GitHub repo, regardless 
 
 Create an `architecture/` directory at the repo root with:
 
-- `architecture.md` — your consolidation plan and C4 diagrams. If you used Mermaid, include the diagrams as Mermaid code blocks (GitHub renders them automatically). If you used another tool, embed the images in the Markdown file and include a brief text description of each diagram (what the major components are, what they connect to, and how data flows between them). The text descriptions ensure your AI tools can understand the architecture, not just display a picture.
-- Any additional diagrams or notes the team finds useful
+- `architecture.md` — your consolidation plan and C4 diagrams as Mermaid code blocks (GitHub renders them automatically). Include a brief text description alongside each diagram (what the major components are, what they connect to, and how data flows between them) so your AI tools can reason about the architecture, not just render the picture.
+- Any additional sketches, working notes, or exploratory diagrams the team wants to keep
 
 This becomes the living reference for your project. Keep it up to date as your architecture evolves. You'll formally revise it in Week 8 when you compare the actual system to the plan.
 
@@ -157,7 +157,7 @@ See Camino for submission details and due date.
 
 - **Collect sticky notes carefully.** They're your primary data source for the synthesis. Take a photo of each prototype's feedback cluster before cleaning up.
 - **Don't over-architect.** Your C4 diagrams should reflect what you plan to build in the next six weeks, not a fantasy system. If your product is a web app with a database and an AI API, the container diagram might have four boxes. That's fine.
-- **Discuss trade-offs with AI.** The first draft can come from a whiteboard sketch or an AI-generated diagram. That choice is up to the team. The back-and-forth with AI afterward is what produces a defensible architecture: ask it to weigh alternatives, name weaknesses in the current design, and suggest simpler options. Iterate until the team can defend each box and arrow.
+- **Discuss trade-offs with AI.** The first draft can come from a whiteboard sketch, a pen-and-paper doodle, a draw.io diagram, or a first pass of Mermaid code. That choice is up to the team. The back-and-forth with AI is what produces a defensible architecture: ask it to weigh alternatives, name weaknesses in the current design, and suggest simpler options. Iterate until the team can defend each box and arrow, then commit the final C4 diagrams as Mermaid to the repo.
 - **Ownership prevents merge conflicts.** Dividing the codebase by area (not by feature) means team members mostly work in different files. This is simpler than it sounds and saves enormous pain later.
 - **Start the Kanban board in lab.** Don't defer it. Having cards on the board by the end of lab means your team can hit the ground running in Week 5.
 - **Your architecture will change.** That's expected. The Week 8 assignment explicitly asks you to compare your initial architecture to the actual system and explain what changed and why. Document your current thinking honestly, not optimistically.
