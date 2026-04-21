@@ -1,7 +1,7 @@
 # Week 3: Repo Setup, Storyboard, and Divergent Prototypes
 
-**Type:** Individual assignment (each student submits their own storyboard and prototype)
-**Points:** 10
+**Type:** Individual assignment (each student submits their own storyboard and prototype)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 **This is an async week.** There are no in-person lectures or labs due to the CHI conference. The three parts of this assignment are designed to flow sequentially: get the repo set up first, then think through the user journey, then build.

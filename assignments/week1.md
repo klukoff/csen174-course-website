@@ -1,6 +1,8 @@
 # Week 1: AI API Exploration + Product Ideation (Individual)
 
-This is an individual assignment. Each student submits their own work.
+**Type:** Individual assignment (each student submits their own work)  
+**Points:** 10  
+**Due:** See Camino for submission details and due date.
 
 **Submit your completed slide deck to Camino as a PDF.**
 
