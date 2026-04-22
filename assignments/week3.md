@@ -150,7 +150,23 @@ As you build, pay attention to what the AI does well and where you have to inter
 
 ### What to submit for this part
 
-Your prototype committed to the team repo in your `prototypes/[yourname]/` directory, ready to run locally and demo at the gallery walk.
+Commit to your `prototypes/[yourname]/` directory in the team repo:
+
+- Your prototype code, ready to run locally and demo at the gallery walk.
+- A 1 to 2 minute demo video of your prototype (see the Week 3 Prototype Demo Video section below for details).
+
+### Week 3 Prototype Demo Video
+
+> **Updated requirement (added April 22, 2026):** The demo video was added after the Week 4 gallery walk, where many prototypes turned out to not be making real API calls. The video is now part of the Week 3 submission and is how we grade the AI API portion of your prototype.
+
+Commit a 1 to 2 minute screen recording of your prototype to your `prototypes/[yourname]/` directory in the team repo. The video should cover:
+
+- The name of the AI API(s) being used (stated on-screen or verbally)
+- The prototype launching
+- You giving it input
+- The AI API answering or powering an element of the experience
+
+Any screen recording tool works (Loom, QuickTime, OBS). In the Week 3 Prototype Demo Video assignment on Camino, paste the path or URL to your video in the repo (e.g., `https://github.com/your-team/your-repo/blob/main/prototypes/maria/demo.mp4`).
 
 ## What to Submit
 
@@ -160,7 +176,9 @@ Submit as a **PDF** to Camino with:
 
 2. **Repo link:** URL to your team's public GitHub repository, with `.cursorrules`, `product-vision.md`, secrets management, prototype directories, and README in place.
 
-3. **Your prototype:** A brief description (2-3 sentences) of what direction your prototype explores and how it differs from your teammates' approaches. Include the path to your prototype directory in the repo (e.g., `prototypes/maria/`).
+3. **Your prototype:** A brief description (2-3 sentences) of what direction your prototype explores and how it differs from your teammates' approaches. Include the path to your prototype directory in the repo (e.g., `prototypes/maria/`) and the filename of your demo video (e.g., `demo.mp4`).
+
+The demo video itself lives in the repo, not the PDF. Submit the video's path or URL in the separate Week 3 Prototype Demo Video assignment on Camino.
 
 See Camino for submission details and due date.
 
@@ -170,7 +188,7 @@ See Camino for submission details and due date.
 |----------|--------|
 | Storyboard: 6 panels in a consistent low-fidelity sketch style, specific persona, clear problem-to-outcome arc grounded in the product vision | 3 |
 | Repo setup: public repo with .cursorrules, product-vision.md, .gitignore excluding .env files, prototype directories with .env.example, README | 1 |
-| Prototype: working application (front end + back end + database + AI API) that explores a genuinely different direction from teammates | 4 |
+| Prototype: working application (front end + back end + database + AI API) that explores a genuinely different direction from teammates, evidenced by a 1 to 2 minute demo video showing a real API call | 4 |
 | Prototype intro screen communicates what the app is and how to use it (gallery walk readiness) | 1 |
 | Prototype reflects the user journey and persona from your storyboard | 1 |
 | **Total** | **10** |
@@ -182,6 +200,7 @@ See Camino for submission details and due date.
 - **Vibe code your prototype.** Use Cursor's agent mode to scaffold and build. Describe what you want, let the AI generate it, test it, iterate. Trying to hand-code a full-stack app with an AI API integration in a few days is unnecessarily hard. Let the tools do what they're good at.
 - **Don't over-engineer.** The bar is "works when someone tries it." You'll have weeks 5-9 to add testing, CI/CD, security, and deployment. Right now, focus on exploring the idea.
 - **Demo prep.** Each team member should demo their own prototype at the gallery walk. Start thinking about how you'll reset the app between visitors so each person gets a clean experience.
+- **Record the demo video as soon as it works.** Do not wait until the night before the deadline. Once your API call is working end to end, record the 1 to 2 minute video right then. If the API breaks later, you still have evidence it worked.
 - **Commit early and often.** Your commit history is evidence of individual work.
 - **Questions about repo setup?** Email Kiki (xzhang22@scu.edu).
 
