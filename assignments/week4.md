@@ -170,3 +170,8 @@ See Camino for submission details and due date.
 - [Mermaid C4 syntax](https://mermaid.js.org/syntax/c4.html) — Mermaid's C4 diagram types and syntax reference
 - [Mermaid Live Editor](https://mermaid.live/) — Browser-based tool for rendering and previewing Mermaid diagrams
 - [GitHub Projects quickstart](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects) — Getting started with GitHub's built-in project management
+
+<!--
+INSTRUCTOR NOTE (internal, not student-facing): For future quarters, consider revising Part 2 so each team member produces a C4 context + container for their own Week 3 prototype, then the team writes a comparison (trade-offs surfaced, what each assumed) and the final consolidated architecture is justified by that comparison. This reinforces Outcome 3 (compare/contrast architectures and choose best) and mirrors the diverge/converge rhythm already established in Weeks 1-3. Not feasible to introduce mid-S26 because labs (Tue + Wed) have already passed by the W4D2 Thursday lecture, and the assignment is due Monday with no additional lab time in between. To implement: update Part 2, redistribute the 5 architecture points (e.g., 2 prototype architectures + 2 comparison + 2 final), schedule time in W3 or W4 lab for students to draft individual architectures before Thursday's converge session.
+-->
+
