@@ -66,11 +66,38 @@ AI tools are very good at generating tests; you may want to keep more than 3 if 
 
 The tests you keep are what you'll critique in Part 4, so make sure at least 2 of them are substantive enough to evaluate.
 
-Starting points to consider (you may pick another that fits your stack better):
+In Week 2 we gave you a fixed set of skills to install. This time, you choose. Picking the right skill is itself a course skill: it's how you tailor an AI agent to your team's stack and workflow.
 
-- A TDD or red-green-refactor workflow skill from a community skill marketplace.
-- A coverage-analysis skill that helps identify untested branches.
-- A code-review-for-tests skill that flags common test patterns to revisit.
+### Where to look for skills
+
+Skills live in public GitHub repositories as folders containing a `SKILL.md` file. The Agent Skills specification is open, so skills generally work across Claude Code, Cursor, GitHub Copilot, OpenAI Codex CLI, and others without modification.
+
+**For testing and TDD specifically:**
+
+- [obra/superpowers](https://github.com/obra/superpowers) — includes a TDD skill that enforces a RED-GREEN-REFACTOR workflow. Probably the most direct fit for this assignment.
+- [mattpocock/skills](https://github.com/mattpocock/skills) — 17 developer-workflow skills including TDD, refactoring, codebase architecture, and PRD writing.
+
+**Curated lists and aggregators:**
+
+- [anthropics/skills](https://github.com/anthropics/skills) — official Anthropic skills repository.
+- [karanb192/awesome-claude-skills](https://github.com/karanb192/awesome-claude-skills) — verified Claude Code skills covering TDD, debugging, git workflows, and more.
+- [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) — 1000+ agent skills from official teams and the community, cross-platform.
+- [travisvn/awesome-claude-skills](https://github.com/travisvn/awesome-claude-skills) — another curated awesome list, with a focus on Claude Code workflows.
+
+**Searchable marketplaces and search:**
+
+- [claudeskills.info](https://claudeskills.info/skills/) — browse and download Claude Code skills with topic filters.
+- GitHub code search: `path:SKILL.md "test driven"` or `path:SKILL.md "testing"` finds skills not listed in any aggregator.
+
+You're not limited to skills with "TDD" in the name. A coverage-analysis skill, a code-review-for-tests skill, or a refactoring skill that maintains test integrity are all valid choices, as long as they support your team's testing work this sprint.
+
+### Tips for choosing a skill
+
+- **Match your stack first.** A skill aimed at Python pytest won't help a JavaScript team using Jest. Confirm by reading the SKILL.md before installing.
+- **Read the description out loud.** If it's vague, the skill probably is too. Specific, concrete descriptions point to specific, well-scoped skills.
+- **Smaller is usually better.** A skill that focuses on one workflow (e.g., red-green-refactor for TDD) usually outperforms one that tries to do everything at once.
+- **Check the last commit date.** Skills not updated in over a year often reference outdated tooling, and AI tooling moves fast.
+- **Try it on one test before keeping it.** Load the skill, ask the AI to generate a test, then unload the skill and ask the same AI to generate the same test. If the output doesn't change, the skill isn't doing what you wanted.
 
 In the write-up, 3 to 5 sentences: which skill, why this one fits your team's stack and approach, and what changed about your workflow when the skill was loaded.
 
