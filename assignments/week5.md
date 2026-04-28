@@ -113,7 +113,7 @@ Include one before/after diff showing a test you improved using these questions.
 
 ## Part 5: Jolli connection (1 pt)
 
-Connect your team repo to [Jolli.ai](https://jolli.ai) using the course invite link (shared in lab). Include a screenshot of the connected repo in the write-up.
+Connect your team repo to [Jolli.ai](https://jolli.ai) using the course invite link (coming by Thu Apr 30, W5D2 at the latest). Include a screenshot of the connected repo in the write-up.
 
 Jolli runs in the background W5 to W9, generating documentation as you build. You'll use the output in W8 (revised architecture) and W9 (peer code review). Nothing visible from Jolli is graded this week beyond the connection itself.
 
