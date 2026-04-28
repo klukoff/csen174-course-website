@@ -499,8 +499,9 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
     <tr><td><strong>Lectures</strong></td><td>Tuesday &amp; Thursday, 10:20 AM&thinsp;&ndash;&thinsp;12:00 PM, Lucas Hall 206</td></tr>
     <tr><td><strong>Tuesday Lab</strong></td><td>Tuesday, 2:15&ndash;5:00 PM, Heafey 106</td></tr>
     <tr><td><strong>Wednesday Lab</strong></td><td>Wednesday, 2:15&ndash;5:00 PM, Heafey 106</td></tr>
-    <tr><td><strong>Final Presentations</strong></td><td>Thursday, June 4</td></tr>
-    <tr><td><strong>Final Project Due</strong></td><td>Wednesday, June 10</td></tr>
+    <tr><td><strong>Pitch Practice (in class)</strong></td><td>Thursday, June 4</td></tr>
+    <tr><td><strong>Demo Night (public)</strong></td><td>Friday, June 5</td></tr>
+    <tr><td><strong>Technical Report Due</strong></td><td>Wednesday, June 10</td></tr>
   </tbody>
 </table>
 
@@ -521,8 +522,8 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 <div class="table-wrap"><table>
   <thead><tr><th>Component</th><th style="text-align:center">Points</th><th>Details</th></tr></thead>
   <tbody>
-    <tr><td><strong>Group project deliverables</strong></td><td class="grade-weight">100</td><td>Weekly group and individual artifacts scored on a 1&ndash;10 scale</td></tr>
-    <tr><td><strong>Final presentation</strong></td><td class="grade-weight">40</td><td>Group demo (10&ndash;15 min per team)</td></tr>
+    <tr><td><strong>Group project deliverables</strong></td><td class="grade-weight">100</td><td>W1 individual + W2&ndash;W10 group artifacts, each scored on a 1&ndash;10 scale (W10 = demo video, demo night participation, lightning pitch, summary card)</td></tr>
+    <tr><td><strong>Final project (technical report)</strong></td><td class="grade-weight">40</td><td>3&ndash;5 page report covering architecture, testing, security, deployment, and AI process. Anchored in your repo and artifacts.</td></tr>
     <tr><td><strong>Pop quizzes</strong></td><td class="grade-weight">20</td><td>7 quizzes on readings, best 5 of 7 count. 10 MC questions, ~10 min.</td></tr>
     <tr><td><strong>Perusall annotations</strong></td><td class="grade-weight">20</td><td>3+ substantive annotations per reading assignment</td></tr>
     <tr><td><strong>AI learning journal</strong></td><td class="grade-weight">20</td><td>Weekly: 3 interesting prompts (with a sentence on why each), plus one opportunity and one challenge</td></tr>
@@ -834,7 +835,7 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <div class="phase">
     <span class="label label-ship">Ship</span>
     <h4>Weeks 9&ndash;10</h4>
-    <p>Code freeze, ethics reflection, final presentations.</p>
+    <p>Code freeze, ethics reflection, demo night, technical report.</p>
   </div>
 </div>
 
@@ -947,29 +948,45 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <hr>
 
-<h2>Final Presentation</h2>
+<h2>Final Project (Technical Report)</h2>
 
-<h4>Group demo (10&ndash;15 min per team)</h4>
+<p>The technical report is a reflection on your team's engineering process across the quarter. It is not a summary of your weekly assignments or a portfolio walk-through. It is the place where you step back and articulate what your team learned about software engineering when AI is a collaborator, what surprised you, what you would do differently next time.</p>
+
+<p>You cite your weekly artifacts as evidence (architecture diagrams, Kanban boards, specific tests and commits, retrospective notes) but the artifacts are not the deliverable. Your reflection is. Each section makes a claim about what your team learned and supports it with specific evidence from your repo.</p>
+
+<h4>Length and format</h4>
 <ul>
-  <li>2&ndash;3 min: Problem, personas, product vision</li>
-  <li>5&ndash;7 min: Live demo at the deployed URL</li>
-  <li>2&ndash;3 min: Architecture overview, key technical decisions, how AI was integrated</li>
-  <li>2&ndash;3 min: Q&amp;A from class</li>
+  <li>3 to 5 pages of prose, plus embedded or linked artifacts (diagrams, screenshots, code excerpts, board snapshots).</li>
+  <li>Submitted as a Google Doc or PDF on Camino.</li>
+  <li>Due Wednesday, June 10, 10pm.</li>
+</ul>
+
+<h4>Required sections</h4>
+
+<p>Each section asks "what did you learn about X?", not "describe what you did in week N." Use the prompts below as starting points.</p>
+
+<ul>
+  <li><strong>Process arc reflection.</strong> How did your team's optimization targets shift across the quarter, from API exploration and ideation (W1 to W2), through divergent prototyping (W3 to W4), into the engineering phase (W5 onward)? What did you learn from the prototype phase that shaped your final approach? What experiment, prototype, or piece of peer feedback from the gallery walk changed what your team built or did not build? What would you tell yourself in Week 1?</li>
+  <li><strong>Architecture and design lessons.</strong> How did your divergent prototypes (W3) inform your initial W4 architecture? What did your W4 architecture get wrong, and how did you discover it? What changed between W4 and W8, and why? Reference both C4 diagrams.</li>
+  <li><strong>Testing, CI/CD, and quality lessons.</strong> Where did TDD work for your team? Where did it slow you down? What did your tests catch? What did they miss? Reference specific tests, your CI configuration, and your deployment approach.</li>
+  <li><strong>Security and reliability lessons.</strong> What attack surface did you not see in W4 that you understood by W7? How did your threat model evolve, especially around the AI integration? Reference your security audit.</li>
+  <li><strong>AI collaboration patterns.</strong> How did your team's prompting and AI use evolve from W1 ideation through W10? Where did AI accelerate you most? Where did it lead you astray? Cite specific moments: a prompt that worked, a bug AI introduced, a feature you delegated entirely.</li>
 </ul>
 
 <h4>Rubric (40 points)</h4>
 <table>
   <thead><tr><th>Category</th><th style="text-align:center">Points</th></tr></thead>
   <tbody>
-    <tr><td>Demonstration of methodical SE process</td><td style="text-align:center">12</td></tr>
-    <tr><td>Reflection on the process</td><td style="text-align:center">8</td></tr>
-    <tr><td>Presentation quality</td><td style="text-align:center">4</td></tr>
-    <tr><td>Quality of Q&amp;A responses</td><td style="text-align:center">4</td></tr>
-    <tr><td>Usability</td><td style="text-align:center">4</td></tr>
-    <tr><td>Technical depth</td><td style="text-align:center">4</td></tr>
-    <tr><td>Cohesion</td><td style="text-align:center">4</td></tr>
+    <tr><td>Process arc reflection (cross-cutting learning across the quarter)</td><td style="text-align:center">10</td></tr>
+    <tr><td>Architecture and design lessons (W4 to W8 evolution, with diagrams)</td><td style="text-align:center">6</td></tr>
+    <tr><td>Testing, CI/CD, and quality lessons (with test and pipeline references)</td><td style="text-align:center">8</td></tr>
+    <tr><td>Security and reliability lessons (with audit reference)</td><td style="text-align:center">4</td></tr>
+    <tr><td>AI collaboration patterns (with specific moments cited)</td><td style="text-align:center">8</td></tr>
+    <tr><td>Writing quality and artifact citation (clear claims, real evidence)</td><td style="text-align:center">4</td></tr>
   </tbody>
 </table>
+
+<p style="margin-top:1rem"><em>A report that repackages your weekly assignments without stepping back to reflect will not earn full credit. Full credit requires claims about what your team learned, grounded in specific evidence from your repo (a particular test, commit, board state, retrospective note, or moment).</em></p>
 
 </section>
 
@@ -1151,6 +1168,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <div class="week-title">Week 4: Gallery Walk, Initial Architecture, and Kanban Setup (Team)</div>
   <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit PDF to Camino</div>
   <p>Synthesize gallery walk feedback, pick a direction, document the architecture with C4 context and container diagrams, and stand up a GitHub Projects Kanban board for the build phase.</p>
+</div>
+
+<div class="week week-build" style="cursor:pointer" onclick="loadAssignment('week5', this)">
+  <div class="week-title">Week 5: Testing Strategy and TDD (Team, Sprint 1)</div>
+  <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit on Camino (repo URL + write-up in repo)</div>
+  <p>Write failing spec tests for your Sprint 1 features (one unit per team member, one integration, one AI behavior), implement code to flip at least two RED to GREEN, install a testing skill, critique AI-generated tests, and connect your repo to Jolli.</p>
 </div>
 
 <div class="week week-explore" style="cursor:pointer" onclick="loadAssignment('contribution-statements', this)">
