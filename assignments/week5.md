@@ -20,6 +20,13 @@ The graded items are the testing artifacts. The implicit work of Sprint 1 is shi
 
 Write a set of failing tests that describe what your team is building in Sprint 1.
 
+**Before you start, here is what the suite should look like at the deadline:**
+
+- Tests live in the repo as actual test files (e.g., `tests/`, `__tests__/`, `*.test.js`, `test_*.py`), not as Kanban cards, design docs, or notes in the write-up.
+- Most tests stay RED at the deadline. Only 2 need to flip GREEN (Part 2), and those can be the simplest unit tests in your suite.
+- The integration test and the AI behavior test are expected to stay RED this week. Set up the test structure with mock data or stub inputs so the test runs and fails for a meaningful reason (e.g., the function is not yet implemented, the endpoint returns 404), not a syntax error.
+- The implementation can come later. The point of TDD is to define the behavior in code first, then build to satisfy it. Tests not flipping GREEN until W6 or later is the design, not a gap.
+
 Required minimum:
 
 - **One unit test per team member**, written by that member, in the area they own from the W4 consolidation plan.
@@ -54,9 +61,9 @@ All tests start RED. They fail because the features aren't built yet, or only pa
 
 ## Part 2: Turn some tests green (2 pts)
 
-Implement enough code to flip at least 2 tests from RED to GREEN by the deadline.
+Implement enough code to flip at least 2 tests from RED to GREEN by the deadline. These 2 can be the simplest unit tests in your suite (a small pure function, a formatter, a validator). They do not need to be your integration test or your AI behavior test.
 
-In the write-up, describe in 2 to 3 sentences how your team ran the tests RED first, then implemented features to turn them GREEN. The remaining RED tests stay as future-sprint work; some will flip in W6, others later in the quarter. Some staying RED at the deadline is expected, not a failure.
+In the write-up, describe in 2 to 3 sentences how your team ran the tests RED first, then implemented features to turn them GREEN. The remaining RED tests stay as future-sprint work; some will flip in W6, others later in the quarter. Most tests staying RED at the deadline is expected, not a failure.
 
 ## Part 3: Testing skill installed and used (1 pt)
 
