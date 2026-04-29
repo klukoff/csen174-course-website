@@ -20,16 +20,16 @@ This is ungraded and takes just a few minutes. It gives Kai a chance to help wit
 
 ## Week 7: Mid-Project Contribution Statement
 
-**Covers:** Weeks 5-7 (architecture, testing, CI/CD).
+**Covers:** Weeks 4-7 (gallery walk and consolidation, initial architecture, Kanban setup, refined architecture and ADRs, testing, CI/CD and deployment).
 
-**Format:** Your team should discuss and agree on this statement, then submit it on Camino. It should list the name of each team member, the percentage of effort that each member contributed during Weeks 5-7, and a corresponding list of specific activities.
+**Format:** Your team should discuss and agree on this statement, then submit it on Camino. It should list the name of each team member, the percentage of effort that each member contributed during Weeks 4-7, and a corresponding list of specific activities.
 
 Example:
 
-- Alex: 30%, first draft of architecture doc, implemented user authentication API, led code review for sprint 2, served as scrum master
-- Jordan: 30%, built the frontend dashboard components, wrote integration tests for API endpoints, organized team standups
-- Sam: 20%, implemented database schema, wrote deployment scripts, contributed to architecture doc review
-- Taylor: 20%, designed UI mockups, created CI/CD pipeline configuration, added unit tests for frontend components
+- Alex: 25%, led gallery walk synthesis and drafted the consolidation plan, drew the C4 container diagram, wrote 2 ADRs (database choice and AI provider abstraction), led testing strategy discussion in lab
+- Jordan: 30%, set up the GitHub Projects Kanban with team conventions, wrote unit tests for the prompt construction module (28 tests, 85% coverage), set up the GitHub Actions CI pipeline, fixed flaky test in PR #47
+- Sam: 25%, refined the C4 context diagram, wrote 1 ADR (frontend framework), deployed the app to Render with environment variable management, wrote the deployment runbook
+- Taylor: 20%, contributed the gallery walk write-up for two sibling teams, added integration tests for the API layer, reviewed and merged 6 PRs across the sprint, organized team standups
 
 ## Week 10: Final Contribution Statement
 

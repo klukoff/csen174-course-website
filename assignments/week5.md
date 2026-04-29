@@ -113,7 +113,15 @@ Include one before/after diff showing a test you improved using these questions.
 
 ## Part 5: Jolli connection (1 pt)
 
-Connect your team repo to [Jolli.ai](https://jolli.ai) using the course invite link (coming by Thu Apr 30, W5D2 at the latest). Include a screenshot of the connected repo in the write-up.
+You'll receive an invite link at your SCU email address by Thursday (W5D2 at the latest). To complete this part:
+
+1. **All team members join Jolli.ai.** Use the invite link in your email to create your accounts on the [Jolli.ai](https://jolli.ai) service.
+2. **One team member creates a company space.** That person creates a new company space and selects your team's GitHub repository when prompted.
+3. **Getting it set up is the requirement.** Once the space is connected to your repo, Jolli will generate documentation about your codebase. Take a look at what it produced and check how accurately and helpfully it represents your work. You don't need to fix or improve the output this week, just have it set up.
+
+Include a screenshot of the connected repo (the company space showing your repo selected) in the write-up.
+
+**Note:** For now, we are **not** using Jolli Memory inside Cursor. That feature requires extra setup (an Anthropic API key in Cursor) that we're skipping at the moment. You only need the web service connection described above.
 
 Jolli runs in the background W5 to W9, generating documentation as you build. You'll use the output in W8 (revised architecture) and W9 (peer code review). Nothing visible from Jolli is graded this week beyond the connection itself.
 
