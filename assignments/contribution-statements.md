@@ -6,17 +6,17 @@ The instructor does not necessarily expect each member to contribute equally to 
 
 There are three checkpoints across the quarter, timed to match the natural phase transitions of the project.
 
-## Week 4: Team Check-In
+## Week 5: Team Check-In
 
-**Covers:** The transition from prototypes to the consolidated project.
+**Covers:** How your team is working together so far, including the transition from prototypes into the consolidated project.
 
-**Format:** Your team submits a short check-in on Camino. Briefly answer:
+**Format:** Your team submits a short check-in on Camino. Answer each question in 1-2 sentences:
 
-- Is your team communicating effectively? (Yes / Mostly / Not really)
-- Is work being distributed fairly? (Yes / Mostly / Not really)
-- Is there anything you want the instructor to know about how your team is working?
+- How is your team communicating? (Channels you use, how often, what's working or not.)
+- How is work being distributed across the team so far?
+- Anything else you want Kai to know about how your team is working?
 
-This is ungraded and takes just a few minutes. It gives the instructor a chance to help with any team dynamics issues before the intensive project phase begins.
+This is ungraded and takes just a few minutes. It gives Kai a chance to help with any team dynamics issues before Sprint 1 wraps.
 
 ## Week 7: Mid-Project Contribution Statement
 
@@ -43,6 +43,6 @@ By default, all team members receive the same grade on group assignments. The in
 
 This is not a penalty system. A student who takes on a smaller role and whose team agrees on that will receive a grade that reflects their contribution. A student who consistently goes above and beyond will be recognized for it.
 
-**If you disagree with your team's statement:** Email the instructor privately with an explanation by the due date. These communications are confidential.
+**If you disagree with your team's statement:** Email Kai with an explanation along with your contribution statement. These messages are confidential.
 
 See the Camino assignment page for submission details and due date.
