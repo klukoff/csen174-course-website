@@ -1203,29 +1203,35 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
 
 <hr>
 
-<h3>Week 6: CI/CD, Deployment, and Retrospectives</h3>
-<p style="font-size:0.85rem;color:var(--text-light)">~45 min reading + annotation time. The W5 readings on DevOps culture and the CI/CD Handbook also apply this week.</p>
+<h3>Week 6: Agentic Workflows, Scaffolding, and Security</h3>
+<p style="font-size:0.85rem;color:var(--text-light)">~70 min reading + annotation time. Sets up next week's lectures on security and seeds the W7-W8 work on secure coding and prompt injection.</p>
 
 <div class="reading">
-  <div class="r-title"><a href="https://martinfowler.com/articles/continuousIntegration.html" target="_blank">Continuous Integration</a></div>
-  <div class="r-meta">Martin Fowler &middot; Article &middot; ~25 min</div>
-  <div class="r-desc">The canonical piece on what continuous integration actually means: integrate frequently, keep the mainline green, treat a broken build as the team's top priority. Sets the philosophy that the GitHub Actions workflow you build this week is meant to enforce.</div>
+  <div class="r-title"><a href="https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/" target="_blank">Automate repository tasks with GitHub Agentic Workflows</a></div>
+  <div class="r-meta">The GitHub Blog &middot; Article &middot; ~10 min</div>
+  <div class="r-desc">GitHub's announcement of Agentic Workflows: describe outcomes in plain Markdown, run a coding agent inside GitHub Actions, with read-only defaults and safe outputs for sensitive operations. Direct continuation of the CI/CD pipeline you stood up for the W6 assignment.</div>
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://docs.github.com/en/actions/quickstart" target="_blank">GitHub Actions: Quickstart</a></div>
-  <div class="r-meta">GitHub Docs &middot; Tutorial &middot; ~10 min</div>
-  <div class="r-desc">Hands-on walkthrough of creating your first workflow file: triggers, jobs, steps, and a passing run. Mirrors the minimal CI setup you'll commit for Part 1 of the W6 assignment.</div>
+  <div class="r-title"><a href="https://www.nicolasbustamante.com/p/llms-eat-scaffolding-for-breakfast" target="_blank">LLMs Eat Scaffolding for Breakfast</a></div>
+  <div class="r-meta">Nicolas Bustamante &middot; Blog post &middot; ~12 min</div>
+  <div class="r-desc">Argues that every line of scaffolding around an LLM (PDF parsers, JSON validators, retrieval pipelines) is a confession that the model was not yet good enough, and traces how each generation deletes scaffolding the previous one needed. A useful frame for what your team built in Sprint 1 and what to keep building or delete in Sprint 2.</div>
 </div>
 
 <div class="reading">
-  <div class="r-title"><a href="https://www.atlassian.com/team-playbook/plays/retrospective" target="_blank">Running an agile retrospective</a></div>
-  <div class="r-meta">Atlassian Team Playbook &middot; Guide &middot; ~10 min</div>
-  <div class="r-desc">A clean template for facilitating a retrospective: prep, the conversation itself, and the move from reflection to specific commitments. Read before Thursday's in-class Sprint 1 retro.</div>
+  <div class="r-title">Engineering Software Products, Ch. 7: Security and Privacy (pp. 195-227, Key Points)</div>
+  <div class="r-meta">Ian Sommerville &middot; Textbook &middot; ~25 min</div>
+  <div class="r-desc">Threats to confidentiality, integrity, and availability; authentication and authorization; the practical tradeoffs of secure design. Read the Key Points sections. Sets up next week's lectures on security and the W8 OWASP work.</div>
+</div>
+
+<div class="reading">
+  <div class="r-title"><a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/" target="_blank">The lethal trifecta for AI agents: private data, untrusted content, and external communication</a></div>
+  <div class="r-meta">Simon Willison &middot; Blog post &middot; ~10 min</div>
+  <div class="r-desc">Names the three capabilities that turn an AI agent into an exfiltration risk: access to private data, exposure to untrusted content, and the ability to communicate externally. Any agent or workflow that combines all three can be tricked into leaking data via prompt injection. Pairs directly with the GitHub Agentic Workflows reading.</div>
 </div>
 
 <div class="prompt">
-  <strong>Perusall discussion:</strong> &ldquo;Fowler argues that CI only works if developers integrate frequently and a broken build is the team's top priority. The Atlassian retrospective play insists that retros end with specific commitments tied to action items, not vague intentions. Pick one: what concrete change to your team's workflow would have the biggest payoff entering Sprint 2, faster integration, more honest CI failures, or sharper retrospective commitments? Explain what you'd do differently and why.&rdquo;
+  <strong>Perusall discussion:</strong> &ldquo;Bustamante argues each new model erases the scaffolding the last one needed; Willison warns that the more capabilities an agent has, the easier it is to weaponize. Look at your Sprint 1 codebase: where would you delete scaffolding because the model can now handle it directly, and where does your product touch all three points of the lethal trifecta? What would you change before Sprint 2?&rdquo;
 </div>
 
 <!-- Weeks 7+ hidden until finalized -->
