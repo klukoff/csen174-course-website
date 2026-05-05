@@ -124,13 +124,21 @@ You'll receive an invite link at your SCU email address by Thursday (W5D2 at the
 
 1. **All team members join Jolli.ai.** Use the invite link in your email to create your accounts on the [Jolli.ai](https://jolli.ai) service.
 2. **One team member creates a company space.** That person creates a new company space and selects your team's GitHub repository when prompted.
-3. **Getting it set up is the requirement.** Once the space is connected to your repo, Jolli will generate documentation about your codebase. Take a look at what it produced and check how accurately and helpfully it represents your work. You don't need to fix or improve the output this week, just have it set up.
+3. **At least one team member installs Jolli Memory in Cursor.** Jolli Memory is the Cursor extension that watches the back-and-forth between you and Cursor, so the Jolli web service can stay aligned with how the codebase actually evolves.
+4. **Getting it set up is the requirement.** Once the space is connected to your repo, Jolli will generate documentation about your codebase. Take a look at what it produced and check how accurately and helpfully it represents your work. You don't need to fix or improve the output this week, just have it set up.
 
-Include a screenshot of the connected repo (the company space showing your repo selected) in the write-up.
+Include in the write-up: a screenshot of the connected repo (the company space showing your repo selected), and a screenshot of Jolli Memory loaded inside Cursor for at least one team member.
 
-**Note:** For now, we are **not** using Jolli Memory inside Cursor. That feature requires extra setup (an Anthropic API key in Cursor) that we're skipping at the moment. You only need the web service connection described above.
+### Setting up Jolli Memory in Cursor
 
-Jolli runs in the background W5 to W9, generating documentation as you build. You'll use the output in W8 (revised architecture) and W9 (peer code review). Nothing visible from Jolli is graded this week beyond the connection itself.
+Jolli Memory does **not** require an Anthropic API key. Use a Jolli API key instead. Two paths:
+
+- **Easy path (recommended).** In Cursor's Jolli Memory app, find the **Status** section and click **Sign In**. The flow logs you into your Jolli account, creates a Jolli API key, and applies it to Jolli Memory automatically.
+- **Manual path.** At [jolli.ai](https://jolli.ai), open **Settings (bottom left)** → **Jolli Memory** and create an API key. In Cursor, click the **gear icon** in the **MEMORIES** section to open Jolli Memory Settings, paste the key into the **Jolli Memory API Key** box, and click **Apply** in the bottom right.
+
+If you hit a problem with either path, email Luke Haselwood at lukas.haselwood@jolli.ai (he is the Jolli PM working with our class) or post in office hours.
+
+Jolli runs in the background W5 to W9, generating documentation as you build. You'll use the output in W8 (revised architecture) and W9 (peer code review). Nothing visible from Jolli is graded this week beyond the connection and the Jolli Memory install.
 
 ## What to Submit
 
@@ -149,7 +157,7 @@ See Camino for submission details and due date.
 | Part 2: At least 2 tests pass, others fail cleanly. Coherent red-to-green narrative in the write-up | 2 |
 | Part 3: Testing skill installed and used on at least one test. Reflection names a concrete workflow change | 1 |
 | Part 4: Both AI critiques are specific to the test. Before/after diff is real, not cosmetic | 2 |
-| Part 5: Jolli connection working. Screenshot in write-up | 1 |
+| Part 5: Jolli connection working, Jolli Memory installed in Cursor for one team member, both screenshots in write-up | 1 |
 | **Total** | **10** |
 
 **Tests must pass for the right reason.** `assert true`, hardcoded expected values that mirror the implementation, or tests that mock the function under test do not earn Part 1 or Part 2 credit.
