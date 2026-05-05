@@ -793,16 +793,35 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <a class="assignment-link" href="#assignment-week5">View full assignment &amp; rubric &rarr;</a>
 </div>
 
-<!-- WEEKS 6-10 OUTLINE -->
-<hr>
-<h2>Weeks 6&ndash;10: Outline</h2>
-<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
-
+<!-- WEEK 6 DETAILED -->
 <div class="week week-build">
-  <div class="week-title">Week 6: CI/CD Pipeline + Sprint 1 Retrospective</div>
-  <div class="week-meta">Tue May 5 &amp; Thu May 7 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> GitHub Actions pipeline (lint, test on every PR), deployment documentation, and Sprint 1 retrospective.</p>
+  <div class="week-title">Week 6: CI/CD, Deployment, and Sprint 1 Retrospective</div>
+  <div class="week-meta">Lab &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>W6D1 (Tue May 5):</strong> CI/CD overview. GitHub Actions live setup. Deferred tests (skip / xfail / test.todo) so the W5 spec tests stay in the suite without breaking CI. Deployment platforms walkthrough. W6 assignment overview.</li>
+    <li><strong>W6D2 (Thu May 7):</strong> In-class Sprint 1 retrospective. Three prompts (what went well, what could be improved, Sprint 2 commitments). AI tools reflection. Translate commitments into Sprint 2 Kanban cards.</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>CI workflow:</strong> Set up GitHub Actions to run the W5 test suite on every PR. Mark deferred tests with skip or xfail and a <code>reason=</code> string. Land at least one merged PR with a passing CI run.</li>
+    <li><strong>Deployment:</strong> Pick a platform (Vercel, Netlify, Render, Fly.io, etc.) and deploy the application to a public URL. Move secrets out of code into the platform's environment settings.</li>
+    <li><strong>Retrospective write-up:</strong> Block 30 minutes after Thursday's class to draft the team's retro write-up while the conversation is fresh.</li>
+  </ul>
+
+  <h4>Deliverable</h4>
+  <ul>
+    <li><strong>CI/CD, deployment, and Sprint 1 retrospective</strong> (team) &mdash; GitHub Actions running the W5 suite on every PR, a public deployment URL, and a Sprint 1 retrospective. Write-ups at <code>docs/sprint-1-cicd.md</code> and <code>docs/sprint-1-retro.md</code> in the team repo.</li>
+  </ul>
+  <a class="assignment-link" href="#assignment-week6">View full assignment &amp; rubric &rarr;</a>
 </div>
+
+<!-- WEEKS 7-10 OUTLINE -->
+<hr>
+<h2>Weeks 7&ndash;10: Outline</h2>
+<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
 
 <div class="week week-build">
   <div class="week-title">Week 7: Security Audit (Sprint 2)</div>
@@ -1231,6 +1250,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <div class="week-title">Week 5: Testing Strategy and TDD (Team, Sprint 1)</div>
   <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit on Camino (repo URL + write-up in repo)</div>
   <p>Write failing spec tests for your Sprint 1 features (one unit per team member, one integration, one AI behavior), implement code to flip at least two RED to GREEN, install a testing skill, critique AI-generated tests, and connect your repo to Jolli.</p>
+</div>
+
+<div class="week week-build" style="cursor:pointer" onclick="loadAssignment('week6', this)">
+  <div class="week-title">Week 6: CI/CD, Deployment, and Sprint 1 Retrospective (Team, Sprint 1)</div>
+  <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit on Camino (repo URL + write-ups in repo)</div>
+  <p>Set up GitHub Actions to run the W5 test suite on every PR (with deferred tests marked via skip or xfail), deploy the application to a public URL, and run a Sprint 1 retrospective that turns commitments into Sprint 2 Kanban cards.</p>
 </div>
 
 <div class="week week-explore" style="cursor:pointer" onclick="loadAssignment('contribution-statements', this)">
