@@ -31,7 +31,7 @@ Sandbox rules:
 - Do not log into the target team's accounts, use their API keys, or burn their paid AI quota beyond what the deployed app already exposes to a normal user.
 - If you find a leaked credential, document it and notify the target team directly. Do not test by using the credential.
 
-Write the report in a document your team can share quickly (Google Doc, Markdown file, or similar). Share it with the target team during lab, by end of the section. The final version of the report is also uploaded to Camino at submission.
+Write the report at `docs/red-team-report-team-X.md` in your team repo (replace X with the target team's name). Share the repo link with the target team during lab, by end of the section. At submission, export the file to PDF and upload to Camino.
 
 Required structure:
 
@@ -62,14 +62,15 @@ For each fix:
 - Link to the merged PR
 - 1 to 2 sentences on what changed and why this fix addresses the finding
 
-Write the remediation summary as its own document (Google Doc, Markdown file, or similar) and upload it to Camino at submission. If the peer report had fewer than 2 findings you can act on this sprint, talk to the TA before the deadline so we can adjust expectations.
+Write the remediation summary at `docs/sprint-2-remediations.md` in your team repo. At submission, export the file to PDF and upload to Camino. If the peer report had fewer than 2 findings you can act on this sprint, talk to the TA before the deadline so we can adjust expectations.
 
 ## What to submit
 
 Upload to Camino:
 
-- Red team report, shared with the target team during lab (Part 1).
-- Remediation summary listing the two or more fixes with PR links (Part 2).
+- Red team report (PDF), exported from `docs/red-team-report-team-X.md` in your repo (Part 1).
+- Remediation summary (PDF), exported from `docs/sprint-2-remediations.md` in your repo (Part 2).
+- Repo URL for verification (paste in the submission text).
 
 See Camino for submission details and due date.
 
