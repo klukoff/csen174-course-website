@@ -818,16 +818,35 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <a class="assignment-link" href="#assignment-week6">View full assignment &amp; rubric &rarr;</a>
 </div>
 
-<!-- WEEKS 7-10 OUTLINE -->
-<hr>
-<h2>Weeks 7&ndash;10: Outline</h2>
-<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
-
+<!-- WEEK 7 DETAILED -->
 <div class="week week-build">
-  <div class="week-title">Week 7: Security Audit (Sprint 2)</div>
-  <div class="week-meta">Tue May 12 &amp; Thu May 14 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> Threat model, AI-assisted security review findings, remediation of 2&ndash;3 vulnerabilities, AI-specific security section (prompt injection, API keys, permissions).</p>
+  <div class="week-title">Week 7: Security Red Team and Remediation (Sprint 2)</div>
+  <div class="week-meta">Lab &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>W7D1 (Tue May 12):</strong> How security teams think. Threat modeling and attacker archetypes (external, insider, accidental user, automated scanner). CIA triad applied to AI-powered web products. Lethal trifecta and prompt injection. What AI scanners miss vs. what humans must catch. AI as research partner. Responsible AI as part of the threat model. Lab preview.</li>
+    <li><strong>W7D2 (Thu May 14):</strong> Guest lecture by <a href="https://www.linkedin.com/in/travismcpeak/" target="_blank">Travis McPeak</a> from Cursor on AI-assisted security tooling. The speaker receives an anonymized synthesis of class findings beforehand, so the talk lands on the patterns the section surfaced.</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>Ring red team (pre-assigned):</strong> Tuesday section: Codebase Explainer &rarr; Smart Shop &rarr; TTSTT &rarr; Codebase Explainer. Wednesday section: Roots &rarr; TripSync &rarr; Write Up &rarr; Email Triage Agent &rarr; SCU Course Planner &rarr; Roots. Each team red-teams the next team and is red-teamed by the previous one.</li>
+    <li><strong>Three required categories:</strong> Technical security (auth, input validation, secrets, dependencies), AI API security (prompt injection, key exposure, payload sanitization), and responsible AI (vulnerable-user disclosure test).</li>
+    <li><strong>In-lab share:</strong> Each team gives a 5-minute top-finding presentation and shares the written report with the target team by end of the section.</li>
+  </ul>
+
+  <h4>Deliverable</h4>
+  <ul>
+    <li><strong>Security red team and remediation</strong> (team) &mdash; Red team report on the assigned target team plus a remediation summary patching at least 2 issues from the peer report received. Both uploaded as documents to Camino.</li>
+  </ul>
+  <a class="assignment-link" href="#assignment-week7">View full assignment &amp; rubric &rarr;</a>
 </div>
+
+<!-- WEEKS 8-10 OUTLINE -->
+<hr>
+<h2>Weeks 8&ndash;10: Outline</h2>
+<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
 
 <div class="week week-build">
   <div class="week-title">Week 8: Revised Architecture + Sprint 2 Retrospective</div>
@@ -1289,6 +1308,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <div class="week-title">Week 6: CI/CD, Deployment, and Sprint 1 Retrospective (Team, Sprint 1)</div>
   <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit on Camino (repo URL + write-ups in repo)</div>
   <p>Set up GitHub Actions to run the W5 test suite on every PR (with deferred tests marked via skip or xfail), deploy the application to a public URL, and run a Sprint 1 retrospective that turns commitments into Sprint 2 Kanban cards.</p>
+</div>
+
+<div class="week week-build" style="cursor:pointer" onclick="loadAssignment('week7', this)">
+  <div class="week-title">Week 7: Security Red Team and Remediation (Team, Sprint 2)</div>
+  <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit documents on Camino</div>
+  <p>Red-team a target team&rsquo;s deployed app and public repo (pre-assigned ring, in lab), then patch your own codebase using the report your team received. Findings cover technical security, AI API security, and responsible AI (vulnerable-user disclosure test required).</p>
 </div>
 
 <div class="week week-explore" style="cursor:pointer" onclick="loadAssignment('contribution-statements', this)">

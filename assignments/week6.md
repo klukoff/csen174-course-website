@@ -75,19 +75,14 @@ Choose any platform that offers a free tier and supports your stack. A few commo
 
 ## Part 3: Sprint 1 retrospective (2 pts)
 
-The team participates in the in-class Sprint 1 retrospective on Thursday (W6D2). Each team posts the write-up at `docs/sprint-1-retro.md` after class.
+The team participates in the in-class Sprint 1 retrospective on Thursday (W6D2). After class, each team posts the write-up at `docs/sprint-1-retro.md`.
 
-The in-class session walks through three prompts:
+The in-class session walks through three retro prompts. All three prompts are answered in the write-up, organized into four required sections:
 
-- What went well in Sprint 1?
-- What could be improved?
-- Which improvements will the team commit to in Sprint 2?
-
-Required sections in the write-up:
-
-- **Celebrate.** Name specific people and specific contributions. "Maya unblocked the auth flow on Saturday by rewriting the token refresh logic" beats "everyone worked hard."
+- **What went well (Celebrate).** Answer to the first retro prompt. Name specific people and specific contributions. "Maya unblocked the auth flow on Saturday by rewriting the token refresh logic" beats "everyone worked hard."
+- **What could be improved.** Answer to the second retro prompt. Be specific about frictions, gaps, or process problems the team noticed during Sprint 1.
 - **AI tools reflection.** Two short paragraphs. Describe what AI tools (Cursor, Claude, Copilot, agent skills, Jolli, etc.) made easier this sprint and what they made harder. Use concrete examples instead of generalities.
-- **Sprint 2 commitments.** Two or three improvements the team will act on, each translated into a specific Kanban card on the team's Sprint 2 board. Link each card directly from the retro write-up.
+- **Sprint 2 commitments.** Answer to the third retro prompt. Two or three improvements the team will act on, each translated into a specific Kanban card on the team's Sprint 2 board. Link each card directly from the retro write-up.
 
 Aim for one to two pages of prose. Specifics carry the grade.
 
@@ -124,7 +119,7 @@ See Camino for the due date.
 |----------|--------|
 | Part 1: GitHub Actions workflow runs the W5 test suite on every PR; at least one merged PR shows a passing CI run; deferred tests are marked with a skip or xfail decorator and a `reason=` string; secrets handled via repo settings | 4 |
 | Part 2: Public URL reachable off-campus, landing page returns cleanly, stable for the 24 hours before the deadline, deployment dashboard screenshot included | 4 |
-| Part 3: Retro posted at `docs/sprint-1-retro.md` with all three questions answered, celebrate section naming specific people and contributions, AI tools reflection, and 2 to 3 commitments linked to specific Sprint 2 Kanban cards | 2 |
+| Part 3: Retro posted at `docs/sprint-1-retro.md` with all four required sections: what went well (celebrate, with specific names and contributions), what could be improved, AI tools reflection, and Sprint 2 commitments (2 to 3 improvements, each linked to a specific Sprint 2 Kanban card) | 2 |
 | **Total** | **10** |
 
 ## Gotchas
