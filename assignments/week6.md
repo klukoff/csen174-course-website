@@ -1,7 +1,7 @@
 # Week 6: CI/CD, Deployment, and Sprint 1 Retrospective
 
-**Type:** Team assignment (one submission per team)
-**Points:** 10
+**Type:** Team assignment (one submission per team)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 ## Overview
@@ -50,7 +50,7 @@ jobs:
 
 Python teams swap in `actions/setup-python` and `pip install -r requirements.txt` with `pytest`. Same shape.
 
-In the write-up, include:
+In `docs/sprint-1-cicd.md`, include:
 
 - A link to one merged PR showing the passing CI check.
 - A short paragraph (3 to 5 sentences) on how the team handled secrets: which secrets exist, which environment surface (CI, deployment, or both) needs each one, and how the workflow reads them at runtime.
@@ -65,10 +65,10 @@ Required:
 - The deployment is stable for the 24 hours leading into the deadline. "Working" means the landing page loads without server errors and the core entry point of your product is visible (a homepage, a sign-in screen, the main UI). It does not need every feature wired up.
 - Secrets used in deployment (API keys, database credentials, etc.) live in the deployment platform's environment settings, not in code.
 
-In the write-up, include:
+In `docs/sprint-1-cicd.md`, include:
 
 - The live URL.
-- A screenshot of the deployment platform's dashboard showing successful deploys (Vercel, Netlify, Render, Fly.io, Railway, AWS Amplify, and similar all expose a "Deployments" view).
+- A screenshot of the deployment platform's dashboard showing successful deploys (Vercel, Netlify, Render, Fly.io, Railway, AWS Amplify, and similar all expose a "Deployments" view). Commit the image to the repo (e.g., `docs/img/deploy.png`) and embed it inline in the markdown with `![Deploy dashboard](img/deploy.png)`.
 - A short paragraph (3 to 5 sentences) describing which platform the team chose, why it fit your stack, and what tripped you up the first time.
 
 Choose any platform that offers a free tier and supports your stack. A few common picks: Vercel and Netlify for front-end-heavy stacks, Render and Fly.io for full-stack apps with a back end, Railway for projects with a database. Many platforms can also auto-deploy on push to `main`, which pairs well with Part 1. Auto-deploy is not required for credit, but it is the workflow most teams will want for Sprint 2.
@@ -93,13 +93,30 @@ Aim for one to two pages of prose. Specifics carry the grade.
 
 ## What to Submit
 
-Submit on Camino. The submission includes:
+Two write-ups live in the team repo. Both are markdown files committed alongside the rest of the code.
 
-- Repo URL.
-- Write-up at `docs/sprint-1-cicd.md` covering Parts 1 and 2 (link to the merged PR, secrets paragraph, live URL, deployment screenshot, platform paragraph).
-- Write-up at `docs/sprint-1-retro.md` covering Part 3 (three questions, celebrate section, AI tools reflection, Sprint 2 Kanban card links).
+`docs/sprint-1-cicd.md` covers Parts 1 and 2. It contains:
 
-See Camino for submission details and due date.
+- A link to the merged PR with a passing CI run.
+- The secrets paragraph (3 to 5 sentences).
+- The live deployment URL.
+- The deployment dashboard screenshot. Commit the image to the repo (e.g., `docs/img/deploy.png`) and embed it inline in the markdown with `![Deploy dashboard](img/deploy.png)`.
+- The platform paragraph (3 to 5 sentences).
+
+`docs/sprint-1-retro.md` covers Part 3. It contains:
+
+- The three retro questions answered.
+- The celebrate section with specific names and contributions.
+- The AI tools reflection (two short paragraphs).
+- Links to 2 to 3 Sprint 2 Kanban cards.
+
+On Camino, submit:
+
+- The repo URL.
+- A direct link to `docs/sprint-1-cicd.md` in the repo.
+- A direct link to `docs/sprint-1-retro.md` in the repo.
+
+See Camino for the due date.
 
 ## Grading
 

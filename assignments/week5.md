@@ -1,7 +1,7 @@
 # Week 5: Testing Strategy and TDD (Sprint 1)
 
-**Type:** Team assignment (one submission per team)
-**Points:** 10
+**Type:** Team assignment (one submission per team)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 ## Overview
