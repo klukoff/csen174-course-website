@@ -103,18 +103,9 @@ See Camino for submission details and due date.
 - Look at git history. Secrets that were committed and later removed often still live in earlier commits. `git log -p | grep -i 'api[_-]key'` finds plenty.
 - Check the deployment platform's environment variables list (Vercel, Render, Fly.io, etc.) if the target team has it open during lab. Misconfigured env vars are a common, real finding.
 - Keep the lab presentation tight. Five minutes is the lead vulnerability, the repro, the impact, and one sentence on the fix. Save the rest for the written report.
-- Travis McPeak will have your section's anonymized findings beforehand. Bring questions on Thursday tied to what you saw.
-- If you want to harden your CI workflow, Travis will mention tools like Dependabot, Gitleaks, CodeQL, and language-specific scanners. Adding any of these to your W6 GitHub Actions workflow is not graded this week but is a real Sprint 2 upgrade.
-
-## Resources
-
-- [OWASP Secure Coding Practices Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/), the practical checklist that names the categories of issues you'll be probing.
-- [OWASP LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/), direct and indirect prompt injection with examples.
-- [The lethal trifecta for AI agents](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/), Simon Willison (W6 reading). Frames the AI-API attack surface.
-- [Engineering Software Products, Ch. 7: Security and Privacy](https://www.softwareengineering-9.com/web/security/index.html), Sommerville (W6 reading). Foundational vocabulary for talking about confidentiality, integrity, and availability.
 
 ## Why this week
 
 The red team gives the visceral realization that other teams' code has the same gaps yours does. The patches close the loop: not "we found a problem" but "here's how we fixed it."
 
-The responsible-AI dimension is the part most likely to stick. Every team's product sends user input to an LLM, and how that LLM responds when a user shares something fragile is a security question, a design question, and an ethics question at once. Surfacing it adversarially in another team's product, before your own faces it in the wild, is the cleanest way to make it real.
+Every team's product sends user input to an LLM. How the system handles fragile input (distress, sensitive personal details, prompts designed to elicit harmful output) is a security, design, and ethics problem all at once. The red team is a chance to find those gaps in a peer's product before users find them in your own.
