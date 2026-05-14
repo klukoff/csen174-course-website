@@ -36,7 +36,7 @@ Write the report at `docs/red-team-report-team-X.md` in your team repo (replace 
 Required structure:
 
 - One-paragraph summary of the target team's product and the surfaces you probed.
-- Brief threat model: 1 to 2 attacker archetypes most plausible for this product (external attacker, insider, accidental user, automated scanner) and one sentence each on why. Each finding below ties to one of these attackers.
+- Brief threat model: 1 to 2 attacker archetypes most plausible for this product (external attacker, insider, accidental user, automated scanner) and one sentence each on why. Model the product at the scale you intend to operate at, not the six-week prototype as it stands today. Architectural and design choices made now decide which threats land when real users arrive. Each finding below ties to one of these attackers.
 - Findings across three categories. Aim for at least one finding per category. If a category yielded nothing exploitable, document the null result and what you tried.
   - Technical security: auth, input validation, secrets, dependency hygiene.
   - AI API security: prompt injection, key exposure, payload sanitization, rate limit abuse.
@@ -87,6 +87,7 @@ See Camino for submission details and due date.
 ## Gotchas
 
 - A red team report that says "we couldn't find anything" earns partial credit at best. Document what you tried, including dead ends. Real-world pen test reports look the same.
+- A report that dismisses findings with "this is just a class project, no attackers care yet" misses the point. Threat-model the product at the scale you intend to operate at. If a design choice today becomes a real risk once users arrive, it counts.
 - Using a leaked credential from the target team to "prove" the finding crosses the sandbox line and earns no credit. Document the leak and tell the target team directly.
 - Generic remediations ("improved input validation") with no PR link or no source finding do not count. Each fix must trace back to a finding in the peer report and forward to a merged PR.
 - Responsible-AI test handled poorly by the app is a finding for the target team, not a failure of the red team. Frame constructively.
@@ -94,6 +95,7 @@ See Camino for submission details and due date.
 ## Tips
 
 - Lead with the threat model. Naming the attackers first turns "we found a bug" into "this matters because attacker X could do Y." That framing is what the grade rests on.
+- Threat-model the product you intend to ship, not the prototype you have today. A class project with no users has few attackers; the deployed commercial service you're prototyping has many. Where secrets live, how user input flows, what gets logged: these choices made now decide which threats land later.
 - Bug-finding is the easy half. AI-assisted coding has already caught a lot of the obvious surface issues. The richer findings are design, operational, business logic, and trust boundary issues that need a human reading the code with an attacker in mind.
 - Treat AI tool findings as a starting point. Cursor or Claude can list 30 candidate issues in two minutes; most will be irrelevant. The skill is filtering.
 - Show your work with AI. In your report (or an appendix), name the prompts you used and the model's draft findings. Then say which you verified, which you discarded, and what you added by hand. The grade rests on the judgment, not the volume.
