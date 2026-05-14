@@ -95,7 +95,7 @@ See Camino for submission details and due date.
 ## Tips
 
 - Lead with the threat model. Naming the attackers first turns "we found a bug" into "this matters because attacker X could do Y." That framing is what the grade rests on.
-- Threat-model the product you intend to ship, not the prototype you have today. A class project with no users has few attackers; the deployed commercial service you're prototyping has many. Where secrets live, how user input flows, what gets logged: these choices made now decide which threats land later.
+- Threat-model the product you intend to ship, not the prototype you have today. A class project with no users has few attackers; the deployed commercial service you're prototyping has many: ransomware operators, DDoS-for-ransom crews, abuse-API botnets, and competitors looking to embarrass you on launch day. Where secrets live, how user input flows, what gets logged: these choices made now decide which threats land later.
 - Bug-finding is the easy half. AI-assisted coding has already caught a lot of the obvious surface issues. The richer findings are design, operational, business logic, and trust boundary issues that need a human reading the code with an attacker in mind.
 - Treat AI tool findings as a starting point. Cursor or Claude can list 30 candidate issues in two minutes; most will be irrelevant. The skill is filtering.
 - Show your work with AI. In your report (or an appendix), name the prompts you used and the model's draft findings. Then say which you verified, which you discarded, and what you added by hand. The grade rests on the judgment, not the volume.
