@@ -843,16 +843,36 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <a class="assignment-link" href="#assignment-week7">View full assignment &amp; rubric &rarr;</a>
 </div>
 
-<!-- WEEKS 8-10 OUTLINE -->
-<hr>
-<h2>Weeks 8&ndash;10: Outline</h2>
-<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
-
+<!-- WEEK 8 DETAILED -->
 <div class="week week-build">
-  <div class="week-title">Week 8: Revised Architecture + Sprint 2 Retrospective</div>
-  <div class="week-meta">Tue May 19 &amp; Thu May 21 &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
-  <p><strong>Deliverable:</strong> Updated C4 diagrams reflecting the current system (compared to W4 plan), narrative on what changed and why, jolli.ai output comparison, and Sprint 2 retrospective. Lighter week by design.</p>
+  <div class="week-title">Week 8: Revised Architecture and Sprint 2 Retrospective (Sprint 2)</div>
+  <div class="week-meta">Lab &middot; <span class="label label-build" style="font-size:0.65rem">Build</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>W8D1 (Tue May 19):</strong> Architecture as decisions, now and at scale. Vocabulary recap from the W7 readings (ADRs, tech debt quadrant, irreversibility). Worked example walking one architectural shift as a modified ADR. Cursor-assisted C4 update demo. Architecture at scale: Fowler's monolith-first revisited, Uber's monolith-to-microservices transition, Conway's Law. Two think-pair-share exercises on dividing microservices and scaling to 10M users.</li>
+    <li><strong>W8D2 (Thu May 21):</strong> Sprint 2 retrospective workshop (in-class, replaces lab retro this week). Three-minute architecture shareouts: every team presents the change in their C4 context and container diagrams, plus the key architectural decision behind it. Brief demo night ramp (June 5 schedule and format). W9 preview and code freeze handoff.</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>Revisit and update:</strong> Read the W2 product vision out loud as a team; note what has shifted. Update C4 context and container diagrams to reflect what is on <code>main</code> today.</li>
+    <li><strong>Draft the retrospective architecture note:</strong> 1 to 3 decisions that shifted between W4 and W8, each with context, decision, consequences, and Fowler-quadrant classification; tech debt list classified per the same quadrant.</li>
+    <li><strong>Cross-team pairing (mid-lab):</strong> Each team explains its biggest architectural surprise to one other team and gets one clarifying question back. Surfaces patterns before Thursday's shareouts.</li>
+    <li><strong>Slide prep:</strong> Add up to 4 slides to the shared Thursday architecture deck (template provided on Camino).</li>
+  </ul>
+
+  <h4>Deliverable</h4>
+  <ul>
+    <li><strong>Revised architecture and Sprint 2 retrospective</strong> (team) &mdash; Three parts. Retrospective architecture note (5 pts) in the repo, 3-minute in-class presentation on Thursday (2 pts), and Sprint 2 retrospective write-up (3 pts) drafted in Thursday's lecture.</li>
+  </ul>
+  <a class="assignment-link" href="#assignment-week8">View full assignment &amp; rubric &rarr;</a>
 </div>
+
+<!-- WEEKS 9-10 OUTLINE -->
+<hr>
+<h2>Weeks 9&ndash;10: Outline</h2>
+<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
 
 <div class="week week-ship">
   <div class="week-title">Week 9: Ethics Reflection + Peer Code Review + Code Freeze (Sprint 3)</div>
@@ -1314,6 +1334,12 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <div class="week-title">Week 7: Security Red Team and Remediation (Team, Sprint 2)</div>
   <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit documents on Camino</div>
   <p>Red-team a target team&rsquo;s deployed app and public repo (pre-assigned ring, in lab), then patch your own codebase using the report your team received. Findings cover technical security, AI API security, and responsible AI (vulnerable-user disclosure test required).</p>
+</div>
+
+<div class="week week-build" style="cursor:pointer" onclick="loadAssignment('week8', this)">
+  <div class="week-title">Week 8: Revised Architecture and Sprint 2 Retrospective (Team, Sprint 2)</div>
+  <div class="week-meta">10 points &middot; See Camino for due date &middot; Submit on Camino (PDFs + shared slides)</div>
+  <p>Revisit the W2 product vision, update C4 context and container diagrams to reflect the current code, classify shifted decisions and tech debt per Fowler&rsquo;s quadrant, present the change in a 3-minute in-class shareout on Thursday, and post the Sprint 2 retrospective.</p>
 </div>
 
 <div class="week week-explore" style="cursor:pointer" onclick="loadAssignment('contribution-statements', this)">
