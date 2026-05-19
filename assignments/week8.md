@@ -41,7 +41,7 @@ Each team gives a 3-minute presentation in Thursday's lecture (W8D2) on the team
 
 Required:
 
-- Up to 4 slides added to the shared class deck (link on Camino, pinned to the W8D2 session) before Thursday's lecture.
+- Up to 4 slides added to the [shared class deck](https://docs.google.com/presentation/d/16eHBn87DjPoZIgR7YGD1sMm-UBfXtl7G?rtpof=true&usp=drive_fs) before Thursday's lecture.
 - Show your revisited product vision statement, noting briefly whether anything changed from W2.
 - Show your current C4 context diagram (introduces the product at the system boundary).
 - Show your C4 container diagram with a before (W4) and after (W8) view that reflects the key architectural change your team made.
