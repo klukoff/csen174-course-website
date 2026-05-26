@@ -1,7 +1,9 @@
 # Week 8: Revised Architecture and Sprint 2 Retrospective
 
 **Type:** Team assignment (one submission per team)
+
 **Points:** 10
+
 **Due:** See Camino for submission details and due date.
 
 ## Overview

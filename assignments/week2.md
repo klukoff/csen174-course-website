@@ -1,7 +1,9 @@
 # Week 2: Product Vision and Agent Skills
 
 **Type:** Group assignment (one submission per team)  
+
 **Points:** 10  
+
 **Due:** See Camino for submission details and due date.
 
 ## Overview
