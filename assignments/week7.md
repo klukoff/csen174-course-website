@@ -1,9 +1,7 @@
 # Week 7: Security Red Team and Remediation
 
-**Type:** Team assignment (one submission per team)
-
-**Points:** 10
-
+**Type:** Team assignment (one submission per team)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 ## Overview

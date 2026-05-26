@@ -408,6 +408,7 @@
   .md-content h1 { font-family: 'Crimson Pro', serif; font-size: 1.6rem; color: var(--red); margin: 0 0 0.5rem; }
   .md-content h2 { font-family: 'Crimson Pro', serif; font-size: 1.25rem; color: var(--slate-dark); margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--fog); padding-bottom: 0.3rem; }
   .md-content p { margin: 0.6rem 0; line-height: 1.65; }
+  .md-content > h1 + p { line-height: 1.4; margin: 0.25rem 0 1rem; }
   .md-content ul, .md-content ol { margin: 0.5rem 0; padding-left: 1.5rem; }
   .md-content li { margin: 0.3rem 0; line-height: 1.55; }
   .md-content strong { color: var(--slate-dark); }
@@ -869,23 +870,57 @@ Office hours: Tuesdays 9:15&ndash;10:15 AM and 1:30&ndash;2:30 PM, Heafey 229</p
   <a class="assignment-link" href="#assignment-week8">View full assignment &amp; rubric &rarr;</a>
 </div>
 
-<!-- WEEKS 9-10 OUTLINE -->
-<hr>
-<h2>Weeks 9&ndash;10: Outline</h2>
-<p>Full details for these weeks will be posted to the schedule at least one week in advance.</p>
-
+<!-- WEEK 9 DETAILED -->
 <div class="week week-ship">
   <div class="week-title">Week 9: Ethics Reflection and Code Freeze (Sprint 3)</div>
-  <div class="week-meta">Tue May 26 &amp; Thu May 28 &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
-  <p><strong>Lab:</strong> Case-study workshop applying the IEEE/ACM SE Code to the W8 failure readings (Boeing 737 MAX, Robodebt, Moffatt v. Air Canada), scaffolded drafting of the team ethics reflection, and code freeze.</p>
-  <p><strong>Deliverable:</strong> Team ethics reflection (product ethics, one user and one non-user stakeholder, 3 harms mapped to IEEE/ACM SE Code clauses, one concrete change made for ethical reasoning). Sprint 3 code freeze on <code>main</code>; bug fixes allowed and expected.</p>
+  <div class="week-meta">Lab &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>W9D1 (Tue May 26):</strong> <a class="slides-link" href="https://docs.google.com/presentation/d/1doa5oL913dxkaFuhaN6lb2gKSbwuR-h1?rtpof=true&amp;usp=drive_fs" target="_blank">Slides</a> Ethics reflection framework. Vocabulary recap from the W8 readings (Boeing 737 MAX, Robodebt, Moffatt v. Air Canada, IEEE/ACM SE Code). Stakeholders: users vs. non-users. Harms-to-clauses mapping with worked examples. Code freeze handoff and W10 demo night preview.</li>
+    <li><strong>W9D2 (Thu May 28):</strong> Ethics reflection workshop and demo night preview. Teams finalize the ethics reflection write-up and start mapping the W10 demo plan (happy-path flow, fallback story, summary card draft).</li>
+  </ul>
+
+  <h4>Lab</h4>
+  <ul>
+    <li><strong>Case-study workshop:</strong> Apply the IEEE/ACM SE Code to the W8 failure readings (Boeing 737 MAX, Robodebt, Moffatt v. Air Canada). Identify which clauses apply and how the failures could have been caught upstream.</li>
+    <li><strong>Ethics reflection draft:</strong> Turn the vocabulary on the team's own product. Name one user and one non-user stakeholder, 3 harms mapped to IEEE/ACM SE Code clauses, and one concrete change made for ethical reasoning.</li>
+    <li><strong>Code freeze:</strong> Sprint 3 code freeze on <code>main</code>. No new features after the freeze; bug fixes, deployment fixes, and last-mile polish are allowed.</li>
+  </ul>
+
+  <h4>Deliverable</h4>
+  <ul>
+    <li><strong>Ethics reflection and code freeze</strong> (team) &mdash; Two parts. Team ethics reflection (8 pts) with product vision, one user and one non-user stakeholder, 3 harms mapped to IEEE/ACM SE Code clauses, and one concrete change. Sprint 3 code freeze (2 pts) on <code>main</code> with the deployed app live.</li>
+  </ul>
   <a class="assignment-link" href="#assignment-week9">View full assignment &amp; rubric &rarr;</a>
 </div>
 
+<!-- WEEK 10 DETAILED -->
 <div class="week week-ship">
   <div class="week-title">Week 10: AI Demo Night + Technical Report (Sprint 3)</div>
-  <div class="week-meta">Thu Jun 4 practice &middot; Fri Jun 5 demo night &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
-  <p><strong>Deliverable:</strong> Working live demo, 60-second lightning pitch, one-page project summary card (Fri Jun 5, 5:30&ndash;7:30 PM, St. Clare Room, University Library). Technical report due Wed Jun 10 (3&ndash;5 pages: architecture, testing, security, deployment, AI process reflection).</p>
+  <div class="week-meta">Demo Night &middot; <span class="label label-ship" style="font-size:0.65rem">Ship</span></div>
+
+  <h4>In-class Sessions</h4>
+  <ul>
+    <li><strong>W10D1 (Tue Jun 2):</strong> Demo night kickoff. Walk-through of the live demo rubric, summary card example (GazeReader), and demo video expectations. Team dry runs of the 90-second happy-path flow with peer feedback.</li>
+    <li><strong>W10D2 (Thu Jun 4):</strong> Demo night dress rehearsal. Full station setup with the deployed app, the demo video fallback queued on a local device, the printed summary card, and the rehearsed in-flow failure story. Logistics for Friday's gallery hours.</li>
+    <li><strong>AI Demo Night (Fri Jun 5, 5:30&ndash;7:30 PM):</strong> St. Clare Room, University Library. Public gallery-style showcase with industry guests, faculty, alumni, students, and other AI Kitchen teams. All team members staff the demo station during gallery hours.</li>
+  </ul>
+
+  <h4>Lab and Async Work</h4>
+  <ul>
+    <li><strong>Card and video due Wed Jun 3:</strong> Submit the 90-second to 2-minute demo video (hosted publicly, with voiceover or captions) and the one-page summary card PDF to Camino by Wednesday so printing can happen Thursday.</li>
+    <li><strong>Tag the deploy:</strong> Tag the deployed commit on <code>main</code> as <code>demo-night</code> before Friday and include the tag link in the Camino submission.</li>
+    <li><strong>Failure rehearsal:</strong> Save the demo video as a local MP4 on a team-provided device, queued in a media player ready to play in under 10 seconds if the live demo cannot run.</li>
+  </ul>
+
+  <h4>Deliverable</h4>
+  <ul>
+    <li><strong>AI Demo Night deliverables</strong> (team, 10 pts) &mdash; Live deployed demo (4 pts), demo video (3 pts), one-page summary card (3 pts). Card and video due Wed Jun 3; live demo and demo night attendance Fri Jun 5.</li>
+    <li><strong>Final technical report</strong> (team, 40 pts, separate Final Project deliverable) &mdash; 3 to 5 pages covering architecture evolution, testing, security, deployment, and AI process reflection. Due Wed Jun 10.</li>
+  </ul>
+  <a class="assignment-link" href="#assignment-week10">View W10 assignment &amp; rubric &rarr;</a>
+  <a class="assignment-link" href="#assignment-technical-report">View final technical report &amp; rubric &rarr;</a>
 </div>
 
 </section>

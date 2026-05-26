@@ -1,9 +1,7 @@
 # Final Technical Report
 
-**Type:** Team submission (one report per team)
-
-**Points:** 40 (separate "Final Project" deliverable, not part of W10 weekly)
-
+**Type:** Team submission (one report per team)  
+**Points:** 40 (separate "Final Project" deliverable, not part of W10 weekly)  
 **Due:** See Camino for submission details and due date.
 
 ## Overview

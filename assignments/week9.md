@@ -1,9 +1,7 @@
 # Week 9: Ethics Reflection and Code Freeze (Sprint 3)
 
-**Type:** Team assignment (one submission per team)
-
-**Points:** 10
-
+**Type:** Team assignment (one submission per team)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 ## Overview

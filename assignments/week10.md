@@ -1,9 +1,7 @@
 # Week 10: AI Demo Night Deliverables
 
-**Type:** Team assignment (one submission per team)
-
-**Points:** 10
-
+**Type:** Team assignment (one submission per team)  
+**Points:** 10  
 **Due:** See Camino for submission details and due date.
 
 ## Overview
