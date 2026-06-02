@@ -16,6 +16,7 @@ The grader cares more about the process narrative than the final result. A team 
 - Page count excludes the title page and the appendix.
 - Figures and diagrams count toward the page budget. Use them when they earn their space.
 - Every numbered section below ends with at least one **repo reference**: a specific file path, commit SHA, PR number, sprint-board column screenshot, or comparable artifact. "We refactored the API" without a link is not credit; "we extracted `services/agent.py` from `app.py` in PR #47 after the security review flagged it" is.
+- Reference and link specific decisions and changes in the code, not summaries from memory. If a change removed code, link to the version-controlled instance of it (the commit or PR that removed it, or the file at an earlier tag); removed work still counts when it is traceable in version control.
 
 ## What to include
 
