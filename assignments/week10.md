@@ -27,7 +27,6 @@ Required:
 - A visitor can reach the product without team-only credentials, localhost, or "you have to log in as me" caveats. If the product requires accounts, the team provides at least one demo account.
 - The happy-path user flow (the one also shown in the demo video) completes end-to-end in under 90 seconds, with minimal team intervention.
 - At least one in-flow failure is rehearsed: what the team shows if the API rate-limits, the model errors, or the demo account gets into a bad state. A 10-second fallback story counts. For whole-system failures (network down, deploy is down), the team plays the Part 2 video.
-- The deployed build matches a tagged commit on `main`. Tag it `demo-night` before Friday and include the tag link in the Camino submission.
 
 The grader walks up as an anonymous visitor during gallery hours, attempts the demo on whatever device the product runs on, and grades on whether it works.
 
@@ -51,7 +50,7 @@ The grader watches the video as if seeing the product for the first time and gra
 
 Each team produces one 8.5 x 11 project summary card that sits on the demo table for visitors to pick up or read at a glance. Submit as a single-page PDF.
 
-The card should communicate the project at a glance: what it is, what problem it solves, and how a visitor can try it. An example summary card for a fictional product called GazeReader is in the course assets folder (`Assignments/assets/summary-card-example/`). Use it as a reference for visual rhythm and level of detail. Teams are free to depart from the example layout.
+The card should communicate the project at a glance: what it is, what problem it solves, and how a visitor can try it. An example summary card for a fictional product called GazeReader is in the GazeReader repo README: https://github.com/The-AI-Kitchen/gaze-reader#example-summary-card (a print-ready PDF is linked there too). Use it as a reference for visual rhythm and level of detail. Teams are free to depart from the example layout.
 
 The course will print one 8.5 x 11 copy of each card on regular paper for the demo table. Submit the PDF to Camino by Wednesday of W10 so printing can happen Thursday.
 
@@ -87,7 +86,7 @@ Not graded on this rubric, but a missing team member without a pre-approved conf
 
 Upload to Camino:
 
-- The live deployed URL and the `demo-night` git tag link (Part 1).
+- The live deployed URL (Part 1).
 - The demo video URL, hosted publicly (Part 2).
 - The one-page summary card as a single PDF (Part 3).
 
@@ -97,7 +96,7 @@ See Camino for submission details and due date.
 
 | Criteria | Points |
 |----------|--------|
-| Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback; deployed build matches the `demo-night` git tag on `main` | 4 |
+| Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback | 4 |
 | Part 2: Demo video of up to 2 minutes with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds; submitted by the Wednesday cutoff | 3 |
 | Part 3: One-page 8.5 x 11 summary card that communicates the project at a glance (what it is, what problem it solves, how to try it); submitted to Camino by the Wednesday print cutoff | 3 |
 | **Total** | **10** |
