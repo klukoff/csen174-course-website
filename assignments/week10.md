@@ -64,9 +64,18 @@ Required:
 - 90 seconds, verbal only, no slides.
 - Delivered by one or two team members (the team's choice). If two speakers, rehearse the handoff so the transition is clean and does not eat into the 90 seconds.
 - Lead with the motivation (the problem and why it matters) and the cool outcomes. Leave out process and technical details. Save the depth for visitors who stop by the station, where the team can go as deep as anyone wants.
-- Practiced in class on Thursday of W10 with peer feedback before the live event Friday.
+- Rehearsed in class on Thursday of W10 with peer feedback before the live event Friday (see the dress rehearsal below).
 
 The pitch is a participation expectation, not a graded rubric item. Delivering it counts; skipping it is what costs the team.
+
+## Dress rehearsal in class: Thursday of W10
+
+Thursday's class (W10D2) is a full dress rehearsal for Friday, run in two parts.
+
+- Pitches first. Every team delivers its 90-second lightning pitch once to the room and gets quick peer and instructor feedback, then has a chance to adjust before Friday.
+- Demo stations second. Teams set up the actual demo station as it will run Friday, then rehearse the walk-up: what a visitor sees first, who greets them, how the team hands the visitor the product, the under-90-second happy path, and the rehearsed failure fallback.
+
+Bring a deployed build and whatever you will run the station on Friday (laptop, device, demo account, and the local MP4 backup). The point is that nothing about the station or the pitch is set up for the first time on Friday.
 
 ## Demo night attendance (pass/fail)
 
