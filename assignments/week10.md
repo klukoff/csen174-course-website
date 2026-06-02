@@ -16,6 +16,8 @@ The three public deliverables show what the product does. Technical depth (archi
 
 Code freeze landed in W9. W10 is communication work, not new features. The graded items are the live demo, the demo video, and the summary card. The team also staffs the demo station Friday evening.
 
+While polishing the demo, tidy the repo into a portfolio piece: a README that leads with the product description, the demo video, and the live URL, plus a clean top-level structure a stranger can navigate. The repo-as-portfolio is graded in the final technical report, but the demo video belongs in the README this week regardless.
+
 ## Part 1: Live deployed demo (4 pts)
 
 The product is reachable by any visitor at the demo station. For a web app, that means a public URL any visitor can open on their phone or laptop. For a mobile app, that means a public install or run path (TestFlight link, Expo Go QR, downloadable build, or a working build on a team-provided device at the station). The expectation is that visitors get a hands-on live demo. The Part 2 video is the fallback if the live demo cannot run.
@@ -39,6 +41,7 @@ Required:
 - Voiceover, on-screen captions, or both. A silent screen recording does not count.
 - Shows the product doing the thing, framed from the user's point of view. The codebase, the architecture diagram, the dev tools panel, and "look how cool this prompt is" do not belong here. Technical depth goes in the technical report.
 - Hosted at a public URL (unlisted YouTube or similar) and submitted to Camino as a link.
+- Linked or embedded in the repo README, so anyone landing on the repo can watch it. The README is the front door to the project as a portfolio piece.
 - A local MP4 copy of the video sits on a team-provided device at the demo station, queued in a media player and ready to play in under 10 seconds when the live demo cannot run.
 - Due Wednesday of W10, the same cutoff as the summary card. A video recorded Friday afternoon is not a fallback.
 
