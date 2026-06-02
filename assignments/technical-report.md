@@ -14,9 +14,8 @@ The grader cares more about the process narrative than the final result. A team 
 
 The report is both a markdown file in the repository and a PDF.
 
-- Write the report as a markdown file in the repo (for example, `TECHNICAL_REPORT.md`), linked from the README. It stays public so anyone visiting the repo can read it.
-- Export that same report to PDF and submit the PDF to Camino for grading.
-- Keep the two in sync. The PDF is a snapshot of the markdown at code freeze.
+- Write the report as a markdown file in the repo (for example, `TECHNICAL_REPORT.md`), linked from the README. It stays public so anyone visiting the repo can read it, and it can keep evolving after the course as the team's portfolio.
+- At the report deadline (after W10), export the markdown to PDF and submit the PDF to Camino. The PDF is the graded version of record: what's in it is what the grader scores. Edits to the markdown after the deadline do not change the grade.
 
 Open the markdown (and therefore the PDF) with a short identifier block under the H1: project name, team members, and quarter (for example, `Team GazeReader · Alex Kim, Priya Shah, Jordan Lee, Sam Park · Spring 2026`). No separate title page.
 
