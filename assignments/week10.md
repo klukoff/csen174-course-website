@@ -8,7 +8,7 @@
 
 The product ships this week. AI Kitchen Demo Night is a public, gallery-style showcase on Friday evening of W10, with industry guests, faculty, alumni, students, and other AI Kitchen teams in the room. The team's job is to communicate what was built and let visitors try it.
 
-Three graded parts: a live deployed demo (Part 1), a demo video fallback (Part 2), and a one-page project summary card (Part 3). Demo night attendance is a pass/fail expectation on top of the three graded parts.
+Three graded parts: a live deployed demo (Part 1), a demo video fallback (Part 2), and a one-page project summary card (Part 3). On demo night itself, each team opens with a 90-second lightning pitch and staffs its station through the evening. Both are pass/fail participation expectations on top of the three graded parts.
 
 The three public deliverables show what the product does. Technical depth (architecture evolution, testing, security, deployment, process reflection) goes in the final technical report, a separate 40-pt deliverable graded against its own rubric.
 
@@ -31,11 +31,11 @@ The grader walks up as an anonymous visitor during gallery hours, attempts the d
 
 ## Part 2: Demo video (3 pts)
 
-A 90-second to 2-minute screen recording of the product running through the happy-path user flow, with voiceover or on-screen captions narrating what the user is doing and what the product is delivering. The video is the team's fallback when the live demo cannot run at the station, and a visitor watching the video alone should be able to understand what the product does.
+A screen recording of up to 2 minutes showing the product running through the happy-path user flow, with voiceover or on-screen captions narrating what the user is doing and what the product is delivering. The video is the team's fallback when the live demo cannot run at the station, and a visitor watching the video alone should be able to understand what the product does.
 
 Required:
 
-- 90 seconds to 2 minutes long. Same happy path shown in the live demo.
+- Up to 2 minutes long. Same happy path shown in the live demo. (This is separate from the 90-second pitch; the video walks through the product, the pitch is a verbal hook.)
 - Voiceover, on-screen captions, or both. A silent screen recording does not count.
 - Shows the product doing the thing, framed from the user's point of view. The codebase, the architecture diagram, the dev tools panel, and "look how cool this prompt is" do not belong here. Technical depth goes in the technical report.
 - Hosted at a public URL (unlisted YouTube or similar) and submitted to Camino as a link.
@@ -51,6 +51,19 @@ Each team produces one 8.5 x 11 project summary card that sits on the demo table
 The card should communicate the project at a glance: what it is, what problem it solves, and how a visitor can try it. An example summary card for a fictional product called GazeReader is in the course assets folder (`Assignments/assets/summary-card-example/`). Use it as a reference for visual rhythm and level of detail. Teams are free to depart from the example layout.
 
 The course will print one 8.5 x 11 copy of each card on regular paper for the demo table. Submit the PDF to Camino by Wednesday of W10 so printing can happen Thursday.
+
+## The lightning pitch (pass/fail)
+
+Demo night opens with each team delivering a 90-second lightning pitch to the full room, before visitors fan out to browse the stations. The pitch is the hook that gets people to walk over and try the product. It is not a full explanation.
+
+Required:
+
+- 90 seconds, verbal only, no slides.
+- Delivered by one or two team members (the team's choice). If two speakers, rehearse the handoff so the transition is clean and does not eat into the 90 seconds.
+- Lead with the motivation (the problem and why it matters) and the cool outcomes. Leave out process and technical details. Save the depth for visitors who stop by the station, where the team can go as deep as anyone wants.
+- Practiced in class on Thursday of W10 with peer feedback before the live event Friday.
+
+The pitch is a participation expectation, not a graded rubric item. Delivering it counts; skipping it is what costs the team.
 
 ## Demo night attendance (pass/fail)
 
@@ -73,7 +86,7 @@ See Camino for submission details and due date.
 | Criteria | Points |
 |----------|--------|
 | Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback; deployed build matches the `demo-night` git tag on `main` | 4 |
-| Part 2: 90-second to 2-minute demo video with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds; submitted by the Wednesday cutoff | 3 |
+| Part 2: Demo video of up to 2 minutes with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds; submitted by the Wednesday cutoff | 3 |
 | Part 3: One-page 8.5 x 11 summary card that communicates the project at a glance (what it is, what problem it solves, how to try it); submitted to Camino by the Wednesday print cutoff | 3 |
 | **Total** | **10** |
 
