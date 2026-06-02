@@ -18,6 +18,8 @@ The report is both a markdown file in the repository and a PDF.
 - Export that same report to PDF and submit the PDF to Camino for grading.
 - Keep the two in sync. The PDF is a snapshot of the markdown at code freeze.
 
+Open the markdown (and therefore the PDF) with a short identifier block under the H1: project name, team members, and quarter (for example, `Team GazeReader · Alex Kim, Priya Shah, Jordan Lee, Sam Park · Spring 2026`). No separate title page.
+
 ## The repo is the portfolio
 
 Treat the repository as a portfolio piece. A hiring manager, a future teammate, or next quarter's CSEN 174 team should be able to land on the repo and understand what the product is, what the engineering was, and how to run it, without anyone walking them through it.
@@ -29,8 +31,7 @@ Treat the repository as a portfolio piece. A hiring manager, a future teammate, 
 
 ## Length and format
 
-- 4 to 6 pages of body content for the PDF, 11-pt body text minimum, 1-inch margins.
-- Page count excludes the title page.
+- 4 to 6 pages for the PDF, 11-pt body text minimum, 1-inch margins. The identifier block at the top is part of the first page, not a separate title page.
 - Figures and diagrams go in the body and count toward the page budget. Lean on them. Architecture diagrams, sprint-board snapshots, screenshots of the product, before-and-after code, and other artifacts from the engineering process make the report stronger than prose alone.
 - Every numbered section below ends with at least one **repo reference**: a specific file path, commit SHA, PR number, sprint-board column screenshot, or comparable artifact. "We refactored the API" without a link is not credit; "we extracted `services/agent.py` from `app.py` in PR #47 after the security review flagged it" is.
 - Reference and link specific decisions and changes in the code, not summaries from memory. If a change removed code, link to the version-controlled instance of it (the commit or PR that removed it, or the file at an earlier tag); removed work still counts when it is traceable in version control.
@@ -98,7 +99,7 @@ Short. Concrete. Written for next quarter's W1 students.
 
 Upload to Camino:
 
-- One PDF (title page + 4 to 6 pages body) per team, exported from the `TECHNICAL_REPORT.md` in the repo.
+- One PDF (4 to 6 pages, with the identifier block at the top of page 1) per team, exported from the `TECHNICAL_REPORT.md` in the repo.
 - Repo URL accessible to the grader (public repo by default per course policy). The README should lead with the product description, demo video, and live URL, and link to the technical report.
 
 The repo carries the rest: the markdown report, the demo video in the README, the sprint board (linked or screenshotted), and the prior assignment artifacts the report references. The grader should be able to reach all of it from the repo front page.
