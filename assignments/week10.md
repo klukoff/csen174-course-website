@@ -20,16 +20,16 @@ While polishing the demo, tidy the repo into a portfolio piece: a README that le
 
 ## Part 1: Live deployed demo (4 pts)
 
-The product is reachable by any visitor at the demo station, and the team actively walks each visitor through it. For a web app, that means a public URL any visitor can open on their phone or laptop. For a mobile app, that means a public install or run path (TestFlight link, Expo Go QR, downloadable build, or a working build on a team-provided device at the station). The Part 2 video is the fallback if the live demo cannot run.
+The product is reachable by any visitor at the demo station, and the team gets the product into each visitor's hands. For a web app, that means a public URL any visitor can open on their phone or laptop. For a mobile app, that means a public install or run path (TestFlight link, Expo Go QR, downloadable build, or a working build on a team-provided device at the station). The Part 2 video is the fallback if the live demo cannot run.
 
 Required:
 
 - A visitor can reach the product without team-only credentials, localhost, or "you have to log in as me" caveats. If the product requires accounts, the team provides at least one demo account.
 - The happy-path user flow (the one also shown in the demo video) completes end-to-end in under 90 seconds, with minimal team intervention.
 - At least one in-flow failure is rehearsed: what the team shows if the API rate-limits, the model errors, or the demo account gets into a bad state. A 10-second fallback story counts. For whole-system failures (network down, deploy is down), the team plays the Part 2 video.
-- **Actively staff the station — do not sit behind it silently.** When a visitor arrives, a team member greets them, walks them through the product, and stays engaged while they try it. Don't just point at a QR code and watch the visitor tap through on their own phone. Ask what they think, answer questions about how the product works, and have a short conversation about how it was built and what would come next. Visitors should leave knowing the team and the product, not just the screen.
+- **Get the product into the visitor's hands.** Don't just tell visitors about it or show them what it does — have them actually use it. Greet them, hand over the device (or open the URL on their phone), and stay with them as they try it: observe how they use it, talk to them as they go, suggest cool features to try, point out things they might miss, answer questions, and let them poke at it. Don't sit silently behind the screen while a visitor taps through alone. The goal is a hands-on conversation as the visitor uses the product, including how it was built and what would come next. Visitors should leave knowing the team and the product, not just the URL.
 
-The grader walks up as an anonymous visitor during gallery hours, tries the demo on whatever device the product runs on, and grades on whether it works AND whether the team actually engages — guiding the walk-through, fielding questions, and discussing how it was built and what's next.
+The grader walks up as an anonymous visitor during gallery hours, tries the demo on whatever device the product runs on, and grades on whether it works AND whether the team gets the product into the grader's hands and stays engaged — observing, suggesting things to try, fielding questions, and discussing how it was built and what's next.
 
 ## Part 2: Demo video (3 pts)
 
@@ -98,7 +98,7 @@ See Camino for submission details and due date.
 
 | Criteria | Points |
 |----------|--------|
-| Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback; team actively staffs the station — greets visitors, walks them through the product, and discusses how it was built and what's next, rather than sitting silently while visitors tap through alone | 4 |
+| Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback; team gets the product into visitors' hands and stays engaged — observing as they use it, suggesting features to try, fielding questions, and discussing how it was built and what's next, rather than sitting silently while visitors tap through alone | 4 |
 | Part 2: Demo video of up to 2 minutes with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds | 3 |
 | Part 3: One-page 8.5 x 11 summary card that communicates the project at a glance (what it is, what problem it solves, how to try it); submitted to Camino as a single-page PDF; printed copy displayed at the demo station | 3 |
 | **Total** | **10** |
@@ -108,7 +108,7 @@ See Camino for submission details and due date.
 - A demo video that needs network to play is not a fallback. Save the MP4 locally and rehearse playing it offline.
 - A demo video where the audio walks through the architecture diagram or shows the code is a Part 2 fail. The video is for visitors, not classmates. Architecture and code live in the technical report.
 - If the card includes an image, it should show the product doing the thing. Stock illustrations of brains or "a laptop on a desk" tell visitors nothing.
-- "Scan the QR code and try it on your phone" is not the demo. Visitors will tap through and leave without understanding what they just used. Walk them through it, narrate what's happening, and turn it into a short conversation about the product and the build.
+- "Scan the QR code and try it on your phone" is not the demo. Visitors will tap through and leave without understanding what they just used. Hand them the product, observe and talk to them as they use it, suggest features to try, and turn it into a short conversation about the product and the build.
 
 ## Why this week
 
