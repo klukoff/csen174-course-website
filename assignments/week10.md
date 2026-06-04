@@ -42,7 +42,7 @@ Required:
 - Hosted at a public URL (unlisted YouTube or similar) and submitted to Camino as a link.
 - Linked or embedded in the repo README, so anyone landing on the repo can watch it. The README is the front door to the project as a portfolio piece.
 - A local MP4 copy of the video sits on a team-provided device at the demo station, queued in a media player and ready to play in under 10 seconds when the live demo cannot run.
-- Due Wednesday of W10, the same cutoff as the summary card. A video recorded Friday afternoon is not a fallback.
+- Due before demo night (see Camino for the due date). A video recorded Friday afternoon is not a fallback.
 
 The grader watches the video as if seeing the product for the first time and grades on whether a stranger can understand what the product does from the video alone.
 
@@ -52,7 +52,7 @@ Each team produces one 8.5 x 11 project summary card that sits on the demo table
 
 The card should communicate the project at a glance: what it is, what problem it solves, and how a visitor can try it. An example summary card for a fictional product called GazeReader is in the GazeReader repo README: https://github.com/The-AI-Kitchen/gaze-reader#example-summary-card (a print-ready PDF is linked there too). Use it as a reference for visual rhythm and level of detail. Teams are free to depart from the example layout.
 
-The course will print one 8.5 x 11 copy of each card on regular paper for the demo table. Submit the PDF to Camino by Wednesday of W10 so printing can happen Thursday.
+The course will print one 8.5 x 11 copy of each card on regular paper for the demo table. Submit the PDF to Camino; see the Camino assignment page for the due date.
 
 ## The lightning pitch (pass/fail)
 
@@ -97,8 +97,8 @@ See Camino for submission details and due date.
 | Criteria | Points |
 |----------|--------|
 | Part 1: Live demo reachable by an anonymous visitor (public URL for web, public install or team-provided device for mobile); happy-path flow completes end-to-end in under 90 seconds with minimal team intervention; rehearsed in-flow failure fallback | 4 |
-| Part 2: Demo video of up to 2 minutes with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds; submitted by the Wednesday cutoff | 3 |
-| Part 3: One-page 8.5 x 11 summary card that communicates the project at a glance (what it is, what problem it solves, how to try it); submitted to Camino by the Wednesday print cutoff | 3 |
+| Part 2: Demo video of up to 2 minutes with voiceover or captions showing the happy-path user flow; user-facing framing (no codebase or dev-tools content); hosted publicly with the link submitted to Camino; local MP4 on the demo laptop ready to play in under 10 seconds | 3 |
+| Part 3: One-page 8.5 x 11 summary card that communicates the project at a glance (what it is, what problem it solves, how to try it); submitted to Camino as a single-page PDF | 3 |
 | **Total** | **10** |
 
 ## Gotchas
