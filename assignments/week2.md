@@ -121,21 +121,21 @@ Push back on the agent if its suggestions don't match your domain knowledge. Add
 
 ### What to submit
 
-Include the completed Problem Framing Canvas (the filled canvas with your responses across all three phases, plus the final "How Might We" statement) along with a **brief reflection (half page max):** What did the canvas surface that you hadn't considered? Did the Look Inward phase reveal assumptions you weren't aware of? Did the Look Outward phase change who you think your users are? How does your "How Might We" question differ from where you started?
-
-The goal is genuine engagement with the framework, not a polished deliverable. We want to see evidence that the skill shaped your thinking, not that you ran it and copy-pasted the output.
+The canvas output and a short reflection are listed in the consolidated "What to Submit" section below (items 3 and 4). The goal is genuine engagement with the framework, not a polished deliverable. We want to see evidence that the skill shaped your thinking, not that you ran it and copy-pasted the output.
 
 ## What to Submit
 
-A single document (PDF or Google Doc link) with:
+A single document (PDF or Google Doc link) with four clearly labeled sections:
 
-1. **Product vision statement** using the modified Moore's template (all seven fields, including POWERED BY).
+1. **Product vision statement** using the modified Moore's template (all seven fields, including POWERED BY naming a capability, not a vendor).
 
-2. **Vision narrative** (half page max) covering the problem in context and how AI makes the product possible.
+2. **Vision narrative** (half page max): the problem in context and how AI makes the product possible. Include the "without AI" test, that is, whether removing the AI would make the product meaningfully worse or only slightly less convenient.
 
-3. **Skills setup confirmation:** Screenshot or link showing your team repo's `.cursor/skills/` directory with all three SKILL.md files in place.
+3. **Problem Framing Canvas output:** the completed canvas across all three phases, including your "How Might We" statement.
 
-4. **Problem Framing Canvas output and reflection:** The completed canvas you generated with the skill, including your "How Might We" statement, plus a brief reflection on how it shaped your thinking.
+4. **Reflection** (half page max): what the canvas surfaced that you had not considered. Did Look Inward reveal assumptions you were not aware of? Did Look Outward change who you think your users are? How does your "How Might We" question differ from where you started?
+
+Skills setup is not a submission item. Install all three skills in your team repo (see Part 2) and commit them. We verify the install directly in your repo, so no screenshot is needed.
 
 See Camino for submission details and due date.
 
@@ -144,8 +144,8 @@ See Camino for submission details and due date.
 | Criteria | Points |
 |----------|--------|
 | Product vision statement: specific, grounded, all seven fields filled in (including POWERED BY naming a capability, not a vendor) | 3 |
-| Vision narrative: clear problem, AI capability is essential not decorative | 3 |
-| Problem Framing Canvas demonstrates genuine engagement (examined assumptions, considered who's affected and excluded, produced a clear HMW statement) | 2 |
+| Vision narrative: clear problem in context, AI capability essential not decorative (passes the "without AI" test) | 3 |
+| Problem Framing Canvas and reflection: genuine engagement (examined assumptions, considered who's affected and excluded, clear HMW) plus a reflection that shows the canvas shaped the team's thinking | 2 |
 | Skills installed in the team repo (all three SKILL.md files present and committed) | 1 |
 | Writing quality and overall coherence | 1 |
 | **Total** | **10** |
