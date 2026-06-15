@@ -51,8 +51,8 @@ Start with the direction your team will pursue based on the gallery walk feedbac
 
 Create two diagrams using the [C4 model](https://c4model.com/):
 
-- **Context diagram:** Shows your system as a single box, surrounded by the users and external systems it interacts with (AI APIs, databases, third-party services). This answers: "What does our system talk to?"
-- **Container diagram:** Zooms into your system box and shows the major containers (front end, back end, database, AI service layer, etc.) and how they communicate. This answers: "What are the big pieces, and how do they connect?"
+- **Context diagram:** Shows your system as a single box, surrounded by the people who use it and the external systems it talks to. "External" means a third-party service you call but do not build or run, like an LLM API or an email provider. Your own database and cache are not external. They are part of your system and show up in the container diagram, not here. Leave infrastructure (Kubernetes, cloud regions, servers) out of this diagram too; where things run is a deployment concern, not a context one. This answers: "Who uses our system, and what outside services does it depend on?"
+- **Container diagram:** Opens up your system box and shows the runnable pieces inside it (front end, back end or API, database, cache, AI service layer) and how they communicate. Aim for roughly four to eight boxes, each a thing you could deploy or restart on its own. Do not drill down to individual files, modules, or functions. That is component-level detail, one level finer than this assignment needs, and it makes the diagram harder to read. This answers: "What are the big pieces, and how does data flow between them?"
 
 The diagrams should be **visual and human-readable**: someone looking at your context diagram should immediately understand what your system connects to, and someone looking at your container diagram should see the major pieces and how data flows between them.
 
@@ -62,21 +62,23 @@ The diagrams should be **visual and human-readable**: someone looking at your co
 
 The tools you use along the way are flexible: whiteboard sketches, pen and paper, [draw.io](https://draw.io/), Figma, or Mermaid directly. Pick whatever lets the team think clearly.
 
-**For the final C4 diagrams in the repo, use Mermaid.** Mermaid has built-in support for C4 diagrams using keywords like `C4Context`, `C4Container`, `Person()`, `System()`, `Container()`, and `Rel()`. The syntax reads naturally:
+**Try Mermaid, but it is not required for the final diagrams.** Mermaid has built-in support for C4 diagrams using keywords like `C4Context`, `C4Container`, `Person()`, `System()`, `Container()`, and `Rel()`. The syntax reads naturally:
 
 ```
 C4Context
   Person(student, "Student", "Uses the app to study")
   System(app, "StudyBuddy", "AI-powered study tool")
   System_Ext(openai, "OpenAI API", "Provides LLM capabilities")
-  System_Ext(db, "PostgreSQL", "Stores user data")
 
   Rel(student, app, "Uses")
   Rel(app, openai, "Sends prompts, receives completions")
-  Rel(app, db, "Reads and writes")
 ```
 
-GitHub automatically renders Mermaid code blocks in `.md` files as visual diagrams, so when you commit your architecture doc to the repo, anyone viewing it on GitHub sees the actual diagram (not just the code). Your AI tools can also read and update Mermaid code directly, which makes the diagrams easier to keep in sync with your system as it evolves. You can preview diagrams in the [Mermaid Live Editor](https://mermaid.live/) or in Cursor. See the [Mermaid C4 documentation](https://mermaid.js.org/syntax/c4.html) for full syntax reference.
+(Note that PostgreSQL is not in the context diagram above: your own database is part of your system, so it appears as a container in the container diagram, not as an external box here.)
+
+GitHub renders Mermaid code blocks in `.md` files as diagrams, so committing Mermaid to your architecture doc lets anyone viewing it on GitHub see the picture, and your AI tools can read and update the code as the system evolves. Preview in the [Mermaid Live Editor](https://mermaid.live/) or in Cursor; see the [Mermaid C4 documentation](https://mermaid.js.org/syntax/c4.html) for syntax.
+
+Mermaid is worth trying, especially as a fast first pass or a way to explore the structure with AI. Do not treat AI-generated Mermaid as the finished diagram, though. The model often misses the right logic (drawing your database as an external system, or turning every file into a box) and the output tends to be denser and less human-readable than a diagram you lay out yourself. Whatever tool you pick (Mermaid, draw.io, Figma, Excalidraw, or a clean hand sketch), the final diagrams must be accurate and easy for a person to read.
 
 ### Commit to your repo
 
@@ -84,7 +86,7 @@ Your architecture documentation must live in the team's GitHub repo, regardless 
 
 Create an `architecture/` directory at the repo root with:
 
-- `architecture.md` — your consolidation plan and C4 diagrams as Mermaid code blocks (GitHub renders them automatically). Include a brief text description alongside each diagram (what the major components are, what they connect to, and how data flows between them) so your AI tools can reason about the architecture, not just render the picture.
+- `architecture.md` — your consolidation plan and C4 diagrams. If you used Mermaid, paste the code blocks (GitHub renders them automatically). If you used another tool, embed the diagrams as images. Either way, include a brief text description alongside each diagram (what the major components are, what they connect to, and how data flows between them) so your AI tools can reason about the architecture, not just render the picture.
 - Any additional sketches, working notes, or exploratory diagrams the team wants to keep
 
 This becomes the living reference for your project. Keep it up to date as your architecture evolves. You'll formally revise it in Week 8 when you compare the actual system to the plan.
@@ -133,13 +135,15 @@ Include a link to your GitHub Projects board in your submission. To verify it's 
 
 ## What to Submit
 
-Submit as a **PDF** to Camino with:
+Submit a **single, self-contained PDF** to Camino. Everything we grade has to be visible in the PDF itself. Include repo and board links for reference, but do not rely on a link as the only way to see your work. Repos get reorganized over the quarter and links break, and we will not chase a broken link to find your submission.
 
 1. **Gallery walk synthesis:** For each prototype, what it explored and the key feedback patterns.
 
-2. **Consolidation plan and architecture:** The team's chosen direction and rationale (connected to gallery walk feedback), tech stack decisions, ownership split, and C4 context and container diagrams (rendered as visual diagrams, not raw code). Also committed to the repo in `architecture/`.
+2. **Consolidation plan:** Written out in the PDF: the team's chosen direction and rationale (connected to gallery walk feedback), tech stack decisions, and the ownership split (who owns which area of the codebase).
 
-3. **Kanban board link:** URL to your GitHub Projects board, populated with initial development tasks.
+3. **C4 diagrams:** Paste your context and container diagrams into the PDF as rendered images (a screenshot or image export, not raw Mermaid code and not a link). Also commit the source to your repo at `architecture/architecture.md`, since the Week 8 revision builds on it.
+
+4. **Kanban board:** Paste a screenshot of your populated GitHub Projects board into the PDF, and include the board link beneath the screenshot.
 
 See Camino for submission details and due date.
 
