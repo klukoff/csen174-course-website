@@ -27,7 +27,7 @@ Required sections:
 - **Potential harms (3 harms).** Pick the 3 most important risks the product creates. For each harm, write a short block in this shape:
   - Harm: who is harmed and how, in concrete terms.
   - Principle: the IEEE/ACM SE Code clause that applies, named by number and short title (for example, 1.03 "Approve software only if...").
-  - Mitigation: what the team has done, will do before demo night, or is choosing to accept and why.
+  - Mitigation: what the team has done, will do before demo night, or is choosing to accept and why. A disclaimer ("AI can make mistakes, double-check the output") is a starting point, not a real mitigation; it manages liability more than risk. For at least one of your three harms, go past the disclaimer and engineer for trust and safety: a test for the failure case, a path for users to flag bad output, a check on the sensitive cases, a guardrail or a rate limit. Name the residual risk that remains, since the model is non-deterministic and problem cases will still surface.
 - **One concrete change.** Name one specific decision the team made (or will make before demo night) based on ethical reasoning. A line in the README, a disclaimer in the UI, a removed feature, a logged consent prompt, a rate limit, a test for biased outputs. The team can also draw the change from the responsible AI audit it ran in the W7 security review. One sentence on what changed and why.
 
 Format: up to two pages, exported as PDF. Plain document, no cover page, no slide deck.
@@ -56,6 +56,6 @@ See Camino for submission details and due date.
 
 | Criteria | Points |
 |----------|--------|
-| Part 1: Product vision line, one user and one non-user stakeholder named, 3 harms each with a specific group harmed, a named IEEE/ACM SE Code clause, and a mitigation, one concrete change with one-sentence rationale, up to two pages, PDF on Camino with `.md` source in repo | 8 |
+| Part 1: Product vision line, one user and one non-user stakeholder named, 3 harms each with a specific group harmed, a named IEEE/ACM SE Code clause, and a mitigation (at least one of the three goes beyond a disclaimer to an engineered trust-and-safety measure: a test, a user-flag path, a guardrail, with the residual risk named), one concrete change with one-sentence rationale, up to two pages, PDF on Camino with `.md` source in repo | 8 |
 | Part 2: Deployed app live, no new features merged after freeze, allowed bug-fix changes traceable in PR history | 2 |
 | **Total** | **10** |
