@@ -125,7 +125,7 @@ The canvas output and a short reflection are listed in the consolidated "What to
 
 ## What to Submit
 
-A single document (PDF or Google Doc link) with four clearly labeled sections:
+A single markdown document in your team repo (for example, `docs/product-vision.md`), submitted on Camino as a GitHub permalink pinned to a commit (open the file on GitHub and press `y` for a URL that contains the commit SHA, so the graded version is frozen and edits pushed afterward do not change it). Four clearly labeled sections:
 
 1. **Product vision statement** using the modified Moore's template (all seven fields, including POWERED BY naming a capability, not a vendor).
 
