@@ -18,7 +18,7 @@ The report is a markdown file in the repository, and the grader reads it rendere
 
 - Write the report as a markdown file in the repo (for example, `TECHNICAL_REPORT.md`), linked from the README. It stays public so anyone visiting the repo can read it, and it can keep evolving after the course as the team's portfolio.
 - The grader reads the report rendered on GitHub, where Markdown, diagrams, and screenshots display cleanly and links work. Make sure it renders correctly there.
-- Submit one thing to Camino: a link to the report frozen at a specific commit. Use a GitHub permalink to `TECHNICAL_REPORT.md` (open the file on GitHub and press `y` to get a URL containing the full commit SHA), or paste the commit SHA itself. That commit is the version graded; anything pushed after it does not count. No PDF.
+- Submit one thing to Camino: a GitHub permalink to `TECHNICAL_REPORT.md` frozen at a specific commit. Open the file on GitHub and press `y` to get a URL containing the full commit SHA. The URL should look like `https://github.com/<owner>/<repo>/blob/<commit-sha>/TECHNICAL_REPORT.md` — with a real 40-character SHA inline, not a branch name like `main`. That commit is the version graded; anything pushed after it does not count.
 - Open the report with a short identifier block under the H1: project name, team members, and quarter (for example, `Team GazeReader · Alex Kim, Priya Shah, Jordan Lee, Sam Park · Spring 2026`). No separate title page.
 
 ## The repo is the portfolio
@@ -86,7 +86,7 @@ Close with where the team would take the product and what they would tell the ne
 
 Upload to Camino:
 
-- A frozen link to the report: a GitHub permalink to `TECHNICAL_REPORT.md` containing the full commit SHA, or the commit SHA itself, taken at code freeze. That commit is the version graded; later edits do not count. No PDF.
+- A GitHub permalink to `TECHNICAL_REPORT.md` taken at code freeze, with the full commit SHA in the URL (not a branch name like `main`). See "Where the report lives and how it is graded" above for the format. That commit is the version graded; later edits do not count.
 - Repo URL accessible to the grader (public repo by default per course policy). The README should lead with the product description, demo video, and live URL, and link to the technical report.
 - A live deployment that stays reachable by anyone through the end of the grading period. Hosted URLs, demo accounts, invite links, and any API tokens behind the live version must remain valid, with no expiry, until grades are posted. An expired invite link, a revoked or expired token, or a host torn down after demo night counts as a non-functional deployment.
 
